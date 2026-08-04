@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Configurator from "./Configurator";
 import SummaryPanel from "./SummaryPanel";
+import { SERVICES, partnerLevelForCount } from "./data/services";
 
 function Arrow() {
   return (
@@ -58,6 +59,29 @@ export default function Page() {
       else next.add(id);
       return next;
     });
+
+  // Derived once for the contact section: the chosen services, the partner
+  // level they earn, and a mailto pre-filled with the same package so the
+  // selection carries straight into the email. Replaced by the read-only form
+  // field in Phase 3.
+  const chosenServices = SERVICES.filter((s) => selected.has(s.id));
+  const partnerLevel = partnerLevelForCount(chosenServices.length);
+  const monthlyTotal = chosenServices.reduce((sum, s) => sum + s.monthly, 0);
+  const setupTotal = chosenServices.reduce((sum, s) => sum + s.setup, 0);
+  const mailHref = chosenServices.length
+    ? `mailto:brandon@dynastyweb.co?subject=${encodeURIComponent(
+        `Package of interest — ${partnerLevel ? partnerLevel.label : ""}`.trim()
+      )}&body=${encodeURIComponent(
+        [
+          `Partner level: ${partnerLevel ? partnerLevel.label : "—"}`,
+          `Services (${chosenServices.length}):`,
+          ...chosenServices.map((s) => `- ${s.name}`),
+          "",
+          `Due today (setup): $${setupTotal.toLocaleString("en-US")}`,
+          `Monthly (recurring): $${monthlyTotal.toLocaleString("en-US")}`,
+        ].join("\n")
+      )}`
+    : "mailto:brandon@dynastyweb.co";
 
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
@@ -305,8 +329,26 @@ export default function Page() {
               Questions about On It, early access to T-Vault, or an idea for what
               Dynasty Web should build next — it all reaches the same inbox.
             </p>
+            {chosenServices.length > 0 && (
+              <div
+                className="package-interest reveal"
+                aria-label="Package of interest"
+              >
+                <span className="package-interest-label">
+                  Package of interest
+                </span>
+                <p className="package-interest-level">
+                  {partnerLevel ? partnerLevel.label : ""} ·{" "}
+                  {chosenServices.length} service
+                  {chosenServices.length === 1 ? "" : "s"}
+                </p>
+                <p className="package-interest-services">
+                  {chosenServices.map((s) => s.name).join(", ")}
+                </p>
+              </div>
+            )}
             <div className="reveal">
-              <a className="mail" href="mailto:brandon@dynastyweb.co">
+              <a className="mail" href={mailHref}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" strokeWidth="1.6" />
                   <path d="M4 7l8 6 8-6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
