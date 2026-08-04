@@ -659,6 +659,105 @@ svg {
   color: var(--gold);
 }
 
+/* ---------- Configurator ---------- */
+.svc-group + .svc-group {
+  margin-top: 34px;
+}
+
+.svc-group-label {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 21px;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.svc-list {
+  display: grid;
+  gap: 14px;
+}
+
+.svc-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  text-align: left;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  cursor: pointer;
+  transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.svc-row:hover {
+  border-color: var(--line-strong);
+}
+
+.svc-row.selected {
+  border-color: var(--gold);
+  background: var(--cream-2);
+}
+
+.svc-check {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line-strong);
+  display: grid;
+  place-items: center;
+  margin-top: 2px;
+  color: var(--cream);
+  transition: background 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.svc-row.selected .svc-check {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.svc-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.svc-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.svc-desc {
+  font-size: 14.5px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+
+.svc-price {
+  flex: none;
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--gold);
+  white-space: nowrap;
+  text-align: right;
+}
+
+@media (max-width: 620px) {
+  .svc-row {
+    flex-wrap: wrap;
+  }
+  .svc-price {
+    width: 100%;
+    padding-left: 40px;
+    text-align: left;
+  }
+}
+
 /* ---------- Reveal on scroll ----------
    Hidden state is gated behind the `js` class (added by an inline script
    before paint) so no-JS visitors always see fully rendered content. */

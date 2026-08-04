@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Configurator from "./Configurator";
 
 function Arrow() {
   return (
@@ -46,6 +47,17 @@ function Mark() {
 }
 
 export default function Page() {
+  // Which services are selected in the configurator. Owned here so the summary
+  // panel and the contact prefill read one source of truth.
+  const [selected, setSelected] = useState(() => new Set());
+  const toggleService = (id) =>
+    setSelected((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
     if (!("IntersectionObserver" in window)) {
@@ -223,6 +235,23 @@ export default function Page() {
                 </span>
               </article>
             </div>
+          </div>
+        </section>
+
+        {/* Configurator */}
+        <section className="section" id="services">
+          <div className="wrap">
+            <div className="section-head reveal">
+              <div>
+                <span className="eyebrow">Build your package</span>
+                <h2>Pick the services you need. Nothing you don&apos;t.</h2>
+              </div>
+              <p>
+                Every service is priced on its own — no bundles, no tiers to buy
+                into. Choose what fits, and your partner level comes with it.
+              </p>
+            </div>
+            <Configurator selected={selected} onToggle={toggleService} />
           </div>
         </section>
 
