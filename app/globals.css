@@ -758,6 +758,150 @@ svg {
   }
 }
 
+/* ---------- Configurator layout + summary ---------- */
+.svc-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.svc-summary {
+  position: sticky;
+  top: calc(64px + 22px);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+@media (max-width: 760px) {
+  .svc-layout {
+    grid-template-columns: 1fr;
+  }
+  .svc-summary {
+    position: static;
+  }
+}
+
+.svc-summary-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 21px;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.svc-summary-empty {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.svc-summary-items {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.svc-summary-items li {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 14px;
+}
+
+.svc-summary-items li span:last-child {
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.svc-level {
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.svc-level-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.svc-level-badge {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--cream-2);
+  color: var(--gold);
+}
+
+.svc-level-count {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.svc-progress {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--cream-3);
+  overflow: hidden;
+}
+
+.svc-progress span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--gold);
+  transition: width 0.3s var(--ease);
+}
+
+.svc-level-hint {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.svc-totals {
+  display: grid;
+  gap: 14px;
+}
+
+.svc-total {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.svc-total-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.svc-total-value {
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.svc-total-note {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
 /* ---------- Reveal on scroll ----------
    Hidden state is gated behind the `js` class (added by an inline script
    before paint) so no-JS visitors always see fully rendered content. */

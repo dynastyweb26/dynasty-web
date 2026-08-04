@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Configurator from "./Configurator";
+import SummaryPanel from "./SummaryPanel";
 
 function Arrow() {
   return (
@@ -251,7 +252,10 @@ export default function Page() {
                 into. Choose what fits, and your partner level comes with it.
               </p>
             </div>
-            <Configurator selected={selected} onToggle={toggleService} />
+            <div className="svc-layout">
+              <Configurator selected={selected} onToggle={toggleService} />
+              <SummaryPanel selected={selected} />
+            </div>
           </div>
         </section>
 
