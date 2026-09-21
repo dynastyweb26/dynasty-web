@@ -1,4 +1,5 @@
 import { Fraunces, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -21,20 +22,19 @@ const siteUrl = "https://dynastyweb.co";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Dynasty Web — Software for the trades",
+    default: "Dynasty Web — Digital Solutions Studio for Local Businesses",
     template: "%s · Dynasty Web",
   },
   description:
-    "A solo-run product studio in Forney, Texas, building subscription software for small trade businesses. Makers of On It and T-Vault.",
+    "Digital solutions studio in Forney, Texas building websites, branding, and lead capture systems for local businesses. Makers of On It.",
   keywords: [
     "Dynasty Web",
-    "product studio",
-    "trade software",
-    "invoicing software",
+    "digital solutions studio",
+    "web design Forney TX",
+    "small business websites",
     "On It",
-    "T-Vault",
     "Forney Texas",
-    "small business software",
+    "local business web development",
   ],
   authors: [{ name: "Brandon Fotsing Talla" }],
   creator: "Brandon Fotsing Talla",
@@ -45,16 +45,16 @@ export const metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Dynasty Web",
-    title: "Dynasty Web — Software for the trades",
+    title: "Dynasty Web — Digital Solutions Studio",
     description:
-      "A solo-run product studio building subscription software for small trade businesses. Makers of On It and T-Vault.",
+      "Digital solutions studio in Forney, Texas building custom websites, branding, and lead systems for local businesses.",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dynasty Web — Software for the trades",
+    title: "Dynasty Web — Digital Solutions Studio",
     description:
-      "A solo-run product studio building subscription software for small trade businesses. Makers of On It and T-Vault.",
+      "Digital solutions studio in Forney, Texas building custom websites, branding, and lead systems for local businesses.",
   },
   icons: {
     icon: "/icon",
@@ -73,10 +73,10 @@ export default function RootLayout({ children }) {
       <head>
         {/* Mark JS as available before first paint so the scroll-reveal
             styles only apply when they can actually be undone. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: "document.documentElement.classList.add('js')",
-          }}
+        <Script
+          id="js-class-init"
+          strategy="beforeInteractive"
+          src="data:text/javascript,document.documentElement.classList.add('js')"
         />
       </head>
       <body>{children}</body>

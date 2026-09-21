@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Dynasty Web — a solo product studio building software for the trades";
+export const alt = "Dynasty Web — Digital solutions studio for local businesses";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -83,7 +83,7 @@ export default function OpengraphImage() {
               display: "flex",
             }}
           >
-            A solo product studio in Forney, Texas — makers of On It and T-Vault.
+            Digital solutions studio in Forney, Texas for local businesses.
           </div>
         </div>
 
@@ -98,9 +98,9 @@ export default function OpengraphImage() {
             fontWeight: 600,
           }}
         >
-          <div style={{ display: "flex" }}>On It — Live</div>
+          <div style={{ display: "flex" }}>Digital Solutions</div>
           <div style={{ display: "flex", color: "#a89a83" }}>·</div>
-          <div style={{ display: "flex" }}>T-Vault — In beta</div>
+          <div style={{ display: "flex" }}>Makers of On It</div>
           <div style={{ display: "flex", color: "#a89a83" }}>·</div>
           <div style={{ display: "flex", color: "#6b5f4d" }}>dynastyweb.co</div>
         </div>
