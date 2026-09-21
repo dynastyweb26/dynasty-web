@@ -6,79 +6,55 @@ export const siteData = {
     {
       id: "starter",
       name: "Starter",
-      price: "$400",
-      cadence: "one-time",
+      qualifier: "Website base (0–1 solutions)",
       pitch: "A custom, high-converting digital storefront built for local service providers.",
-      solutionsIncluded: 0,
-      features: [
-        "Custom website design",
-        "Mobile-responsive layout",
-        "Contact form with lead delivery",
-        "1 revision round",
-        "Launch & custom domain connection",
+      perks: [
+        "Custom responsive website design",
+        "Mobile-optimized performance & accessibility",
+        "Secure contact & lead delivery form",
+        "1 revision round & launch support",
       ],
       featured: false,
     },
     {
       id: "pro-gold",
       name: "Pro Gold",
-      price: "$800",
-      cadence: "one-time + optional $150/mo",
-      pitch: "Enhanced website performance, local SEO optimization, and selected digital add-ons.",
-      solutionsIncluded: 2,
-      features: [
+      qualifier: "Website + 2–3 solutions",
+      pitch: "Enhanced search visibility, local SEO foundation, and interactive client touches.",
+      perks: [
         "Everything in Starter",
-        "Local SEO optimization",
-        "Advanced design & smooth interactions",
-        "Choose 2 Digital Solutions included",
+        "Local SEO foundation & keyword setup",
+        "Advanced layout & fluid animations",
+        "Priority revision rounds",
       ],
       featured: false,
     },
     {
       id: "pro-platinum",
       name: "Pro Platinum",
-      price: "$1,500",
-      cadence: "one-time + $250/mo",
-      pitch: "Complete client engine with live lead tracking dashboard and priority monthly support.",
-      solutionsIncluded: 4,
-      features: [
+      qualifier: "Website + 4–6 solutions",
+      pitch: "Complete client intake engine with live tracking dashboard and priority monthly upkeep.",
+      perks: [
         "Everything in Pro Gold",
-        "Live lead dashboard",
-        "Lead tracking CRM integration",
-        "Choose 4 Digital Solutions included",
-        "Monthly maintenance & priority support",
+        "Live lead tracking dashboard",
+        "Lead CRM integration",
+        "Monthly technical maintenance & priority support",
       ],
-      featured: true, // Featured tier
+      featured: true, // Featured tier (dark card)
     },
     {
       id: "pro-allstar-diamond",
       name: "Pro Allstar Diamond",
-      price: "$2,500",
-      cadence: "one-time + $400/mo",
-      pitch: "Full brand transformation, total automation suite, and dedicated quarterly strategy.",
-      solutionsIncluded: 7, // All digital solutions
-      features: [
+      qualifier: "Website + all 7 solutions",
+      pitch: "Total business transformation with full brand identity refresh and automated follow-ups.",
+      perks: [
         "Everything in Pro Platinum",
-        "Full brand refresh & identity package",
-        "Automated follow-up emails",
-        "All Digital Solutions included",
-        "Dedicated account manager & quarterly strategy calls",
+        "Full brand refresh & asset package",
+        "Automated client follow-up sequences",
+        "Dedicated account strategist & quarterly strategy call",
       ],
       featured: false,
     },
-  ],
-
-  // Comparison Matrix for feature comparison table
-  comparisonFeatures: [
-    { feature: "Custom Responsive Website", starter: true, proGold: true, proPlatinum: true, proDiamond: true },
-    { feature: "Lead Delivery Form", starter: true, proGold: true, proPlatinum: true, proDiamond: true },
-    { feature: "Local SEO Optimization", starter: false, proGold: true, proPlatinum: true, proDiamond: true },
-    { feature: "Digital Solutions Included", starter: "None", proGold: "Choose 2", proPlatinum: "Choose 4", proDiamond: "All Included" },
-    { feature: "Live Lead Dashboard", starter: false, proGold: false, proPlatinum: true, proDiamond: true },
-    { feature: "Lead Tracking CRM", starter: false, proGold: false, proPlatinum: true, proDiamond: true },
-    { feature: "Full Brand Refresh", starter: false, proGold: false, proPlatinum: false, proDiamond: true },
-    { feature: "Automated Email Follow-ups", starter: false, proGold: false, proPlatinum: false, proDiamond: true },
-    { feature: "Monthly Maintenance & Support", starter: "Optional", proGold: "Optional ($150/mo)", proPlatinum: "Included ($250/mo)", proDiamond: "Priority ($400/mo)" },
   ],
 
   solutions: [
@@ -93,7 +69,7 @@ export const siteData = {
       id: "social-media",
       name: "Social Media Management",
       price: "$200",
-      cadence: "month",
+      cadence: "mo",
       description: "Consistent, tailored updates highlighting your ongoing local projects.",
     },
     {
@@ -107,7 +83,7 @@ export const siteData = {
       id: "analytics",
       name: "Analytics Dashboard",
       price: "$100",
-      cadence: "month",
+      cadence: "mo",
       description: "Simple, real-time reporting on site visitors, calls, and lead source tracking.",
     },
     {
@@ -139,7 +115,7 @@ export const siteData = {
       name: "Cyril Handyman & Door LLC",
       industry: "Handyman & Door Services", // PLACEHOLDER
       url: "https://crazydoorhandyman.com",
-      screenshotKey: "cyril",
+      screenshots: ["/work/cyril/1.png", "/work/cyril/2.png"],
       shortDescription: "Custom web platform built to showcase local door installations and handyman service requests.", // PLACEHOLDER
       caseStudy: {
         problem: "Cyril needed a professional online presence to stop relying solely on word-of-mouth and represent their premium door work.", // PLACEHOLDER
@@ -152,7 +128,7 @@ export const siteData = {
       name: "Vydale T.C. Projects",
       industry: "Trade & Construction Projects", // PLACEHOLDER
       url: "https://vydaletcprojects.com",
-      screenshotKey: "vydale",
+      screenshots: ["/work/vydale/1.png", "/work/vydale/2.png"],
       shortDescription: "High-impact web presence highlighting heavy construction and local contract achievements.", // PLACEHOLDER
       caseStudy: {
         problem: "Vydale T.C. Projects required a structured, clean portfolio to present capability statements to larger contractors.", // PLACEHOLDER
@@ -160,51 +136,117 @@ export const siteData = {
         result: "Streamlined bidding communication and provided client proof during contract pitches.", // PLACEHOLDER
       },
     },
+    {
+      id: "onit",
+      name: "On It",
+      industry: "Voice-Powered Invoicing Software",
+      url: "https://onit.dynastyweb.co",
+      screenshots: ["/work/onit/1.png"],
+      builtInHouse: true,
+      shortDescription: "Voice-powered field invoicing for tradespeople. Proof that Dynasty Web ships real software, not just websites.",
+      caseStudy: {
+        problem: "Tradespeople lose hours typing out invoices after long days on job sites.",
+        whatWeBuilt: "Created an instant voice-to-invoice web software using speech recognition and instant payment links.",
+        result: "Enables field workers to invoice and get paid before leaving the client driveway.",
+      },
+    },
   ],
 
   process: [
     {
       step: "01",
-      title: "Pick a Tier",
-      description: "Select the foundation package that matches your business goals and service scale.",
+      title: "Pick Solutions",
+      description: "Select the specific Digital Solutions your business needs, from local SEO to business photography.",
     },
     {
       step: "02",
-      title: "Choose Solutions",
-      description: "Add à la carte digital solutions like photography, SEO, or On It invoicing integration.",
+      title: "Tier Unlocks",
+      description: "Your total solution count automatically unlocks higher package tiers and free strategy perks.",
     },
     {
       step: "03",
       title: "Build & Refine",
-      description: "We craft your site and lead system rapidly with continuous direct communication and zero bloat.",
+      description: "We craft your website and solutions rapidly with direct craftsman communication and zero bloat.",
     },
     {
       step: "04",
-      title: "Launch & Drive",
-      description: "Your site goes live on your custom domain, ready to accept leads and represent your craft.",
+      title: "Launch & Lead",
+      description: "Your custom platform goes live on your domain, ready to turn local visitors into paying customers.",
     },
   ],
 
   faq: [
     {
       question: "How long does a build take?",
-      answer: "A standard build takes 1 to 2 weeks from kickoff. Custom enterprise or diamond packages with full branding take 2 to 3 weeks.",
+      answer: "A standard build takes 1 to 2 weeks from kickoff. Diamond tier projects with full brand refreshes take 2 to 3 weeks.",
     },
     {
       question: "Do I own my site?",
-      answer: "Yes, 100%. You own all source code, domain names, content, and branding assets created during the build.",
+      answer: "Yes, 100%. You own all source code, domain names, content, and design assets created during the project.",
     },
     {
-      question: "What does the retainer cover?",
-      answer: "Monthly retainers cover fast cloud hosting, domain maintenance, regular updates, SEO adjustments, and priority technical support.",
-    },
-    {
-      question: "Can I switch tiers later?",
-      answer: "Absolutely. You can upgrade your tier or add/remove digital solutions at any time as your business grows.",
+      question: "How do package tiers work?",
+      answer: "You pay per Digital Solution added on top of your website base. Adding more solutions automatically unlocks higher tiers (Pro Gold, Pro Platinum, Pro Allstar Diamond) and their exclusive perks at no added tier fee.",
     },
     {
       question: "How do I pay?",
-      answer: "We invoice electronically after our initial consultation and contract agreement. Nothing is charged directly on this site.",
+      answer: "We invoice electronically after our initial consultation and contract approval. Nothing is charged directly on this website.",
+    },
+    {
+      question: "What does ongoing maintenance cover?",
+      answer: "Maintenance covers fast cloud hosting, domain upkeep, regular security updates, content revisions, and priority technical support.",
     },
   ],
 };
+
+/**
+ * Pure function to compute package tier based on selected digital solution IDs or count.
+ * @param {Array|number} selectedSolutions - Array of solution IDs or count of solutions
+ * @returns {Object} Tier information object
+ */
+export function getTier(selectedSolutions = []) {
+  const count = Array.isArray(selectedSolutions)
+    ? selectedSolutions.length
+    : typeof selectedSolutions === "number"
+    ? selectedSolutions
+    : 0;
+
+  if (count >= 7) {
+    return {
+      id: "pro-allstar-diamond",
+      name: "Pro Allstar Diamond",
+      qualifier: "Website + 7 solutions",
+      count,
+      nextTier: null,
+      neededForNext: 0,
+    };
+  }
+  if (count >= 4) {
+    return {
+      id: "pro-platinum",
+      name: "Pro Platinum",
+      qualifier: "Website + 4–6 solutions",
+      count,
+      nextTier: "Pro Allstar Diamond",
+      neededForNext: 7 - count,
+    };
+  }
+  if (count >= 2) {
+    return {
+      id: "pro-gold",
+      name: "Pro Gold",
+      qualifier: "Website + 2–3 solutions",
+      count,
+      nextTier: "Pro Platinum",
+      neededForNext: 4 - count,
+    };
+  }
+  return {
+    id: "starter",
+    name: "Starter",
+    qualifier: "Website base (0–1 solutions)",
+    count,
+    nextTier: "Pro Gold",
+    neededForNext: 2 - count,
+  };
+}

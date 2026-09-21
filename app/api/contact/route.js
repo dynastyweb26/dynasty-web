@@ -1,139 +1,138 @@
 import { NextResponse } from "next/server";
+import { siteData, getTier } from "../../../data/site";
 
-// Simple in-memory rate limiting map: ip -> list of timestamps
+// Simple in-memory rate limiting (IP -> timestamps)
 const rateLimitMap = new Map();
 
 function isRateLimited(ip) {
   const now = Date.now();
   const windowMs = 15 * 60 * 1000; // 15 minutes
-  const maxSubmissions = 5;
+  const limit = 5; // max 5 submissions per 15 minutes
 
-  const timestamps = (rateLimitMap.get(ip) || []).filter((ts) => now - ts < windowMs);
+  const timestamps = rateLimitMap.get(ip) || [];
+  const validTimestamps = timestamps.filter((ts) => now - ts < windowMs);
 
-  if (timestamps.length >= maxSubmissions) {
+  if (validTimestamps.length >= limit) {
     return true;
   }
 
-  timestamps.push(now);
-  rateLimitMap.set(ip, timestamps);
+  validTimestamps.push(now);
+  rateLimitMap.set(ip, validTimestamps);
   return false;
 }
 
-function sanitizeInput(str) {
-  if (typeof str !== "string") return "";
-  // Strip HTML tags and trim
-  return str.replace(/<[^>]*>?/gm, "").trim();
-}
-
-export async function POST(request) {
+export async function POST(req) {
   try {
-    // 1. Payload size check (< 10KB)
-    const contentLength = parseInt(request.headers.get("content-length") || "0", 10);
-    if (contentLength > 10 * 1024) {
-      return NextResponse.json({ error: "Payload too large." }, { status: 413 });
-    }
-
-    const body = await request.json();
-
-    // 2. Honeypot check
-    if (body.website || body.honeypot) {
-      // Silently drop spam submission
-      return NextResponse.json({ success: true, message: "Enquiry sent successfully." });
-    }
-
-    // 3. Rate limiting check
-    const clientIp =
-      request.headers.get("x-forwarded-for")?.split(",")[0] ||
-      request.headers.get("x-real-ip") ||
-      "unknown-ip";
-
+    // 1. Rate limiting check
+    const clientIp = req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || "127.0.0.1";
     if (isRateLimited(clientIp)) {
       return NextResponse.json(
-        { error: "Too many requests. Please try again later or email us directly." },
+        { error: "Too many enquiries sent. Please wait a few minutes before trying again." },
         { status: 429 }
       );
     }
 
-    // 4. Input sanitization & validation
-    const name = sanitizeInput(body.name);
-    const businessName = sanitizeInput(body.businessName);
-    const email = sanitizeInput(body.email);
-    const phone = sanitizeInput(body.phone);
-    const packageName = sanitizeInput(body.package);
-    const solutions = Array.isArray(body.solutions)
-      ? body.solutions.map((s) => sanitizeInput(s)).join(", ")
-      : sanitizeInput(body.solutions);
-    const message = sanitizeInput(body.message);
+    // 2. Payload size check
+    const bodyText = await req.text();
+    if (bodyText.length > 10240) { // 10KB limit
+      return NextResponse.json(
+        { error: "Payload too large." },
+        { status: 413 }
+      );
+    }
 
-    if (!name || name.length > 100) {
-      return NextResponse.json({ error: "Please enter a valid name (max 100 chars)." }, { status: 400 });
+    const body = JSON.parse(bodyText);
+    const { name, businessName, email, phone, message, solutions = [], honeypot } = body;
+
+    // 3. Honeypot check
+    if (honeypot) {
+      // Quietly succeed for spambots
+      return NextResponse.json({ success: true, message: "Enquiry received." });
+    }
+
+    // 4. Input validation
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { error: "Please fill in all required fields (Name, Email, Message)." },
+        { status: 400 }
+      );
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRegex.test(email) || email.length > 100) {
-      return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { error: "Please provide a valid email address." },
+        { status: 400 }
+      );
     }
 
-    if (!message || message.length > 2000) {
-      return NextResponse.json({ error: "Please enter a message (max 2000 chars)." }, { status: 400 });
-    }
+    // 5. Server-side tier computation
+    const computedTier = getTier(solutions);
+    const solutionNames = solutions
+      .map((id) => siteData.solutions.find((s) => s.id === id)?.name || id)
+      .join(", ") || "None selected (Website base)";
 
-    // 5. Environment variables check
+    // 6. Read EmailJS config from server env vars
     const serviceId = process.env.EMAILJS_SERVICE_ID;
     const templateId = process.env.EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.EMAILJS_PUBLIC_KEY;
-    const privateKey = process.env.EMAILJS_PRIVATE_KEY;
 
     if (!serviceId || !templateId || !publicKey) {
-      // Service unconfigured on server; return failure to trigger fallback UI
+      console.warn("EmailJS credentials not fully configured in environment.");
+      // Graceful fallback response instructing direct email
       return NextResponse.json(
-        { error: "Contact service is currently unavailable. Please email brandon@dynastyweb.co." },
+        {
+          error: "Email service currently unavailable. Please email brandon@dynastyweb.co directly.",
+          fallbackEmail: "brandon@dynastyweb.co",
+        },
         { status: 503 }
       );
     }
 
-    // 6. POST to EmailJS REST API with 10s timeout
+    // 7. Send via EmailJS REST API with timeout
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 10000);
+    const timeout = setTimeout(() => controller.abort(), 10000);
 
-    const emailjsPayload = {
-      service_id: serviceId,
-      template_id: templateId,
-      user_id: publicKey,
-      accessToken: privateKey,
-      template_params: {
-        from_name: name,
-        business_name: businessName || "N/A",
-        reply_to: email,
-        phone_number: phone || "N/A",
-        selected_package: packageName || "Not sure yet",
-        selected_solutions: solutions || "None",
-        message: message,
-      },
-    };
-
-    const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+    const emailjsRes = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(emailjsPayload),
+      headers: { "Content-Type": "application/json" },
       signal: controller.signal,
+      body: JSON.stringify({
+        service_id: serviceId,
+        template_id: templateId,
+        user_id: publicKey,
+        template_params: {
+          from_name: name,
+          from_email: email,
+          phone: phone || "Not provided",
+          business_name: businessName || "Not provided",
+          calculated_tier: computedTier.name,
+          solutions_list: solutionNames,
+          message: message,
+        },
+      }),
     });
 
-    clearTimeout(timeoutId);
+    clearTimeout(timeout);
 
-    if (!res.ok) {
+    if (!emailjsRes.ok) {
+      const errText = await emailjsRes.text();
+      console.error("EmailJS REST error:", errText);
       return NextResponse.json(
-        { error: "Unable to send enquiry. Please email brandon@dynastyweb.co directly." },
+        { error: "Failed to send email via server. Please email brandon@dynastyweb.co directly." },
         { status: 500 }
       );
     }
 
-    return NextResponse.json({ success: true, message: "Enquiry sent successfully." });
-  } catch (err) {
+    return NextResponse.json({
+      success: true,
+      message: "Enquiry submitted successfully.",
+      tier: computedTier.name,
+    });
+  } catch (error) {
+    console.error("Contact API error:", error);
     return NextResponse.json(
-      { error: "An unexpected error occurred. Please email brandon@dynastyweb.co directly." },
+      { error: "An unexpected error occurred. Please email brandon@dynastyweb.co." },
       { status: 500 }
     );
   }

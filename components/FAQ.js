@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { siteData } from "@/data/site";
+import { siteData } from "../data/site";
 
-export default function FAQ() {
+export function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (idx) => {
@@ -13,12 +13,12 @@ export default function FAQ() {
   return (
     <section className="section" id="faq">
       <div className="wrap">
-        <div className="section-head reveal">
+        <div className="section-head-split reveal">
           <div>
             <span className="eyebrow">Common Questions</span>
-            <h2>Everything you need to know before <em>starting</em>.</h2>
+            <h2 className="section-title">Everything you need to know before <em>starting</em>.</h2>
           </div>
-          <p>
+          <p className="section-subtitle">
             Got additional questions? Email us anytime at{" "}
             <a href="mailto:brandon@dynastyweb.co" className="gold-link">
               brandon@dynastyweb.co
@@ -67,3 +67,5 @@ export default function FAQ() {
     </section>
   );
 }
+
+export default FAQ;

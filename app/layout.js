@@ -1,5 +1,7 @@
 import { Fraunces, Inter } from "next/font/google";
 import Script from "next/script";
+import { Nav } from "../components/Nav";
+import { Footer } from "../components/Footer";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -79,7 +81,11 @@ export default function RootLayout({ children }) {
           src="data:text/javascript,document.documentElement.classList.add('js')"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

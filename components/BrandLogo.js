@@ -1,17 +1,18 @@
 import Image from "next/image";
 import { brandConfig } from "@/data/brand";
 
-export default function BrandLogo({ variant = "dynasty", className = "", style = {} }) {
-  const isDynasty = variant === "dynasty";
+export function BrandLogo({ type = "dynasty", variant = "dynasty", className = "", style = {}, width = 32, height = 32 }) {
+  const logoVariant = type || variant;
+  const isDynasty = logoVariant === "dynasty";
   const logoData = isDynasty ? brandConfig.dynastyLogo : brandConfig.onitLogo;
 
-  if (logoData.src) {
+  if (logoData && logoData.src) {
     return (
       <Image
         src={logoData.src}
         alt={logoData.alt}
-        width={32}
-        height={32}
+        width={width}
+        height={height}
         className={`brand-logo-img ${className}`}
         style={style}
       />
@@ -23,7 +24,7 @@ export default function BrandLogo({ variant = "dynasty", className = "", style =
     return (
       <svg
         className={`mark ${className}`}
-        style={style}
+        style={{ width, height, ...style }}
         viewBox="0 0 32 32"
         fill="none"
         aria-hidden="true"
@@ -52,7 +53,7 @@ export default function BrandLogo({ variant = "dynasty", className = "", style =
   return (
     <svg
       className={`mark-onit ${className}`}
-      style={style}
+      style={{ width, height, ...style }}
       viewBox="0 0 32 32"
       fill="none"
       aria-hidden="true"
@@ -73,3 +74,5 @@ export default function BrandLogo({ variant = "dynasty", className = "", style =
     </svg>
   );
 }
+
+export default BrandLogo;
