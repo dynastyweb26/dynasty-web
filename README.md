@@ -6,10 +6,12 @@ Founder: Brandon Fotsing Talla · [brandon@dynastyweb.co](mailto:brandon@dynasty
 
 ## Services & Packages
 
-- **Starter ($400)** — Custom website, responsive design, lead contact form, domain connection.
-- **Pro Gold ($800 + $150/mo)** — Everything in Starter, local SEO, 2 Digital Solutions.
-- **Pro Platinum ($1,500 + $250/mo)** — Featured tier, lead tracking CRM, 4 Digital Solutions, monthly support.
-- **Pro Allstar Diamond ($2,500 + $400/mo)** — Full brand refresh, all Digital Solutions, quarterly strategy.
+Our service model pairs a custom website base with à la carte Digital Solutions. Higher solution counts automatically unlock higher package tiers and free perks:
+
+- **Starter** — Custom website base, responsive design, lead contact form, domain connection.
+- **Pro Gold** — Website base + 2–3 Digital Solutions with local SEO foundation and priority revisions.
+- **Pro Platinum** — Featured tier: Website base + 4–6 Digital Solutions with live lead tracking dashboard, CRM, and monthly support.
+- **Pro Allstar Diamond** — Website base + all 7 Digital Solutions with full brand refresh, automated follow-ups, and dedicated account management.
 
 ## In-House Software
 

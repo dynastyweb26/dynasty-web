@@ -1,62 +1,78 @@
-import BrandLogo from "@/components/BrandLogo";
+import Link from "next/link";
+import BrandLogo from "../../components/BrandLogo";
 
 export const metadata = {
-  title: "Privacy Policy",
-  description: "Privacy policy for Dynasty Web enquiries and contact details.",
+  title: "Privacy Policy | Dynasty Web",
+  description: "Privacy policy and data handling commitment for Dynasty Web client enquiries.",
 };
 
 export default function PrivacyPage() {
   return (
-    <main className="wrap" style={{ padding: "80px 22px 120px", maxWidth: "800px" }}>
-      <div style={{ marginBottom: "32px" }}>
-        <a href="/" className="brand" style={{ marginBottom: "24px", display: "inline-flex" }}>
-          <BrandLogo variant="dynasty" />
-          <span>Dynasty Web</span>
-        </a>
-        <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 400, marginTop: "16px" }}>
-          Privacy Policy
-        </h1>
-        <p style={{ color: "var(--ink-soft)", fontSize: "15px", marginTop: "8px" }}>
-          Last updated: {new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" })}
-        </p>
+    <main className="wrap section page-hero-section">
+      <div className="eyebrow">
+        <span>Legal & Transparency</span>
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "28px", lineHeight: "1.7", color: "var(--ink-2)" }}>
+      <h1 className="page-title">
+        Privacy <em>Policy</em> & Data Commitment.
+      </h1>
+
+      <p className="page-subtitle" style={{ marginBottom: "32px" }}>
+        We respect the privacy of every business owner who reaches out to us. Here is exactly how we handle your data.
+      </p>
+
+      <div
+        style={{
+          background: "var(--card)",
+          border: "1px solid var(--line)",
+          borderRadius: "var(--radius)",
+          padding: "36px",
+          maxWidth: "760px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "24px",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <BrandLogo type="dynasty" width={28} height={28} />
+          <span style={{ fontFamily: "var(--font-display)", fontSize: "18px" }}>Dynasty Web Data Promise</span>
+        </div>
+
         <section>
-          <h2 style={{ fontSize: "22px", color: "var(--ink)", marginBottom: "10px" }}>Information We Collect</h2>
-          <p>
-            When you submit an enquiry through our contact form, we collect the information you provide, including your name, business name, email address, phone number, and project details.
+          <h3 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>1. What Information We Collect</h3>
+          <p style={{ color: "var(--ink-2)", lineHeight: "1.6", fontSize: "15px" }}>
+            When you submit our contact form, we collect your name, business name, email address, phone number, and any project details you provide.
           </p>
         </section>
 
         <section>
-          <h2 style={{ fontSize: "22px", color: "var(--ink)", marginBottom: "10px" }}>How We Use Your Information</h2>
-          <p>
-            Information collected via the enquiry form is used solely to evaluate your project requirements, communicate directly with you, and formulate digital solution estimates.
+          <h3 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>2. How We Use Your Data</h3>
+          <p style={{ color: "var(--ink-2)", lineHeight: "1.6", fontSize: "15px" }}>
+            Your information is strictly used to evaluate your project request, prepare custom quote proposals, and communicate with you directly regarding our digital solutions services.
           </p>
         </section>
 
         <section>
-          <h2 style={{ fontSize: "22px", color: "var(--ink)", marginBottom: "10px" }}>Data Sharing & Third Parties</h2>
-          <p>
-            We do not sell, rent, or trade your personal information. Enquiry form data is processed securely through our email service provider (EmailJS) exclusively for communication purposes.
+          <h3 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>3. No Third-Party Sales</h3>
+          <p style={{ color: "var(--ink-2)", lineHeight: "1.6", fontSize: "15px" }}>
+            We never sell, rent, or trade your contact details to third-party advertisers or data brokers.
           </p>
         </section>
 
         <section>
-          <h2 style={{ fontSize: "22px", color: "var(--ink)", marginBottom: "10px" }}>Data Retention & Removal</h2>
-          <p>
-            You may request the removal of your contact information and enquiry history from our records at any time by emailing us at{" "}
-            <a href="mailto:brandon@dynastyweb.co" style={{ color: "var(--gold)", fontWeight: 600 }}>
+          <h3 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>4. Contact Us</h3>
+          <p style={{ color: "var(--ink-2)", lineHeight: "1.6", fontSize: "15px" }}>
+            If you have any questions regarding your data, please contact Brandon directly at{" "}
+            <a href="mailto:brandon@dynastyweb.co" style={{ color: "var(--gold)", textDecoration: "underline" }}>
               brandon@dynastyweb.co
             </a>.
           </p>
         </section>
 
-        <div style={{ marginTop: "40px", paddingTop: "24px", borderTop: "1px solid var(--line)" }}>
-          <a href="/" style={{ color: "var(--gold)", fontWeight: 600 }}>
-            ← Back to Dynasty Web
-          </a>
+        <div style={{ marginTop: "12px" }}>
+          <Link href="/" className="btn btn-ghost">
+            ← Return to Home
+          </Link>
         </div>
       </div>
     </main>

@@ -11,12 +11,12 @@ export function WorkSlideshow({ title, url = "", screenshots = [], isBuiltInHous
   const touchStartXRef = useRef(null);
   const slideshowRef = useRef(null);
 
-  const images = screenshots && screenshots.length > 0 ? screenshots : ["placeholder"];
+  const rawImages = screenshots && screenshots.length > 0 ? screenshots : ["placeholder"];
   const displayDomain = url ? url.replace(/^https?:\/\//, "") : "dynastyweb.co";
 
   // Autoplay timer when in view, not hovered/focused, and multiple images
   useEffect(() => {
-    if (images.length <= 1 || isPaused) return;
+    if (rawImages.length <= 1 || isPaused) return;
 
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) return;
@@ -30,7 +30,7 @@ export function WorkSlideshow({ title, url = "", screenshots = [], isBuiltInHous
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               timer = setInterval(() => {
-                setCurrentIndex((prev) => (prev + 1) % images.length);
+                setCurrentIndex((prev) => (prev + 1) % rawImages.length);
               }, 4500);
             } else {
               if (timer) clearInterval(timer);
@@ -46,14 +46,14 @@ export function WorkSlideshow({ title, url = "", screenshots = [], isBuiltInHous
       if (timer) clearInterval(timer);
       if (observer) observer.disconnect();
     };
-  }, [images.length, isPaused]);
+  }, [rawImages.length, isPaused]);
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
+    setCurrentIndex((prev) => (prev + 1) % rawImages.length);
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    setCurrentIndex((prev) => (prev - 1 + rawImages.length) % rawImages.length);
   };
 
   const handleTouchStart = (e) => {
@@ -109,8 +109,11 @@ export function WorkSlideshow({ title, url = "", screenshots = [], isBuiltInHous
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        {images.map((src, idx) => {
+        {rawImages.map((item, idx) => {
+          const src = typeof item === "string" ? item : item.src;
+          const altText = typeof item === "string" ? `${title} screenshot ${idx + 1}` : item.alt;
           const isError = imageError[idx] || src === "placeholder";
+
           return (
             <div
               key={idx}
@@ -134,7 +137,7 @@ export function WorkSlideshow({ title, url = "", screenshots = [], isBuiltInHous
               ) : (
                 <Image
                   src={src}
-                  alt={`${title} screenshot ${idx + 1}`}
+                  alt={altText}
                   fill
                   style={{ objectFit: "cover", objectPosition: "top" }}
                   onError={() => setImageError((prev) => ({ ...prev, [idx]: true }))}
@@ -146,7 +149,7 @@ export function WorkSlideshow({ title, url = "", screenshots = [], isBuiltInHous
           );
         })}
 
-        {images.length > 1 && (
+        {rawImages.length > 1 && (
           <>
             <button
               type="button"
@@ -169,15 +172,15 @@ export function WorkSlideshow({ title, url = "", screenshots = [], isBuiltInHous
       </div>
 
       {/* DOTS BELOW VIEWPORT */}
-      {images.length > 1 && (
+      {rawImages.length > 1 && (
         <div className="slide-dots-outer">
-          {images.map((_, idx) => (
+          {rawImages.map((_, idx) => (
             <button
               key={idx}
               type="button"
               className={`dot-nav ${idx === currentIndex ? "active" : ""}`}
               onClick={(e) => { e.stopPropagation(); setCurrentIndex(idx); }}
-              aria-label={`Screenshot ${idx + 1} of ${images.length}`}
+              aria-label={`Screenshot ${idx + 1} of ${rawImages.length}`}
             />
           ))}
         </div>

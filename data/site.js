@@ -115,7 +115,11 @@ export const siteData = {
       name: "Cyril Handyman & Door LLC",
       industry: "Handyman & Door Services", // PLACEHOLDER
       url: "https://crazydoorhandyman.com",
-      screenshots: ["/work/cyril/1.png", "/work/cyril/2.png"],
+      screenshots: [
+        { src: "/work/cyril/1.webp", alt: "Cyril Handyman homepage hero section showing custom door service callouts" },
+        { src: "/work/cyril/2.webp", alt: "Cyril Handyman project showcase gallery displaying door repairs" },
+        { src: "/work/cyril/3.webp", alt: "Cyril Handyman service request form and local contact section" },
+      ],
       shortDescription: "Custom web platform built to showcase local door installations and handyman service requests.", // PLACEHOLDER
       caseStudy: {
         problem: "Cyril needed a professional online presence to stop relying solely on word-of-mouth and represent their premium door work.", // PLACEHOLDER
@@ -128,7 +132,11 @@ export const siteData = {
       name: "Vydale T.C. Projects",
       industry: "Trade & Construction Projects", // PLACEHOLDER
       url: "https://vydaletcprojects.com",
-      screenshots: ["/work/vydale/1.png", "/work/vydale/2.png"],
+      screenshots: [
+        { src: "/work/vydale/1.webp", alt: "Vydale T.C. Projects hero header showing heavy trade capability statement" },
+        { src: "/work/vydale/2.webp", alt: "Vydale T.C. Projects construction portfolio grid with project details" },
+        { src: "/work/vydale/3.webp", alt: "Vydale T.C. Projects direct estimate intake form and company credentials" },
+      ],
       shortDescription: "High-impact web presence highlighting heavy construction and local contract achievements.", // PLACEHOLDER
       caseStudy: {
         problem: "Vydale T.C. Projects required a structured, clean portfolio to present capability statements to larger contractors.", // PLACEHOLDER
@@ -141,7 +149,9 @@ export const siteData = {
       name: "On It",
       industry: "Voice-Powered Invoicing Software",
       url: "https://onit.dynastyweb.co",
-      screenshots: ["/work/onit/1.png"],
+      screenshots: [
+        { src: "/work/onit/1.png", alt: "On It software interface showing voice invoice creation screen" },
+      ],
       builtInHouse: true,
       shortDescription: "Voice-powered field invoicing for tradespeople. Proof that Dynasty Web ships real software, not just websites.",
       caseStudy: {

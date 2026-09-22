@@ -1,10 +1,16 @@
 import Image from "next/image";
-import { brandConfig } from "@/data/brand";
+import { brandConfig } from "../data/brand";
 
-export function BrandLogo({ type = "dynasty", variant = "dynasty", className = "", style = {}, width = 32, height = 32 }) {
+export function BrandLogo({ type = "dynasty", variant = "dynasty", className = "", style = {}, width = 32, height = 32, size = "small" }) {
   const logoVariant = type || variant;
   const isDynasty = logoVariant === "dynasty";
-  const logoData = isDynasty ? brandConfig.dynastyLogo : brandConfig.onitLogo;
+
+  let logoData = null;
+  if (isDynasty) {
+    logoData = size === "large" ? brandConfig.dynastyLogoLarge : brandConfig.dynastyLogoSmall;
+  } else {
+    logoData = brandConfig.onitLogo;
+  }
 
   if (logoData && logoData.src) {
     return (
