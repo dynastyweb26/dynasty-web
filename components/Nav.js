@@ -23,7 +23,6 @@ export function Nav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change or ESC key
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
@@ -47,7 +46,8 @@ export function Nav() {
     <header className={`nav-header ${scrolled ? "scrolled" : ""}`}>
       <div className="wrap nav-wrap">
         <Link href="/" className="nav-logo-link" aria-label="Dynasty Web Home">
-          <BrandLogo type="dynasty" width={110} height={28} />
+          <BrandLogo type="dynasty" width={32} height={32} />
+          <span className="nav-brand-wordmark">Dynasty Web</span>
         </Link>
 
         {/* DESKTOP NAV */}

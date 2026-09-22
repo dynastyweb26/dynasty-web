@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { siteData } from "../data/site";
 import { PastWork } from "./PastWork";
+import { OnItSpotlight } from "./OnItSpotlight";
 import { Process } from "./Process";
 
 export function HomeClient() {
@@ -158,8 +159,11 @@ export function HomeClient() {
         </div>
       </section>
 
-      {/* COMBINED CASE STUDY WORK GRID */}
+      {/* RECENT WORK SECTION */}
       <PastWork />
+
+      {/* BUILT BY DYNASTY WEB SECTION */}
+      <OnItSpotlight />
 
       {/* 4-STEP PROCESS */}
       <Process />

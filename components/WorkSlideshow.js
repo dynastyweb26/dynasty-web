@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { BrandLogo } from "./BrandLogo";
 
-export function WorkSlideshow({ title, screenshots = [], isBuiltInHouse = false }) {
+export function WorkSlideshow({ title, url = "", screenshots = [], isBuiltInHouse = false }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageError, setImageError] = useState({});
   const [isPaused, setIsPaused] = useState(false);
@@ -12,12 +12,12 @@ export function WorkSlideshow({ title, screenshots = [], isBuiltInHouse = false 
   const slideshowRef = useRef(null);
 
   const images = screenshots && screenshots.length > 0 ? screenshots : ["placeholder"];
+  const displayDomain = url ? url.replace(/^https?:\/\//, "") : "dynastyweb.co";
 
   // Autoplay timer when in view, not hovered/focused, and multiple images
   useEffect(() => {
     if (images.length <= 1 || isPaused) return;
 
-    // Check prefers-reduced-motion
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) return;
 
@@ -87,6 +87,7 @@ export function WorkSlideshow({ title, screenshots = [], isBuiltInHouse = false 
       tabIndex={0}
       aria-label={`${title} screenshot slideshow`}
     >
+      {/* BROWSER CHROME HEADER */}
       <div className="browser-header">
         <div className="browser-dots" aria-hidden="true">
           <span className="dot dot-red"></span>
@@ -94,14 +95,15 @@ export function WorkSlideshow({ title, screenshots = [], isBuiltInHouse = false 
           <span className="dot dot-green"></span>
         </div>
         <div className="browser-url">
-          <svg className="lock-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg className="lock-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
             <path d="M7 11V7a5 5 0 0110 0v4" />
           </svg>
-          <span>{title.toLowerCase().replace(/[^a-z0-9]/g, "")}.dynastyweb.co</span>
+          <span>{displayDomain}</span>
         </div>
       </div>
 
+      {/* VIEWPORT & SLIDES */}
       <div
         className="slideshow-viewport"
         onTouchStart={handleTouchStart}
@@ -119,9 +121,9 @@ export function WorkSlideshow({ title, screenshots = [], isBuiltInHouse = false 
                 <div className="slide-placeholder">
                   <div className="placeholder-watermark">
                     {isBuiltInHouse ? (
-                      <BrandLogo type="onit" width={72} height={72} />
+                      <BrandLogo type="onit" width={64} height={64} />
                     ) : (
-                      <BrandLogo type="dynasty" width={80} height={40} />
+                      <BrandLogo type="dynasty" width={72} height={36} />
                     )}
                     <p className="placeholder-title">{title}</p>
                     <span className="placeholder-badge">
@@ -150,7 +152,7 @@ export function WorkSlideshow({ title, screenshots = [], isBuiltInHouse = false 
               type="button"
               className="slide-arrow prev"
               onClick={(e) => { e.stopPropagation(); handlePrev(); }}
-              aria-label="Previous slide"
+              aria-label="Previous screenshot"
             >
               ‹
             </button>
@@ -158,24 +160,28 @@ export function WorkSlideshow({ title, screenshots = [], isBuiltInHouse = false 
               type="button"
               className="slide-arrow next"
               onClick={(e) => { e.stopPropagation(); handleNext(); }}
-              aria-label="Next slide"
+              aria-label="Next screenshot"
             >
               ›
             </button>
-            <div className="slide-dots">
-              {images.map((_, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  className={`dot-nav ${idx === currentIndex ? "active" : ""}`}
-                  onClick={(e) => { e.stopPropagation(); setCurrentIndex(idx); }}
-                  aria-label={`Go to slide ${idx + 1}`}
-                />
-              ))}
-            </div>
           </>
         )}
       </div>
+
+      {/* DOTS BELOW VIEWPORT */}
+      {images.length > 1 && (
+        <div className="slide-dots-outer">
+          {images.map((_, idx) => (
+            <button
+              key={idx}
+              type="button"
+              className={`dot-nav ${idx === currentIndex ? "active" : ""}`}
+              onClick={(e) => { e.stopPropagation(); setCurrentIndex(idx); }}
+              aria-label={`Screenshot ${idx + 1} of ${images.length}`}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

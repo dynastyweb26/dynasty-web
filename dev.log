@@ -1,0 +1,101 @@
+
+> dynasty-web-site@1.0.0 dev
+> next dev -p 3001
+
+   ▲ Next.js 15.5.22
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.0.2:3001
+
+ ✓ Starting...
+ ✓ Ready in 2.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 2.9s (703 modules)
+ HEAD / 200 in 4021ms
+ GET / 200 in 699ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1091ms (708 modules)
+ GET /work/cyril/1.png 404 in 1854ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/1.png received null
+ GET /work/vydale/1.png 404 in 1876ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/1.png received null
+ GET /work/onit/1.png 404 in 1840ms
+ ⨯ The requested resource isn't a valid image for /work/onit/1.png received null
+ GET /work/cyril/2.png 404 in 1090ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/2.png received null
+ GET /work/cyril/1.png 404 in 501ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/1.png received null
+ GET /work/cyril/2.png 404 in 512ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/2.png received null
+ GET /work/vydale/1.png 404 in 542ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/1.png received null
+ GET /work/onit/1.png 404 in 556ms
+ ⨯ The requested resource isn't a valid image for /work/onit/1.png received null
+ ✓ Compiled /on-it in 435ms (713 modules)
+ GET /on-it 200 in 907ms
+ GET /work/cyril/1.png 404 in 124ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/1.png received null
+ GET / 200 in 357ms
+ GET /work/vydale/1.png 404 in 224ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/1.png received null
+ GET /work/onit/1.png 404 in 238ms
+ ⨯ The requested resource isn't a valid image for /work/onit/1.png received null
+ GET /work/cyril/2.png 404 in 200ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/2.png received null
+ GET /work/vydale/2.png 404 in 210ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/2.png received null
+ GET /work/cyril/1.png 404 in 439ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/1.png received null
+ GET /work/cyril/2.png 404 in 450ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/2.png received null
+ GET /work/vydale/1.png 404 in 465ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/1.png received null
+ GET /work/vydale/2.png 404 in 483ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/2.png received null
+ GET /work/onit/1.png 404 in 500ms
+ ⨯ The requested resource isn't a valid image for /work/onit/1.png received null
+ GET /on-it 200 in 148ms
+ GET /work/cyril/1.png 404 in 101ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/1.png received null
+ GET /work/vydale/1.png 404 in 130ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/1.png received null
+ GET /work/onit/1.png 404 in 186ms
+ ⨯ The requested resource isn't a valid image for /work/onit/1.png received null
+ GET / 200 in 476ms
+ GET /work/cyril/2.png 404 in 169ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/2.png received null
+ GET /work/vydale/2.png 404 in 173ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/2.png received null
+ GET /work/cyril/1.png 404 in 442ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/1.png received null
+ GET /work/cyril/2.png 404 in 455ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/2.png received null
+ GET /work/vydale/1.png 404 in 467ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/1.png received null
+ GET /work/vydale/2.png 404 in 472ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/2.png received null
+ GET /work/onit/1.png 404 in 484ms
+ ⨯ The requested resource isn't a valid image for /work/onit/1.png received null
+ GET /on-it 200 in 134ms
+ GET /work/cyril/1.png 404 in 149ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/1.png received null
+ GET /work/vydale/1.png 404 in 178ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/1.png received null
+ GET / 200 in 366ms
+ GET /work/onit/1.png 404 in 112ms
+ ⨯ The requested resource isn't a valid image for /work/onit/1.png received null
+ GET /work/cyril/2.png 404 in 102ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/2.png received null
+ GET /work/vydale/2.png 404 in 160ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/2.png received null
+ GET /work/cyril/2.png 404 in 448ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/2.png received null
+ GET /work/vydale/1.png 404 in 457ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/1.png received null
+ GET /work/cyril/1.png 404 in 465ms
+ ⨯ The requested resource isn't a valid image for /work/cyril/1.png received null
+ GET /work/vydale/2.png 404 in 474ms
+ ⨯ The requested resource isn't a valid image for /work/vydale/2.png received null
+ GET /work/onit/1.png 404 in 487ms
+ ⨯ The requested resource isn't a valid image for /work/onit/1.png received null
+ GET /on-it 200 in 114ms
+ ✓ Compiled in 1016ms (709 modules)

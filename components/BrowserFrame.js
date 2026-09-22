@@ -12,6 +12,7 @@ export default function BrowserFrame({
   const screenshotData = brandConfig.workScreenshots[screenshotKey];
   const src = screenshotData?.src;
   const alt = screenshotData?.alt || title || "Client work screenshot";
+  const displayUrl = url ? url.replace(/^https?:\/\//, "") : "dynastyweb.co";
 
   return (
     <div className={`browser-frame ${interactive ? "is-interactive" : ""} ${className}`}>
@@ -33,7 +34,7 @@ export default function BrowserFrame({
             <rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
             <path d="M5 7V4.5a3 3 0 0 1 6 0V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
-          <span className="address-text">{url ? url.replace(/^https?:\/\//, "") : "dynastyweb.co"}</span>
+          <span className="address-text">{displayUrl}</span>
         </div>
       </div>
 
@@ -49,12 +50,11 @@ export default function BrowserFrame({
             />
           </div>
         ) : (
-          /* Brand-colored SVG/CSS fallback screenshot wireframe */
           <div className="browser-placeholder" aria-label={`Preview placeholder for ${title}`}>
             <div className="placeholder-hero">
               <div className="ph-badge" />
               <div className="ph-title">{title}</div>
-              <div className="ph-subtitle">{url}</div>
+              <div className="ph-subtitle">{displayUrl}</div>
               <div className="ph-btn-group">
                 <div className="ph-btn primary" />
                 <div className="ph-btn secondary" />
