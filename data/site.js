@@ -113,35 +113,35 @@ export const siteData = {
     {
       id: "cyril",
       name: "Cyril Handyman & Door LLC",
-      industry: "Handyman & Door Services", // PLACEHOLDER
+      industry: "Handyman & Door Services",
       url: "https://crazydoorhandyman.com",
       screenshots: [
-        { src: "/work/cyril/1.webp", alt: "Cyril Handyman homepage hero section showing custom door service callouts" },
-        { src: "/work/cyril/2.webp", alt: "Cyril Handyman project showcase gallery displaying door repairs" },
-        { src: "/work/cyril/3.webp", alt: "Cyril Handyman service request form and local contact section" },
+        { src: "/work/cyril/1.webp", alt: "Cyril Handyman & Door homepage with hero headline and quote request form" },
+        { src: "/work/cyril/2.webp", alt: "Cyril Handyman & Door services section listing garage doors, media walls, kitchen renovation, and more" },
+        { src: "/work/cyril/3.webp", alt: "Cyril Handyman & Door gallery of completed garage door, media wall, and kitchen projects" },
       ],
-      shortDescription: "Custom web platform built to showcase local door installations and handyman service requests.", // PLACEHOLDER
+      shortDescription: "Case study coming soon.",
       caseStudy: {
-        problem: "Cyril needed a professional online presence to stop relying solely on word-of-mouth and represent their premium door work.", // PLACEHOLDER
-        whatWeBuilt: "Designed a fast, responsive site with project galleries, instant estimate request forms, and local SEO structure.", // PLACEHOLDER
-        result: "Increased direct online enquiries and established a clear, credible brand for higher-value commercial and residential jobs.", // PLACEHOLDER
+        problem: "Case study coming soon.",
+        whatWeBuilt: "Case study coming soon.",
+        result: "Case study coming soon.",
       },
     },
     {
       id: "vydale",
       name: "Vydale T.C. Projects",
-      industry: "Trade & Construction Projects", // PLACEHOLDER
+      industry: "Speaker, Author & Youth Empowerment",
       url: "https://vydaletcprojects.com",
       screenshots: [
-        { src: "/work/vydale/1.webp", alt: "Vydale T.C. Projects hero header showing heavy trade capability statement" },
-        { src: "/work/vydale/2.webp", alt: "Vydale T.C. Projects construction portfolio grid with project details" },
-        { src: "/work/vydale/3.webp", alt: "Vydale T.C. Projects direct estimate intake form and company credentials" },
+        { src: "/work/vydale/1.webp", alt: "Vydale T.C. Projects homepage hero introducing Vydale as a speaker and author, with impact stats" },
+        { src: "/work/vydale/2.webp", alt: "Vydale T.C. Projects founder section introducing Vydale Mache Fotsing and her award nominations" },
+        { src: "/work/vydale/3.webp", alt: "Vydale T.C. Projects photo gallery of community events and speaking engagements" },
       ],
-      shortDescription: "High-impact web presence highlighting heavy construction and local contract achievements.", // PLACEHOLDER
+      shortDescription: "Case study coming soon.",
       caseStudy: {
-        problem: "Vydale T.C. Projects required a structured, clean portfolio to present capability statements to larger contractors.", // PLACEHOLDER
-        whatWeBuilt: "Crafted a mobile-first editorial portfolio with direct lead routing and structured project showcases.", // PLACEHOLDER
-        result: "Streamlined bidding communication and provided client proof during contract pitches.", // PLACEHOLDER
+        problem: "Case study coming soon.",
+        whatWeBuilt: "Case study coming soon.",
+        result: "Case study coming soon.",
       },
     },
     {
@@ -149,15 +149,13 @@ export const siteData = {
       name: "On It",
       industry: "Voice-Powered Invoicing Software",
       url: "https://onit.dynastyweb.co",
-      screenshots: [
-        { src: "/work/onit/1.png", alt: "On It software interface showing voice invoice creation screen" },
-      ],
+      screenshots: [],
       builtInHouse: true,
       shortDescription: "Voice-powered field invoicing for tradespeople. Proof that Dynasty Web ships real software, not just websites.",
       caseStudy: {
         problem: "Tradespeople lose hours typing out invoices after long days on job sites.",
-        whatWeBuilt: "Created an instant voice-to-invoice web software using speech recognition and instant payment links.",
-        result: "Enables field workers to invoice and get paid before leaving the client driveway.",
+        whatWeBuilt: "Created voice-to-invoice web software so field workers can speak the job and send a professional invoice.",
+        result: "Enables field workers to invoice before leaving the client driveway.",
       },
     },
   ],
