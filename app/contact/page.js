@@ -2,6 +2,7 @@
 
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { siteData, getTier } from "../../data/site";
 import { FAQ } from "../../components/FAQ";
 
@@ -93,9 +94,9 @@ function ContactFormInner() {
           Select your solutions below. Your package tier calculates automatically based on your requirements.
         </p>
         <div className="faq-jump-row">
-          <a href="#faq" className="btn btn-ghost btn-sm">
+          <Link href="/contact#faq" className="btn btn-ghost btn-sm">
             View FAQs ↓
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -109,7 +110,7 @@ function ContactFormInner() {
               onChange={handleChange}
               style={{ display: "none" }}
               tabIndex={-1}
-              autocomplete="off"
+              autoComplete="off"
             />
 
             <div className="computed-tier-banner">

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { brandConfig } from "../data/brand";
 
-export function BrandLogo({ type = "dynasty", variant = "dynasty", className = "", style = {}, width = 32, height = 32, size = "small" }) {
+export function BrandLogo({ type = "dynasty", variant = "dynasty", className = "", style = {}, width, height, size = "small" }) {
   const logoVariant = type || variant;
   const isDynasty = logoVariant === "dynasty";
 
@@ -12,15 +12,19 @@ export function BrandLogo({ type = "dynasty", variant = "dynasty", className = "
     logoData = brandConfig.onitLogo;
   }
 
+  // Preserve native 682x745 portrait aspect ratio for Dynasty Web logo if explicit width/height not provided
+  const defaultWidth = width || (size === "large" ? 42 : 32);
+  const defaultHeight = height || Math.round(defaultWidth * (745 / 682));
+
   if (logoData && logoData.src) {
     return (
       <Image
         src={logoData.src}
         alt={logoData.alt}
-        width={width}
-        height={height}
+        width={defaultWidth}
+        height={defaultHeight}
         className={`brand-logo-img ${className}`}
-        style={style}
+        style={{ objectFit: "contain", ...style }}
       />
     );
   }
@@ -30,7 +34,7 @@ export function BrandLogo({ type = "dynasty", variant = "dynasty", className = "
     return (
       <svg
         className={`mark ${className}`}
-        style={{ width, height, ...style }}
+        style={{ width: defaultWidth, height: defaultHeight, ...style }}
         viewBox="0 0 32 32"
         fill="none"
         aria-hidden="true"
@@ -59,7 +63,7 @@ export function BrandLogo({ type = "dynasty", variant = "dynasty", className = "
   return (
     <svg
       className={`mark-onit ${className}`}
-      style={{ width, height, ...style }}
+      style={{ width: defaultWidth, height: defaultHeight, ...style }}
       viewBox="0 0 32 32"
       fill="none"
       aria-hidden="true"
