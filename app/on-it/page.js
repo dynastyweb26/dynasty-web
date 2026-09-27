@@ -1,4 +1,5 @@
 import Image from "next/image";
+import OnItPromoVideo from "../../components/OnItPromoVideo";
 
 export const metadata = {
   title: "On It: Fast invoicing for home service pros | Dynasty Web",
@@ -112,7 +113,28 @@ export default function OnItPage() {
         </div>
       </section>
 
-      {/* 3. THREE BENEFIT LINES */}
+      {/* 3. PROMO VIDEO */}
+      <section className="onit-video-section">
+        <div className="wrap onit-video-grid">
+          <div className="onit-video-copy">
+            <div className="eyebrow">See it work</div>
+            <h2 className="onit-video-title">
+              From the job to <em>paid</em>.
+            </h2>
+            <p className="onit-video-desc">
+              Say the job, send the invoice, get paid. That&apos;s the whole app.
+            </p>
+            <a href="https://onit.dynastyweb.co" className="btn btn-primary onit-primary-btn">
+              Open On It
+            </a>
+          </div>
+          <div className="onit-video-frame">
+            <OnItPromoVideo />
+          </div>
+        </div>
+      </section>
+
+      {/* 4. THREE BENEFIT LINES */}
       <section className="onit-benefits-section">
         <div className="wrap">
           <div className="onit-benefits-grid">
@@ -132,7 +154,7 @@ export default function OnItPage() {
         </div>
       </section>
 
-      {/* 4. CLOSING CTA */}
+      {/* 5. CLOSING CTA */}
       <section className="onit-closing-section">
         <div className="wrap onit-closing-wrap">
           <h2 className="onit-closing-title">Your next invoice takes a minute.</h2>
