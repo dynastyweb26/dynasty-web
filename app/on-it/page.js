@@ -8,11 +8,11 @@ export const metadata = {
 
 export default function OnItPage() {
   const stripScreenshots = [
-    { src: "/onit/02-invoices.png", alt: "On It invoices list screen" },
-    { src: "/onit/03-books.png", alt: "On It books and accounting overview screen" },
-    { src: "/onit/04-expenses.png", alt: "On It expense tracking screen" },
-    { src: "/onit/05-invoice-style.png", alt: "On It customizable invoice preview screen" },
-    { src: "/onit/06-settings.png", alt: "On It application settings screen" },
+    { src: "/onit/02-invoices.png", w: 883, alt: "On It invoices list screen" },
+    { src: "/onit/03-books.png", w: 911, alt: "On It books overview with money kept this year" },
+    { src: "/onit/04-expenses.png", w: 797, alt: "On It expenses logged from receipt photos" },
+    { src: "/onit/05-invoice-style.png", w: 900, alt: "On It invoice style and color picker" },
+    { src: "/onit/06-settings.png", w: 879, alt: "On It business settings and payment connections" },
   ];
 
   return (
@@ -101,8 +101,9 @@ export default function OnItPage() {
               <Image
                 src={item.src}
                 alt={item.alt}
-                width={280}
-                height={560}
+                width={item.w}
+                height={1600}
+                sizes="260px"
                 loading="lazy"
                 className="onit-strip-img"
               />

@@ -1871,6 +1871,8 @@ em::after {
 .onit-strip-section {
   padding: 60px 0;
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 22px;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
@@ -1889,12 +1891,19 @@ em::after {
 
 .onit-strip-item {
   flex: none;
-  width: 260px;
+  height: 470px;
+  scroll-snap-align: center;
+}
+
+@media (max-width: 600px) {
+  .onit-strip-item {
+    height: 400px;
+  }
 }
 
 .onit-strip-img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   display: block;
   filter: drop-shadow(0 14px 28px rgba(36, 29, 21, 0.12));
 }
