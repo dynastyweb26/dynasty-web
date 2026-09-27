@@ -1,4 +1,5 @@
 import Image from "next/image";
+import OnItPromoVideo from "../../components/OnItPromoVideo";
 
 export const metadata = {
   title: "On It: Fast invoicing for home service pros | Dynasty Web",
@@ -8,11 +9,12 @@ export const metadata = {
 
 export default function OnItPage() {
   const stripScreenshots = [
-    { src: "/onit/02-invoices.png", alt: "On It invoices list screen" },
-    { src: "/onit/03-books.png", alt: "On It books and accounting overview screen" },
-    { src: "/onit/04-expenses.png", alt: "On It expense tracking screen" },
-    { src: "/onit/05-invoice-style.png", alt: "On It customizable invoice preview screen" },
-    { src: "/onit/06-settings.png", alt: "On It application settings screen" },
+    { src: "/onit/01-chat.png", w: 883, alt: "On It chat screen turning a spoken job into an invoice" },
+    { src: "/onit/02-invoices.png", w: 883, alt: "On It invoices list screen" },
+    { src: "/onit/03-books.png", w: 911, alt: "On It books overview with money kept this year" },
+    { src: "/onit/04-expenses.png", w: 797, alt: "On It expenses logged from receipt photos" },
+    { src: "/onit/05-invoice-style.png", w: 900, alt: "On It invoice style and color picker" },
+    { src: "/onit/06-settings.png", w: 879, alt: "On It business settings and payment connections" },
   ];
 
   return (
@@ -27,11 +29,13 @@ export default function OnItPage() {
             rel="noopener noreferrer"
             className="qr-link"
           >
-            <div className="qr-code-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h3v3h-3zM18 18h3v3h-3zM18 15h3v3h-3z" />
-              </svg>
-            </div>
+            <Image
+              src="/onit/install-qr.png"
+              alt=""
+              width={88}
+              height={88}
+              className="qr-code-img"
+            />
             <span className="qr-caption">Scan to install</span>
           </a>
         </div>
@@ -50,7 +54,9 @@ export default function OnItPage() {
           </div>
 
           {/* HEADLINE & SUBLINE */}
-          <h1 className="onit-hero-headline">Fast Invoice. Fast Money.</h1>
+          <h1 className="onit-hero-headline">
+            Fast Invoice. <em>Fast Money.</em>
+          </h1>
 
           <p className="onit-hero-subline">
             Say the job. Send the invoice. Get paid before you leave the driveway.
@@ -60,7 +66,7 @@ export default function OnItPage() {
           <div className="onit-hero-cta-block">
             <a
               href="https://onit.dynastyweb.co"
-              className="btn btn-gold-bright onit-primary-btn"
+              className="btn btn-primary onit-primary-btn"
             >
               Open On It
             </a>
@@ -72,18 +78,9 @@ export default function OnItPage() {
             </a>
           </div>
 
-          {/* HERO DEVICE SHOWCASE */}
-          <div className="onit-hero-device-container">
-            <div className="onit-device-wrapper">
-              <Image
-                src="/onit/01-chat.png"
-                alt="On It voice chat invoice creation interface"
-                width={360}
-                height={720}
-                priority
-                className="onit-hero-device-img"
-              />
-            </div>
+          {/* HERO VIDEO */}
+          <div className="onit-hero-video">
+            <OnItPromoVideo />
           </div>
         </div>
       </section>
@@ -96,8 +93,9 @@ export default function OnItPage() {
               <Image
                 src={item.src}
                 alt={item.alt}
-                width={280}
-                height={560}
+                width={item.w}
+                height={1600}
+                sizes="260px"
                 loading="lazy"
                 className="onit-strip-img"
               />
@@ -132,7 +130,7 @@ export default function OnItPage() {
           <h2 className="onit-closing-title">Your next invoice takes a minute.</h2>
           <a
             href="https://onit.dynastyweb.co"
-            className="btn btn-gold-bright onit-primary-btn"
+            className="btn btn-primary onit-primary-btn"
           >
             Open On It
           </a>
