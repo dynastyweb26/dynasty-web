@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { OnItVideoSection } from "../../components/OnItVideoSection";
 
 export const metadata = {
   title: "On It: Fast invoicing for home service pros | Dynasty Web",
@@ -106,7 +107,10 @@ export default function OnItPage() {
         </div>
       </section>
 
-      {/* 3. THREE BENEFIT LINES */}
+      {/* 3. PROMO VIDEO SECTION */}
+      <OnItVideoSection />
+
+      {/* 4. THREE BENEFIT LINES */}
       <section className="onit-benefits-section">
         <div className="wrap">
           <div className="onit-benefits-grid">
@@ -126,7 +130,7 @@ export default function OnItPage() {
         </div>
       </section>
 
-      {/* 4. CLOSING CTA */}
+      {/* 5. CLOSING CTA */}
       <section className="onit-closing-section">
         <div className="wrap onit-closing-wrap">
           <h2 className="onit-closing-title">Your next invoice takes a minute.</h2>
