@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { WorkSlideshow } from "./WorkSlideshow";
 import { BrandLogo } from "./BrandLogo";
+import Image from "next/image";
 
 export function WorkCard({ item }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -11,12 +12,32 @@ export function WorkCard({ item }) {
   if (item.builtInHouse) {
     return (
       <div className="work-card on-it-card">
-        <WorkSlideshow
-          title={item.name}
-          url={item.url}
-          screenshots={item.screenshots}
-          isBuiltInHouse={true}
-        />
+        <Link href="/on-it" className="onit-card-media" aria-label="See the On It app">
+          <Image
+            src="/onit/02-invoices.png"
+            alt=""
+            width={883}
+            height={1600}
+            sizes="140px"
+            className="onit-card-phone onit-card-phone-left"
+          />
+          <Image
+            src="/onit/03-books.png"
+            alt=""
+            width={911}
+            height={1600}
+            sizes="140px"
+            className="onit-card-phone onit-card-phone-right"
+          />
+          <Image
+            src="/onit/01-chat.png"
+            alt="On It chat screen turning a spoken job into an invoice"
+            width={883}
+            height={1600}
+            sizes="180px"
+            className="onit-card-phone onit-card-phone-center"
+          />
+        </Link>
         <div className="work-card-content">
           <div className="work-card-top">
             <span className="badge-in-house">
@@ -28,7 +49,7 @@ export function WorkCard({ item }) {
               <h3 className="work-card-title">{item.name}</h3>
             </div>
             <p className="work-card-tagline">
-              Voice-powered field invoicing for tradespeople.
+              Fast invoices, fast money. Say the job, send the invoice, get paid.
             </p>
           </div>
 
@@ -39,7 +60,7 @@ export function WorkCard({ item }) {
               rel="noopener noreferrer"
               className="btn-link-out"
             >
-              Visit product
+              Open On It
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
                 <polyline points="15 3 21 3 21 9" />
@@ -48,7 +69,7 @@ export function WorkCard({ item }) {
             </a>
 
             <Link href="/on-it" className="btn-case-study-link">
-              Read case study →
+              See the app →
             </Link>
           </div>
         </div>

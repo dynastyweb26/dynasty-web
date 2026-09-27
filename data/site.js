@@ -147,11 +147,11 @@ export const siteData = {
     {
       id: "onit",
       name: "On It",
-      industry: "Voice-Powered Invoicing Software",
+      industry: "Invoicing app for home service pros",
       url: "https://onit.dynastyweb.co",
       screenshots: [],
       builtInHouse: true,
-      shortDescription: "Voice-powered field invoicing for tradespeople. Proof that Dynasty Web ships real software, not just websites.",
+      shortDescription: "Fast invoices, fast money. An invoicing app for home service pros, and proof that Dynasty Web ships real software, not just websites.",
       caseStudy: {
         problem: "Tradespeople lose hours typing out invoices after long days on job sites.",
         whatWeBuilt: "Created voice-to-invoice web software so field workers can speak the job and send a professional invoice.",
