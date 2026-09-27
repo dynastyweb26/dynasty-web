@@ -9,6 +9,7 @@ export const metadata = {
 
 export default function OnItPage() {
   const stripScreenshots = [
+    { src: "/onit/01-chat.png", w: 883, alt: "On It chat screen turning a spoken job into an invoice" },
     { src: "/onit/02-invoices.png", w: 883, alt: "On It invoices list screen" },
     { src: "/onit/03-books.png", w: 911, alt: "On It books overview with money kept this year" },
     { src: "/onit/04-expenses.png", w: 797, alt: "On It expenses logged from receipt photos" },
@@ -77,19 +78,9 @@ export default function OnItPage() {
             </a>
           </div>
 
-          {/* HERO DEVICE SHOWCASE */}
-          <div className="onit-hero-device-container">
-            <div className="onit-device-wrapper">
-              <Image
-                src="/onit/01-chat.png"
-                alt="On It chat screen turning a spoken job into an invoice"
-                width={883}
-                height={1600}
-                sizes="(max-width: 600px) 80vw, 360px"
-                priority
-                className="onit-hero-device-img"
-              />
-            </div>
+          {/* HERO VIDEO */}
+          <div className="onit-hero-video">
+            <OnItPromoVideo />
           </div>
         </div>
       </section>
@@ -113,28 +104,7 @@ export default function OnItPage() {
         </div>
       </section>
 
-      {/* 3. PROMO VIDEO */}
-      <section className="onit-video-section">
-        <div className="wrap onit-video-grid">
-          <div className="onit-video-copy">
-            <div className="eyebrow">See it work</div>
-            <h2 className="onit-video-title">
-              From the job to <em>paid</em>.
-            </h2>
-            <p className="onit-video-desc">
-              Say the job, send the invoice, get paid. That&apos;s the whole app.
-            </p>
-            <a href="https://onit.dynastyweb.co" className="btn btn-primary onit-primary-btn">
-              Open On It
-            </a>
-          </div>
-          <div className="onit-video-frame">
-            <OnItPromoVideo />
-          </div>
-        </div>
-      </section>
-
-      {/* 4. THREE BENEFIT LINES */}
+      {/* 3. THREE BENEFIT LINES */}
       <section className="onit-benefits-section">
         <div className="wrap">
           <div className="onit-benefits-grid">
@@ -154,7 +124,7 @@ export default function OnItPage() {
         </div>
       </section>
 
-      {/* 5. CLOSING CTA */}
+      {/* 4. CLOSING CTA */}
       <section className="onit-closing-section">
         <div className="wrap onit-closing-wrap">
           <h2 className="onit-closing-title">Your next invoice takes a minute.</h2>
