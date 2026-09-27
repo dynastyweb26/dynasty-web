@@ -55,7 +55,7 @@ export default function OnItPage() {
 
           {/* HEADLINE & SUBLINE */}
           <h1 className="onit-hero-headline">
-            Fast Invoice. <em>Fast Money.</em>
+            Fast Invoices. <em>Fast Money.</em>
           </h1>
 
           <p className="onit-hero-subline">
