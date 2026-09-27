@@ -1775,8 +1775,11 @@ em::after {
   transform: translateY(-2px);
 }
 
-.qr-code-placeholder {
-  color: var(--ink);
+.qr-code-img {
+  display: block;
+  width: 88px;
+  height: 88px;
+  border-radius: 6px;
 }
 
 .qr-caption {
@@ -1833,8 +1836,6 @@ em::after {
 .onit-primary-btn {
   padding: 16px 36px;
   font-size: 17px;
-  font-weight: 700;
-  box-shadow: 0 10px 24px -10px rgba(176, 125, 30, 0.4);
 }
 
 .onit-install-link {
@@ -1849,7 +1850,7 @@ em::after {
 }
 
 .onit-hero-device-container {
-  width: 100%;
+  width: 80%;
   max-width: 360px;
   margin: 0 auto;
 }
