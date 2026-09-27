@@ -1738,6 +1738,226 @@ em::after {
   flex-wrap: wrap;
 }
 
+/* ---------- On It App Showcase Page ---------- */
+.onit-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.onit-hero-section {
+  position: relative;
+  padding-top: clamp(48px, 8vw, 80px);
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.onit-qr-badge {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  z-index: 10;
+}
+
+.qr-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 14px;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.qr-link:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.qr-code-placeholder {
+  color: var(--ink);
+}
+
+.qr-caption {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+}
+
+.onit-hero-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 760px;
+}
+
+.onit-brand-header {
+  margin-bottom: 20px;
+}
+
+.onit-hero-logo {
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.onit-hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 6.5vw, 64px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.onit-hero-subline {
+  font-size: clamp(18px, 2.5vw, 22px);
+  color: var(--ink-2);
+  max-width: 32ch;
+  line-height: 1.45;
+  margin-bottom: 28px;
+}
+
+.onit-hero-cta-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.onit-primary-btn {
+  padding: 16px 36px;
+  font-size: 17px;
+  font-weight: 700;
+  box-shadow: 0 10px 24px -10px rgba(176, 125, 30, 0.4);
+}
+
+.onit-install-link {
+  font-size: 14.5px;
+  color: var(--gold);
+  text-decoration: underline;
+  transition: color 0.2s var(--ease);
+}
+
+.onit-install-link:hover {
+  color: var(--ink);
+}
+
+.onit-hero-device-container {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.onit-device-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.onit-hero-device-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 20px 40px rgba(36, 29, 21, 0.15));
+}
+
+.onit-strip-section {
+  padding: 60px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.onit-strip-section::-webkit-scrollbar {
+  display: none;
+}
+
+.onit-strip-track {
+  display: flex;
+  gap: 24px;
+  padding-inline: max(22px, calc((100vw - var(--maxw)) / 2));
+  width: max-content;
+}
+
+.onit-strip-item {
+  flex: none;
+  width: 260px;
+}
+
+.onit-strip-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 14px 28px rgba(36, 29, 21, 0.12));
+}
+
+.onit-benefits-section {
+  padding: clamp(60px, 9vw, 100px) 0;
+  border-top: 1px solid var(--line);
+}
+
+.onit-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: left;
+}
+
+.onit-benefit-item .benefit-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: var(--gold);
+}
+
+.onit-benefit-item .benefit-desc {
+  font-size: 17px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .onit-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+}
+
+.onit-closing-section {
+  padding: clamp(60px, 10vw, 120px) 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.onit-closing-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.onit-closing-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 400;
+  max-width: 22ch;
+}
+
+@media (max-width: 860px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
 /* ---------- Reduced motion & Utility ---------- */
 .js .reveal {
   opacity: 0;

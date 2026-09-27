@@ -121,7 +121,7 @@ function ContactFormInner() {
               <p className="tier-qualifier">{computedTier.qualifier}</p>
               {computedTier.nextTier && (
                 <div className="next-tier-nudge">
-                  💡 Add {computedTier.neededForNext} more solution{computedTier.neededForNext > 1 ? "s" : ""} to unlock <strong>{computedTier.nextTier}</strong> perks!
+                  Add {computedTier.neededForNext} more solution{computedTier.neededForNext > 1 ? "s" : ""} to unlock <strong>{computedTier.nextTier}</strong> perks!
                 </div>
               )}
             </div>
@@ -236,7 +236,7 @@ function ContactFormInner() {
 
             {status === "success" && (
               <div className="form-status-alert success">
-                <p>✓ Enquiry received! We will be in touch within 24 business hours.</p>
+                <p>Enquiry received! We will be in touch within 24 business hours.</p>
               </div>
             )}
 
@@ -258,7 +258,7 @@ function ContactFormInner() {
               brandon@dynastyweb.co
             </a>
             <div className="sidebar-location">
-              <span>📍 Forney, Texas</span>
+              <span>Forney, Texas</span>
               <p>Serving local service businesses across North Texas.</p>
             </div>
           </div>
