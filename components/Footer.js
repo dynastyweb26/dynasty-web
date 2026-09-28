@@ -77,7 +77,7 @@ export function Footer() {
 
         {/* BOTTOM BAR */}
         <div className="footer-bottom-bar">
-          <p>© {currentYear} Dynasty Web LLC · All rights reserved.</p>
+          <p>© {currentYear} Dynasty Web · All rights reserved.</p>
         </div>
       </div>
     </footer>
