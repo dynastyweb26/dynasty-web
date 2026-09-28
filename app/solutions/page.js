@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { siteData, getTier } from "../../data/site";
+import { siteData, getTier, countTierSolutions } from "../../data/site";
 
 export default function SolutionsPage() {
   const [selectedSolutions, setSelectedSolutions] = useState([]);
@@ -14,6 +14,10 @@ export default function SolutionsPage() {
   };
 
   const currentTier = getTier(selectedSolutions);
+  const tierCount = countTierSolutions(selectedSolutions);
+  const hasQuoteOnly = selectedSolutions.some(
+    (id) => siteData.solutions.find((s) => s.id === id)?.quoteOnly
+  );
   const queryParam = selectedSolutions.join(",");
 
   return (
@@ -113,7 +117,8 @@ export default function SolutionsPage() {
                 <strong className="indicator-tier-name">{currentTier.name}</strong>
               </div>
               <span className="summary-count">
-                {selectedSolutions.length} solution{selectedSolutions.length === 1 ? "" : "s"} selected
+                {tierCount} solution{tierCount === 1 ? "" : "s"} selected
+                {hasQuoteOnly && " + custom quote"}
               </span>
             </div>
             <Link
