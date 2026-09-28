@@ -16,7 +16,7 @@ export function PastWork() {
             Sites that <em>work</em> for a living.
           </h2>
           <p className="section-subtitle">
-            Every client site is built custom from the ground up for speed, local search authority, and clear lead conversion.
+            Every client site is custom-built from scratch to load fast, rank in local search, and turn visitors into calls.
           </p>
         </div>
 
