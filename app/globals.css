@@ -714,6 +714,87 @@ em::after {
   border-color: var(--gold);
 }
 
+/* On It card: fanned phone mockups instead of a browser frame */
+.onit-card-media {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background:
+    radial-gradient(60% 70% at 50% 100%, rgba(224, 182, 74, 0.22), transparent 70%),
+    var(--cream-2);
+  border-bottom: 1px solid var(--line);
+}
+
+.onit-card-phone {
+  position: absolute;
+  bottom: -22%;
+  height: auto;
+  transition: transform 0.5s var(--ease);
+}
+
+.onit-card-phone-center {
+  left: 50%;
+  width: 34%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.onit-card-phone-left,
+.onit-card-phone-right {
+  width: 27%;
+  bottom: -30%;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+.onit-card-phone-left {
+  left: 16%;
+  transform: rotate(-6deg);
+}
+
+.onit-card-phone-right {
+  right: 16%;
+  transform: rotate(6deg);
+}
+
+.onit-card-media:hover .onit-card-phone-center {
+  transform: translateX(-50%) translateY(-6px);
+}
+
+.onit-card-media:hover .onit-card-phone-left {
+  transform: rotate(-8deg) translateX(-6px);
+}
+
+.onit-card-media:hover .onit-card-phone-right {
+  transform: rotate(8deg) translateX(6px);
+}
+
+@media (max-width: 768px) {
+  .onit-card-media {
+    aspect-ratio: 4 / 3;
+  }
+
+  .onit-card-phone-center {
+    width: 46%;
+    bottom: -40%;
+  }
+
+  .onit-card-phone-left,
+  .onit-card-phone-right {
+    width: 36%;
+    bottom: -48%;
+  }
+
+  .onit-card-phone-left {
+    left: 6%;
+  }
+
+  .onit-card-phone-right {
+    right: 6%;
+  }
+}
+
 .slideshow-frame {
   background: var(--cream-2);
   border-bottom: 1px solid var(--line);

@@ -18,10 +18,10 @@ export function OnItSpotlight() {
               We build <em>software</em> we use.
             </h2>
             <p className="onit-intro-p" style={{ fontSize: "16px", color: "var(--ink-2)", lineHeight: "1.6", marginBottom: "28px" }}>
-              We design and ship real web applications to solve daily field friction for working trades. On It is our in-house voice-powered invoicing tool — proof that Dynasty Web builds true software, not just static templates.
+              We design and ship real apps for the trades. On It is our in-house invoicing app: say the job, send the invoice, get paid before you leave the driveway. Proof that Dynasty Web builds real software, not just websites.
             </p>
             <Link href="/on-it" className="btn btn-primary">
-              Learn about On It software
+              See On It
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
