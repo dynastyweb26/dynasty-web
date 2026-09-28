@@ -78,7 +78,6 @@ export function Footer() {
         {/* BOTTOM BAR */}
         <div className="footer-bottom-bar">
           <p>© {currentYear} Dynasty Web LLC · All rights reserved.</p>
-          <p>Built with craftsman pride in Forney, TX.</p>
         </div>
       </div>
     </footer>

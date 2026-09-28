@@ -143,7 +143,7 @@ export function HomeClient() {
 
           <div className="bento-grid teaser-bento">
             {featuredSolutions.map((item) => (
-              <div key={item.id} className="bento-tile">
+              <Link key={item.id} href="/solutions" className="bento-tile interactive-tile">
                 <div className="bento-tile-top">
                   <h3 className="bento-tile-title">{item.name}</h3>
                   <div className="bento-price-tag">
@@ -152,13 +152,13 @@ export function HomeClient() {
                   </div>
                 </div>
                 <p className="bento-tile-desc">{item.description}</p>
-              </div>
+              </Link>
             ))}
           </div>
 
           <div className="teaser-action-row">
             <Link href="/solutions" className="btn btn-ghost">
-              View all 7 digital solutions
+              View all digital solutions
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />

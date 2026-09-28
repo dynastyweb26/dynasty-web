@@ -570,6 +570,16 @@ em::after {
   white-space: nowrap;
 }
 
+.bento-price-tag .price-quote {
+  font-size: 18px;
+}
+
+.bento-price-note {
+  margin-top: -4px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
 .bento-tile-desc {
   font-size: 15px;
   color: var(--ink-2);
