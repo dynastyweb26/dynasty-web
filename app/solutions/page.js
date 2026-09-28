@@ -42,9 +42,6 @@ export default function SolutionsPage() {
                 Add 2 or more solutions to automatically unlock <strong>Pro Gold</strong> perks, or add 4 for <strong>Pro Platinum</strong>!
               </p>
             </div>
-            <Link href="/packages" className="btn btn-ghost btn-sm">
-              See what unlocks →
-            </Link>
           </div>
         </div>
       </section>
