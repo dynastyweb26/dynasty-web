@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { siteData, getTier } from "../../../data/site";
+import { siteData, getTier, cleanSolutionIds, formatSolutionPrice } from "../../../data/site";
 
 // Simple in-memory rate limiting (IP -> timestamps)
 const rateLimitMap = new Map();
@@ -42,7 +42,8 @@ export async function POST(req) {
     }
 
     const body = JSON.parse(bodyText);
-    const { name, businessName, email, phone, message, solutions = [], honeypot } = body;
+    const { name, businessName, email, phone, message, honeypot } = body;
+    const solutions = cleanSolutionIds(body.solutions);
 
     // 3. Honeypot check
     if (honeypot) {
@@ -68,8 +69,12 @@ export async function POST(req) {
 
     // 5. Server-side tier computation
     const computedTier = getTier(solutions);
+    // e.g. "Social Media Management ($399/mo), Custom Software (Custom quote)"
     const solutionNames = solutions
-      .map((id) => siteData.solutions.find((s) => s.id === id)?.name || id)
+      .map((id) => {
+        const sol = siteData.solutions.find((s) => s.id === id);
+        return `${sol.name} (${formatSolutionPrice(sol)})`;
+      })
       .join(", ") || "None selected (Website base)";
 
     // 6. Read EmailJS config from server env vars

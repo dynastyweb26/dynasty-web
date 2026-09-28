@@ -3,7 +3,7 @@
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { siteData, getTier } from "../../data/site";
+import { siteData, getTier, cleanSolutionIds, formatSolutionPrice } from "../../data/site";
 import { FAQ } from "../../components/FAQ";
 
 function ContactFormInner() {
@@ -24,7 +24,7 @@ function ContactFormInner() {
   useEffect(() => {
     const sParam = searchParams.get("s");
     if (sParam) {
-      const ids = sParam.split(",").map((id) => id.trim()).filter(Boolean);
+      const ids = cleanSolutionIds(sParam.split(",").map((id) => id.trim()));
       setSelectedSolutions(ids);
     }
   }, [searchParams]);
@@ -204,7 +204,7 @@ function ContactFormInner() {
                       </span>
                       <div className="checkbox-text-wrap">
                         <span className="sol-title">{sol.name}</span>
-                        <span className="sol-price">{sol.price}/{sol.cadence}</span>
+                        <span className="sol-price">{formatSolutionPrice(sol)}</span>
                       </div>
                     </label>
                   );
