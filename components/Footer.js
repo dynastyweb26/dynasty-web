@@ -15,7 +15,7 @@ export function Footer() {
               <span className="footer-brand-name">Dynasty Web</span>
             </Link>
             <p className="footer-tagline">
-              Digital solutions studio crafting high-converting platforms and software for local service businesses.
+              Digital solutions studio building custom websites, marketing, and software for local service businesses in North Texas.
             </p>
           </div>
 
