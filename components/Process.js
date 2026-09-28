@@ -10,8 +10,8 @@ export function Process() {
             A clean 4-step execution from contract to <em>live launch</em>.
           </h2>
           <p>
-            No bloated strategy phase or endless meetings. Direct craftsman communication
-            focused on getting your project live quickly.
+            No long strategy phase or endless meetings. You work directly with the person
+            building your site, and we focus on getting you live fast.
           </p>
         </div>
 

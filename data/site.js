@@ -180,17 +180,17 @@ export const siteData = {
     },
     {
       step: "02",
-      title: "Tier Unlocks",
-      description: "Your total solution count automatically unlocks higher package tiers and free strategy perks.",
+      title: "Quick Call & Quote",
+      description: "We talk through your goals on a short call and send a fixed quote. Your tier is set by how many solutions you pick.",
     },
     {
       step: "03",
       title: "Build & Refine",
-      description: "We craft your website and solutions rapidly with direct craftsman communication and zero bloat.",
+      description: "We build your website and solutions fast, keep you updated directly, and skip anything you don't need.",
     },
     {
       step: "04",
-      title: "Launch & Lead",
+      title: "Launch",
       description: "Your custom platform goes live on your domain, ready to turn local visitors into paying customers.",
     },
   ],
