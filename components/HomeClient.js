@@ -51,7 +51,7 @@ export function HomeClient() {
           </h1>
 
           <p className="hero-subhead">
-            We craft custom websites and integrated digital tools designed to drive inquiries, streamline operations, and elevate hard-working trades.
+            We build custom websites, local SEO, and software that bring in calls, keep your business organized, and help hard-working trades grow.
           </p>
 
           <div className="hero-cta-group">
