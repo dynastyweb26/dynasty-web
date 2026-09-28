@@ -10,8 +10,8 @@ export const siteData = {
       pitch: "A custom website for local service providers, starting at $400.",
       perks: [
         "Custom website, up to 3 pages",
-        "Mobile-optimized performance & accessibility",
-        "Secure contact & lead delivery form",
+        "Mobile-friendly design & contact form",
+        "Basic on-page SEO & Google Search Console setup",
         "1 revision round & launch support",
       ],
       featured: false,
@@ -208,7 +208,7 @@ export const siteData = {
   faq: [
     {
       question: "How much does a website cost?",
-      answer: "Websites start at $400 for up to 3 pages: home, services or gallery, and contact. That includes mobile-friendly design, a contact form, basic on-page SEO, and 1 revision round. Local SEO, branding, and other solutions are added on top.",
+      answer: "Websites start at $400 for up to 3 pages: home, services or gallery, and contact. That includes mobile-friendly design, a contact form, basic on-page SEO, Google Search Console setup, and 1 revision round. You supply the text, logo, and photos. Hosting and maintenance is $90/mo. Extra pages, copywriting, Local SEO, branding, and other solutions are add-ons.",
     },
     {
       question: "How long does a build take?",
