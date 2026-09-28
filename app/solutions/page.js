@@ -58,10 +58,18 @@ export default function SolutionsPage() {
                   <div className="bento-tile-top">
                     <h2 className="bento-tile-title">{sol.name}</h2>
                     <div className="bento-price-tag">
-                      <span className="price-num">{sol.price}</span>
-                      <span className="price-cadence">/{sol.cadence}</span>
+                      {sol.quoteOnly ? (
+                        <span className="price-num price-quote">Custom quote</span>
+                      ) : (
+                        <>
+                          <span className="price-num">{sol.price}</span>
+                          <span className="price-cadence">/{sol.cadence}</span>
+                        </>
+                      )}
                     </div>
                   </div>
+
+                  {sol.note && <p className="bento-price-note">{sol.note}</p>}
 
                   <p className="bento-tile-desc">{sol.description}</p>
 
@@ -81,7 +89,15 @@ export default function SolutionsPage() {
                           </svg>
                         )}
                       </span>
-                      <span>{isSelected ? "Added to quote" : "Add to quote"}</span>
+                      <span>
+                        {sol.quoteOnly
+                          ? isSelected
+                            ? "Quote requested"
+                            : "Request a quote"
+                          : isSelected
+                          ? "Added to quote"
+                          : "Add to quote"}
+                      </span>
                     </button>
                   </div>
                 </div>
