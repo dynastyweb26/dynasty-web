@@ -15,6 +15,7 @@ export default function SolutionsPage() {
 
   const currentTier = getTier(selectedSolutions);
   const tierCount = countTierSolutions(selectedSolutions);
+  const hasWebsite = selectedSolutions.includes("website");
   const hasQuoteOnly = selectedSolutions.some(
     (id) => siteData.solutions.find((s) => s.id === id)?.quoteOnly
   );
@@ -118,6 +119,7 @@ export default function SolutionsPage() {
               </div>
               <span className="summary-count">
                 {tierCount} solution{tierCount === 1 ? "" : "s"} selected
+                {hasWebsite && " + website"}
                 {hasQuoteOnly && " + custom quote"}
               </span>
             </div>

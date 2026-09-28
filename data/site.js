@@ -57,9 +57,19 @@ export const siteData = {
     },
   ],
 
-  // Solutions. `tierEligible: false` means it never counts toward package tiers.
+  // Solutions. `tierEligible: false` means it never counts toward package tiers
+// (the website is the base every tier builds on; Custom Software is quoted separately).
   // `quoteOnly: true` means no fixed price; the client requests a quote.
   solutions: [
+    {
+      id: "website",
+      name: "Website Design",
+      price: "From $400",
+      cadence: "site",
+      note: "plus $90/mo hosting & maintenance",
+      tierEligible: false,
+      description: "A custom website, up to 3 pages: home, services or gallery, and contact. Mobile-friendly design, contact form, basic on-page SEO, Google Search Console setup, and 1 revision round. You supply the text, logo, and photos.",
+    },
     {
       id: "photography",
       name: "Business Photography",
