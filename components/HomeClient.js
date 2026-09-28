@@ -179,7 +179,7 @@ export function HomeClient() {
               Let&apos;s build something <em>lasting</em> for your business.
             </h2>
             <p className="cta-band-text">
-              Pick your solutions, estimate your package tier, and send us an enquiry. We respond within 24 business hours.
+              Pick your solutions, estimate your package tier, and send us an inquiry. We respond within 24 business hours.
             </p>
             <div className="cta-band-actions">
               <Link href="/contact" className="btn btn-gold-bright">

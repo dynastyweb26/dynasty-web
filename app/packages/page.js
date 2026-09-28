@@ -98,7 +98,7 @@ export default function PackagesPage() {
               </svg>
             </Link>
             <Link href="/contact" className="btn btn-primary">
-              Enquire now
+              Inquire now
             </Link>
           </div>
         </div>

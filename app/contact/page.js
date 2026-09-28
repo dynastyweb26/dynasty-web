@@ -236,7 +236,7 @@ function ContactFormInner() {
 
             {status === "success" && (
               <div className="form-status-alert success">
-                <p>Enquiry received! We will be in touch within 24 business hours.</p>
+                <p>Inquiry received! We will be in touch within 24 business hours.</p>
               </div>
             )}
 
@@ -245,7 +245,7 @@ function ContactFormInner() {
               disabled={status === "sending"}
               className="btn btn-primary btn-submit full-width"
             >
-              {status === "sending" ? "Sending Enquiry..." : "Submit Enquiry"}
+              {status === "sending" ? "Sending Inquiry..." : "Submit Inquiry"}
             </button>
           </form>
         </div>

@@ -67,7 +67,7 @@ export function Footer() {
 
           {/* DIRECT CONTACT COL */}
           <div className="footer-col">
-            <h4 className="footer-col-title">Direct Enquiries</h4>
+            <h4 className="footer-col-title">Direct Inquiries</h4>
             <a href="mailto:brandon@dynastyweb.co" className="footer-email-link">
               brandon@dynastyweb.co
             </a>
