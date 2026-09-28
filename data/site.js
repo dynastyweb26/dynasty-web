@@ -7,9 +7,9 @@ export const siteData = {
       id: "starter",
       name: "Starter",
       qualifier: "Website base (0–1 solutions)",
-      pitch: "A custom, high-converting digital storefront built for local service providers.",
+      pitch: "A custom website for local service providers, starting at $400.",
       perks: [
-        "Custom responsive website design",
+        "Custom website, up to 3 pages",
         "Mobile-optimized performance & accessibility",
         "Secure contact & lead delivery form",
         "1 revision round & launch support",
@@ -196,6 +196,10 @@ export const siteData = {
   ],
 
   faq: [
+    {
+      question: "How much does a website cost?",
+      answer: "Websites start at $400 for up to 3 pages: home, services or gallery, and contact. That includes mobile-friendly design, a contact form, basic on-page SEO, and 1 revision round. Local SEO, branding, and other solutions are added on top.",
+    },
     {
       question: "How long does a build take?",
       answer: "A standard build takes 1 to 2 weeks from kickoff. Diamond tier projects with full brand refreshes take 2 to 3 weeks.",
