@@ -13,7 +13,7 @@ export function PastWork() {
         </div>
         <div className="section-head-split">
           <h2 className="section-title">
-            Craftsmanship in <em>the wild</em>.
+            Sites that <em>work</em> for a living.
           </h2>
           <p className="section-subtitle">
             Every client site is built custom from the ground up for speed, local search authority, and clear lead conversion.
