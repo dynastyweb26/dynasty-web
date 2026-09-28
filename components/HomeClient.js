@@ -97,7 +97,7 @@ export function HomeClient() {
               The more you add, the <em>more</em> you unlock.
             </h2>
             <p className="section-subtitle">
-              You pay per solution. Every added tool advances your business up our package ladder, unlocking free strategy & maintenance perks.
+              You pay per solution. Every added tool advances your business up our package ladder, unlocking perks like priority support and website maintenance.
             </p>
           </div>
 
