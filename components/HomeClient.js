@@ -111,6 +111,7 @@ export function HomeClient() {
                     <span className="price-cadence">/{item.cadence}</span>
                   </div>
                 </div>
+                {item.note && <p className="bento-price-note">{item.note}</p>}
                 <p className="bento-tile-desc">{item.description}</p>
               </Link>
             ))}
