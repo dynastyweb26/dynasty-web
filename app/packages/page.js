@@ -19,7 +19,7 @@ export default function PackagesPage() {
             How our <em>packages</em> &amp; tiers work.
           </h1>
           <p className="page-subtitle">
-            Every build starts with a custom website base. Adding Digital Solutions automatically advances your business into higher tiers with exclusive free perks.
+            Packages start with a custom website base. Adding Digital Solutions automatically advances your business into higher tiers with exclusive free perks. Every solution can also be bought on its own.
           </p>
 
           <div className="tier-explanation-box">

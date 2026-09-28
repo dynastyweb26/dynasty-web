@@ -211,6 +211,10 @@ export const siteData = {
       answer: "Websites start at $400 for up to 3 pages: home, services or gallery, and contact. That includes mobile-friendly design, a contact form, basic on-page SEO, Google Search Console setup, and 1 revision round. You supply the text, logo, and photos. Hosting and maintenance is $90/mo. Extra pages, copywriting, Local SEO, branding, and other solutions are add-ons.",
     },
     {
+      question: "Can I buy a solution without a website?",
+      answer: "Yes. Any solution can be bought on its own, no website required. Package tiers and their perks apply when a website is part of the project.",
+    },
+    {
       question: "How long does a build take?",
       answer: "A standard build takes 1 to 2 weeks from kickoff. Diamond tier projects with full brand refreshes take 2 to 3 weeks.",
     },

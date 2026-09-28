@@ -86,7 +86,50 @@ export function HomeClient() {
       {/* 3. HOW WE WORK (4-STEP PROCESS) */}
       <Process />
 
-      {/* 4. PACKAGE PROGRESSION (TIER LADDER TEASER) */}
+      {/* 4. DIGITAL SOLUTIONS TEASER */}
+      <section className="section teaser-section">
+        <div className="wrap">
+          <div className="eyebrow">
+            <span>Digital Solutions</span>
+          </div>
+          <div className="section-head-split">
+            <h2 className="section-title">
+              À la carte <em>tools</em> for growth.
+            </h2>
+            <p className="section-subtitle">
+              Select individual services or combine them on top of your website base to automatically unlock package perks.
+            </p>
+          </div>
+
+          <div className="bento-grid teaser-bento">
+            {featuredSolutions.map((item) => (
+              <Link key={item.id} href="/solutions" className="bento-tile interactive-tile">
+                <div className="bento-tile-top">
+                  <h3 className="bento-tile-title">{item.name}</h3>
+                  <div className="bento-price-tag">
+                    <span className="price-num">{item.price}</span>
+                    <span className="price-cadence">/{item.cadence}</span>
+                  </div>
+                </div>
+                {item.note && <p className="bento-price-note">{item.note}</p>}
+                <p className="bento-tile-desc">{item.description}</p>
+              </Link>
+            ))}
+          </div>
+
+          <div className="teaser-action-row">
+            <Link href="/solutions" className="btn btn-ghost">
+              View all digital solutions
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. PACKAGE PROGRESSION (TIER LADDER TEASER) */}
       <section className="section teaser-section tier-ladder-section">
         <div className="wrap">
           <div className="eyebrow">
@@ -117,48 +160,6 @@ export function HomeClient() {
           <div className="teaser-action-row">
             <Link href="/packages" className="btn btn-primary">
               See how tiers &amp; perks work
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. DIGITAL SOLUTIONS TEASER */}
-      <section className="section teaser-section">
-        <div className="wrap">
-          <div className="eyebrow">
-            <span>Digital Solutions</span>
-          </div>
-          <div className="section-head-split">
-            <h2 className="section-title">
-              À la carte <em>tools</em> for growth.
-            </h2>
-            <p className="section-subtitle">
-              Select individual services or combine them on top of your website base to automatically unlock package perks.
-            </p>
-          </div>
-
-          <div className="bento-grid teaser-bento">
-            {featuredSolutions.map((item) => (
-              <Link key={item.id} href="/solutions" className="bento-tile interactive-tile">
-                <div className="bento-tile-top">
-                  <h3 className="bento-tile-title">{item.name}</h3>
-                  <div className="bento-price-tag">
-                    <span className="price-num">{item.price}</span>
-                    <span className="price-cadence">/{item.cadence}</span>
-                  </div>
-                </div>
-                <p className="bento-tile-desc">{item.description}</p>
-              </Link>
-            ))}
-          </div>
-
-          <div className="teaser-action-row">
-            <Link href="/solutions" className="btn btn-ghost">
-              View all digital solutions
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
