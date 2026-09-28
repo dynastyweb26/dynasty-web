@@ -15,7 +15,7 @@ export function Footer() {
               <span className="footer-brand-name">Dynasty Web</span>
             </Link>
             <p className="footer-tagline">
-              Digital solutions studio crafting high-converting platforms and software for local service businesses.
+              Digital solutions studio building custom websites, marketing, and software for local service businesses in North Texas.
             </p>
           </div>
 
@@ -67,7 +67,7 @@ export function Footer() {
 
           {/* DIRECT CONTACT COL */}
           <div className="footer-col">
-            <h4 className="footer-col-title">Direct Enquiries</h4>
+            <h4 className="footer-col-title">Direct Inquiries</h4>
             <a href="mailto:brandon@dynastyweb.co" className="footer-email-link">
               brandon@dynastyweb.co
             </a>
@@ -77,7 +77,7 @@ export function Footer() {
 
         {/* BOTTOM BAR */}
         <div className="footer-bottom-bar">
-          <p>© {currentYear} Dynasty Web LLC · All rights reserved.</p>
+          <p>© {currentYear} Dynasty Web · All rights reserved.</p>
         </div>
       </div>
     </footer>

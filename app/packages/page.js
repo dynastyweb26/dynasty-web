@@ -38,7 +38,7 @@ export default function PackagesPage() {
             <div className="expl-step">
               <span className="expl-num">3</span>
               <h4>Unlock Perks</h4>
-              <p>Higher solution counts grant free CRM dashboards, brand refreshes &amp; priority support.</p>
+              <p>Higher solution counts unlock CRM setup, website maintenance &amp; priority support.</p>
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function PackagesPage() {
               </svg>
             </Link>
             <Link href="/contact" className="btn btn-primary">
-              Enquire now
+              Inquire now
             </Link>
           </div>
         </div>

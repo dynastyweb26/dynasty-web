@@ -27,7 +27,7 @@ export async function POST(req) {
     const clientIp = req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || "127.0.0.1";
     if (isRateLimited(clientIp)) {
       return NextResponse.json(
-        { error: "Too many enquiries sent. Please wait a few minutes before trying again." },
+        { error: "Too many inquiries sent. Please wait a few minutes before trying again." },
         { status: 429 }
       );
     }
@@ -48,7 +48,7 @@ export async function POST(req) {
     // 3. Honeypot check
     if (honeypot) {
       // Quietly succeed for spambots
-      return NextResponse.json({ success: true, message: "Enquiry received." });
+      return NextResponse.json({ success: true, message: "Inquiry received." });
     }
 
     // 4. Input validation
@@ -131,7 +131,7 @@ export async function POST(req) {
 
     return NextResponse.json({
       success: true,
-      message: "Enquiry submitted successfully.",
+      message: "Inquiry submitted successfully.",
       tier: computedTier.name,
     });
   } catch (error) {

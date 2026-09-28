@@ -7,11 +7,11 @@ export const siteData = {
       id: "starter",
       name: "Starter",
       qualifier: "Website base (0–1 solutions)",
-      pitch: "A custom, high-converting digital storefront built for local service providers.",
+      pitch: "A custom website for local service providers, starting at $400.",
       perks: [
-        "Custom responsive website design",
-        "Mobile-optimized performance & accessibility",
-        "Secure contact & lead delivery form",
+        "Custom website, up to 3 pages",
+        "Mobile-friendly design & contact form",
+        "Basic on-page SEO & Google Search Console setup",
         "1 revision round & launch support",
       ],
       featured: false,
@@ -20,12 +20,12 @@ export const siteData = {
       id: "pro-gold",
       name: "Pro Gold",
       qualifier: "Website + 2–3 solutions",
-      pitch: "Enhanced search visibility, local SEO foundation, and interactive client touches.",
+      pitch: "A stronger launch with richer design, extra revisions, and faster support.",
       perks: [
         "Everything in Starter",
-        "Local SEO foundation & keyword setup",
         "Advanced layout & fluid animations",
-        "Priority revision rounds",
+        "2 revision rounds",
+        "Priority email support",
       ],
       featured: false,
     },
@@ -33,12 +33,12 @@ export const siteData = {
       id: "pro-platinum",
       name: "Pro Platinum",
       qualifier: "Website + 4–6 solutions",
-      pitch: "Complete client intake engine with live tracking dashboard and priority monthly upkeep.",
+      pitch: "Your full lead system, with CRM setup, website maintenance, and first place in line.",
       perks: [
         "Everything in Pro Gold",
-        "Live lead tracking dashboard",
-        "Lead CRM integration",
-        "Monthly technical maintenance & priority support",
+        "Lead CRM setup",
+        "Monthly website maintenance included",
+        "Priority build turnaround",
       ],
       featured: true, // Featured tier (dark card)
     },
@@ -46,20 +46,30 @@ export const siteData = {
       id: "pro-allstar-diamond",
       name: "Pro Allstar Diamond",
       qualifier: "Website + all 7 solutions",
-      pitch: "Total business transformation with full brand identity refresh and automated follow-ups.",
+      pitch: "Every solution working together, with direct access to the founder.",
       perks: [
         "Everything in Pro Platinum",
-        "Full brand refresh & asset package",
-        "Automated client follow-up sequences",
-        "Dedicated account strategist & quarterly strategy call",
+        "Quarterly strategy call with the founder",
+        "First access to new tools and features",
+        "Priority on custom software requests",
       ],
       featured: false,
     },
   ],
 
-  // Solutions. `tierEligible: false` means it never counts toward package tiers.
+  // Solutions. `tierEligible: false` means it never counts toward package tiers
+// (the website is the base every tier builds on; Custom Software is quoted separately).
   // `quoteOnly: true` means no fixed price; the client requests a quote.
   solutions: [
+    {
+      id: "website",
+      name: "Website Design",
+      price: "From $400",
+      cadence: "site",
+      note: "plus $90/mo hosting & maintenance",
+      tierEligible: false,
+      description: "A custom website, up to 3 pages: home, services or gallery, and contact. Mobile-friendly design, contact form, basic on-page SEO, Google Search Console setup, and 1 revision round. You supply the text, logo, and photos.",
+    },
     {
       id: "photography",
       name: "Business Photography",
@@ -180,22 +190,26 @@ export const siteData = {
     },
     {
       step: "02",
-      title: "Tier Unlocks",
-      description: "Your total solution count automatically unlocks higher package tiers and free strategy perks.",
+      title: "Quick Call & Quote",
+      description: "We talk through your goals on a short call and send a fixed quote. Your tier is set by how many solutions you pick.",
     },
     {
       step: "03",
       title: "Build & Refine",
-      description: "We craft your website and solutions rapidly with direct craftsman communication and zero bloat.",
+      description: "We build your website and solutions fast, keep you updated directly, and skip anything you don't need.",
     },
     {
       step: "04",
-      title: "Launch & Lead",
+      title: "Launch",
       description: "Your custom platform goes live on your domain, ready to turn local visitors into paying customers.",
     },
   ],
 
   faq: [
+    {
+      question: "How much does a website cost?",
+      answer: "Websites start at $400 for up to 3 pages: home, services or gallery, and contact. That includes mobile-friendly design, a contact form, basic on-page SEO, Google Search Console setup, and 1 revision round. You supply the text, logo, and photos. Hosting and maintenance is $90/mo. Extra pages, copywriting, Local SEO, branding, and other solutions are add-ons.",
+    },
     {
       question: "How long does a build take?",
       answer: "A standard build takes 1 to 2 weeks from kickoff. Diamond tier projects with full brand refreshes take 2 to 3 weeks.",

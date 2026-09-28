@@ -51,7 +51,7 @@ export function HomeClient() {
           </h1>
 
           <p className="hero-subhead">
-            We craft custom websites and integrated digital tools designed to drive inquiries, streamline operations, and elevate hard-working trades.
+            We build custom websites, local SEO, and software that bring in calls, keep your business organized, and help hard-working trades grow.
           </p>
 
           <div className="hero-cta-group">
@@ -97,7 +97,7 @@ export function HomeClient() {
               The more you add, the <em>more</em> you unlock.
             </h2>
             <p className="section-subtitle">
-              You pay per solution. Every added tool advances your business up our package ladder, unlocking free strategy & maintenance perks.
+              You pay per solution. Every added tool advances your business up our package ladder, unlocking perks like priority support and website maintenance.
             </p>
           </div>
 
@@ -179,7 +179,7 @@ export function HomeClient() {
               Let&apos;s build something <em>lasting</em> for your business.
             </h2>
             <p className="cta-band-text">
-              Pick your solutions, estimate your package tier, and send us an enquiry. We respond within 24 business hours.
+              Pick your solutions, estimate your package tier, and send us an inquiry. We respond within 24 business hours.
             </p>
             <div className="cta-band-actions">
               <Link href="/contact" className="btn btn-gold-bright">

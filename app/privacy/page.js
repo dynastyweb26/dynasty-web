@@ -3,7 +3,7 @@ import BrandLogo from "../../components/BrandLogo";
 
 export const metadata = {
   title: "Privacy Policy | Dynasty Web",
-  description: "Privacy policy and data handling commitment for Dynasty Web client enquiries.",
+  description: "Privacy policy and data handling commitment for Dynasty Web client inquiries.",
 };
 
 export default function PrivacyPage() {
