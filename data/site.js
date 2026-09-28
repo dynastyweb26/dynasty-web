@@ -57,6 +57,8 @@ export const siteData = {
     },
   ],
 
+  // Solutions. `tierEligible: false` means it never counts toward package tiers.
+  // `quoteOnly: true` means no fixed price; the client requests a quote.
   solutions: [
     {
       id: "photography",
@@ -68,28 +70,30 @@ export const siteData = {
     {
       id: "social-media",
       name: "Social Media Management",
-      price: "$200",
+      price: "$399",
       cadence: "mo",
-      description: "Consistent, tailored updates highlighting your ongoing local projects.",
+      description: "We plan, create, and post content that shows off your real jobs, every month.",
     },
     {
       id: "invoicing",
       name: "Invoicing, powered by On It",
-      price: "$150",
+      price: "$30",
       cadence: "setup",
-      description: "Voice-powered field invoicing setup so your team bills on-site effortlessly.",
+      note: "then $10/mo for the app",
+      description: "Say the job, send the invoice, get paid. We set up On It with your logo, services, and payment methods.",
     },
     {
       id: "analytics",
       name: "Analytics Dashboard",
       price: "$100",
       cadence: "mo",
-      description: "Simple, real-time reporting on site visitors, calls, and lead source tracking.",
+      note: "3-month minimum",
+      description: "One page that shows how many people found you, where they came from, and how many called or asked for a quote.",
     },
     {
       id: "branding",
       name: "Logo & Brand Package",
-      price: "$300",
+      price: "$299",
       cadence: "one-time",
       description: "Vector logo files, brand color palette, typography guidelines, and truck decal assets.",
     },
@@ -98,14 +102,22 @@ export const siteData = {
       name: "Email Marketing Setup",
       price: "$200",
       cadence: "setup",
-      description: "Automated email welcome sequences and broadcast newsletter templates.",
+      description: "Automatic welcome, thank-you, review request, and come-back emails, plus templates you can send yourself.",
     },
     {
       id: "local-seo",
       name: "Local SEO Boost",
       price: "$250",
       cadence: "one-time",
-      description: "Google Business Profile optimization, local citations, and geo-targeted keywords.",
+      note: "plus directory listing fees at cost",
+      description: "Google Business Profile optimization, local listings, and on-site tuning so you show up in your town.",
+    },
+    {
+      id: "custom-software",
+      name: "Custom Software",
+      quoteOnly: true,
+      tierEligible: false,
+      description: "Job trackers, customer portals, quote builders: tools built around how your business actually runs.",
     },
   ],
 
@@ -212,12 +224,33 @@ export const siteData = {
  * @param {Array|number} selectedSolutions - Array of solution IDs or count of solutions
  * @returns {Object} Tier information object
  */
+// Only real, tier-eligible solutions count (Custom Software is quoted separately).
+export function countTierSolutions(selectedSolutions = []) {
+  if (typeof selectedSolutions === "number") return selectedSolutions;
+  if (!Array.isArray(selectedSolutions)) return 0;
+  return selectedSolutions.filter((id) => {
+    const sol = siteData.solutions.find((s) => s.id === id);
+    return sol && sol.tierEligible !== false;
+  }).length;
+}
+
+// Keeps only ids that exist, without duplicates.
+export function cleanSolutionIds(ids = []) {
+  if (!Array.isArray(ids)) return [];
+  const known = new Set(siteData.solutions.map((s) => s.id));
+  return [...new Set(ids.filter((id) => typeof id === "string" && known.has(id)))];
+}
+
+// "$399/mo", "$30/setup, then $10/mo for the app", "Custom quote"
+export function formatSolutionPrice(sol) {
+  if (!sol) return "";
+  if (sol.quoteOnly) return "Custom quote";
+  const base = `${sol.price}/${sol.cadence}`;
+  return sol.note ? `${base}, ${sol.note}` : base;
+}
+
 export function getTier(selectedSolutions = []) {
-  const count = Array.isArray(selectedSolutions)
-    ? selectedSolutions.length
-    : typeof selectedSolutions === "number"
-    ? selectedSolutions
-    : 0;
+  const count = countTierSolutions(selectedSolutions);
 
   if (count >= 7) {
     return {
