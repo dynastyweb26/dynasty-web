@@ -142,11 +142,11 @@ export const siteData = {
         { src: "/work/cyril/2.webp", alt: "Cyril Handyman & Door services section listing garage doors, media walls, kitchen renovation, and more" },
         { src: "/work/cyril/3.webp", alt: "Cyril Handyman & Door gallery of completed garage door, media wall, and kitchen projects" },
       ],
-      shortDescription: "Case study coming soon.",
+      shortDescription: "A new handyman business with a strong local reputation and no online presence, now with a website and Google profile that show off the work.",
       caseStudy: {
-        problem: "Case study coming soon.",
-        whatWeBuilt: "Case study coming soon.",
-        result: "Case study coming soon.",
+        problem: "Cyril's handyman and door business was building a strong reputation in the local community for excellent work. But it had no website and no social media presence, so people who heard about him had nowhere to see his work or check him out before calling.",
+        whatWeBuilt: "A clean, simple website that puts his garage doors, media walls, and remodels front and center, with tap-to-call and a quote request form. We also optimized his Google Business Profile and set up local SEO so nearby customers can find him. Cyril signed off on the design at the first demo.",
+        result: "His work now makes the first impression before he picks up the phone. Customers see real projects, trust what they're getting, and can reach him in one tap. Word of mouth now leads to a business people can find and check out online.",
       },
     },
     {
