@@ -142,11 +142,11 @@ export const siteData = {
         { src: "/work/cyril/2.webp", alt: "Cyril Handyman & Door services section listing garage doors, media walls, kitchen renovation, and more" },
         { src: "/work/cyril/3.webp", alt: "Cyril Handyman & Door gallery of completed garage door, media wall, and kitchen projects" },
       ],
-      shortDescription: "Case study coming soon.",
+      shortDescription: "A new handyman business with a strong local reputation and no online presence, now with a website and Google profile that show off the work.",
       caseStudy: {
-        problem: "Case study coming soon.",
-        whatWeBuilt: "Case study coming soon.",
-        result: "Case study coming soon.",
+        problem: "Cyril's handyman and door business was building a strong reputation in the local community for excellent work. But it had no website and no social media presence, so people who heard about him had nowhere to see his work or check him out before calling.",
+        whatWeBuilt: "A clean, simple website that puts his garage doors, media walls, and remodels front and center, with tap-to-call and a quote request form. We also optimized his Google Business Profile and set up local SEO so nearby customers can find him. Cyril signed off on the design at the first demo.",
+        result: "His work now makes the first impression before he picks up the phone. Customers see real projects, trust what they're getting, and can reach him in one tap. Word of mouth now leads to a business people can find and check out online.",
       },
     },
     {
@@ -159,11 +159,11 @@ export const siteData = {
         { src: "/work/vydale/2.webp", alt: "Vydale T.C. Projects founder section introducing Vydale Mache Fotsing and her award nominations" },
         { src: "/work/vydale/3.webp", alt: "Vydale T.C. Projects photo gallery of community events and speaking engagements" },
       ],
-      shortDescription: "Case study coming soon.",
+      shortDescription: "An international speaker and author with no single place to show her books, awards, and community work, now with a home for all of it.",
       caseStudy: {
-        problem: "Case study coming soon.",
-        whatWeBuilt: "Case study coming soon.",
-        result: "Case study coming soon.",
+        problem: "Vydale is an international speaker, published author, and MC focused on faith, growth, and personal transformation. Her books, speaking, awards, and community work were spread across social media, with no single place to show event organizers and readers the full picture.",
+        whatWeBuilt: "A polished personal site that brings it all together: her story, her books (I Am Worthy of My Dreams and the children's book Martha's Little Secret), awards, a gallery of past events, and a Book Vydale button for speaking inquiries. We also added a Donate page for her drive to get books to children in orphanages.",
+        result: "Organizers, readers, and supporters now land on one place that shows who she is and what she's done. It gives her a professional first impression for bookings and a direct way for people to support her book drive.",
       },
     },
     {
