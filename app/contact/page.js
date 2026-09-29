@@ -259,7 +259,7 @@ function ContactFormInner() {
             </a>
             <div className="sidebar-location">
               <span>Forney, Texas</span>
-              <p>Serving local service businesses across North Texas.</p>
+              <p>Based in Forney, working with businesses anywhere.</p>
             </div>
           </div>
         </div>
