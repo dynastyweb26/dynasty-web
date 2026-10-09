@@ -2257,3 +2257,51 @@ em::after {
 .capability-tile:hover .capability-cta {
   color: var(--ink);
 }
+
+/* ---------- Credentials (AWS badge) ---------- */
+.credential-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 10px 18px 10px 10px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.credential-badge {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+
+.credential-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.credential-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+}
+
+.credential-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.footer-credential {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}

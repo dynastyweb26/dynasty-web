@@ -9,6 +9,10 @@ export const brandConfig = {
     src: "/brand/dynasty-web-logo.png",
     alt: "Dynasty Web icon",
   },
+  awsCloudPractitioner: {
+    src: "/brand/aws-cloud-practitioner.png",
+    alt: "AWS Certified Cloud Practitioner badge",
+  },
   onitLogo: {
     src: "/brand/on-it-logo.png",
     alt: "On It logo",

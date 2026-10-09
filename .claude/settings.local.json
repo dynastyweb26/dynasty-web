@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp /root/.claude/uploads/5e323ff5-6254-5539-8a4c-9071d559cc1d/6dfb4efe-image.png public/brand/aws-cloud-practitioner.png)",
+      "Bash(python3 -)",
+      "Bash(git add *)",
+      "Bash(git commit -qm 'feat: show AWS Cloud Practitioner credential in process and footer *)"
+    ]
+  }
+}

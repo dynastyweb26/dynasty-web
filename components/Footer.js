@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { BrandLogo } from "./BrandLogo";
+import { brandConfig } from "../data/brand";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,6 +19,15 @@ export function Footer() {
             <p className="footer-tagline">
               Custom software studio designing and building web applications, operations tools, and websites for companies in Texas and beyond.
             </p>
+            <div className="footer-credential">
+              <Image
+                src={brandConfig.awsCloudPractitioner.src}
+                alt={brandConfig.awsCloudPractitioner.alt}
+                width={40}
+                height={40}
+              />
+              <span>AWS Certified Cloud Practitioner</span>
+            </div>
           </div>
 
           {/* NAVIGATION COL */}

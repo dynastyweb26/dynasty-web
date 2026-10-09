@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { siteData } from "../data/site";
+import { brandConfig } from "../data/brand";
 
 export function Process() {
   return (
@@ -13,6 +15,19 @@ export function Process() {
             Every engagement follows the same disciplined process: defined scope, phased
             delivery, and direct access to the engineer leading your build.
           </p>
+          <div className="credential-row">
+            <Image
+              src={brandConfig.awsCloudPractitioner.src}
+              alt={brandConfig.awsCloudPractitioner.alt}
+              width={64}
+              height={64}
+              className="credential-badge"
+            />
+            <div className="credential-text">
+              <span className="credential-label">Credentials</span>
+              <span className="credential-name">AWS Certified Cloud Practitioner</span>
+            </div>
+          </div>
         </div>
 
         <div className="process-steps reveal">
