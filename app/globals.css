@@ -2184,15 +2184,11 @@ em::after {
 }
 
 /* ---------- On It page: inline QR, static hero shot, video section ---------- */
-.onit-qr-inline {
-  flex-direction: row;
-  gap: 12px;
-  margin-top: 8px;
-}
-
-.onit-qr-inline .qr-code-img {
-  width: 72px;
-  height: 72px;
+.onit-qr-badge {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  z-index: 10;
 }
 
 .onit-hero-shot {

@@ -22,6 +22,26 @@ export default function OnItPage() {
     <main className="onit-page">
       {/* 1. HERO SECTION */}
       <section className="onit-hero-section">
+        {/* DESKTOP QR BADGE TOP-RIGHT */}
+        <div className="onit-qr-badge desktop-only">
+          <a
+            href="https://onit.dynastyweb.co/install"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="qr-link"
+            aria-label="Scan to install On It on your phone"
+          >
+            <Image
+              src="/onit/install-qr.png"
+              alt=""
+              width={88}
+              height={88}
+              className="qr-code-img"
+            />
+            <span className="qr-caption">Scan to install</span>
+          </a>
+        </div>
+
         <div className="wrap onit-hero-wrap">
           {/* LOGO / WORDMARK */}
           <div className="onit-brand-header">
@@ -57,16 +77,6 @@ export default function OnItPage() {
               className="onit-install-link"
             >
               How to install
-            </a>
-            <a
-              href="https://onit.dynastyweb.co/install"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="qr-link onit-qr-inline desktop-only"
-              aria-label="Scan to install On It on your phone"
-            >
-              <Image src="/onit/install-qr.png" alt="" width={72} height={72} className="qr-code-img" />
-              <span className="qr-caption">Scan to install on your phone</span>
             </a>
           </div>
 
