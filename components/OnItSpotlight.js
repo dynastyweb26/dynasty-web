@@ -18,7 +18,7 @@ export function OnItSpotlight() {
               Software built around <em>how</em> you work.
             </h2>
             <p className="onit-intro-p" style={{ fontSize: "16px", color: "var(--ink-2)", lineHeight: "1.6", marginBottom: "28px" }}>
-              Off-the-shelf apps make you work their way. We build tools that fit yours. On It is our own: a voice-powered invoicing app for the trades. Say the job, send the invoice, get paid before you leave the driveway.
+              On It started as a custom web app for one client: Cyril, a handyman who needed to invoice from the job site, not his kitchen table at night. We built it around exactly how his crew works. It worked so well we&apos;re now scaling it for every home service pro. That&apos;s what custom software looks like: built for your business first.
             </p>
             <Link href="/on-it" className="btn btn-primary">
               See On It
