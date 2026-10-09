@@ -2152,3 +2152,15 @@ em::after {
     transform: none !important;
   }
 }
+
+/* ---------- On It spotlight intro ---------- */
+.onit-intro-block .section-title {
+  margin: 12px 0 16px;
+}
+
+.onit-intro-p {
+  font-size: 16px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
