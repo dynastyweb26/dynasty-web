@@ -31,8 +31,6 @@ export function HomeClient() {
     return () => observer.disconnect();
   }, []);
 
-  const featuredSolutions = siteData.solutions.slice(0, 2);
-
   return (
     <>
       {/* FULL VIEWPORT HERO */}
@@ -100,16 +98,16 @@ export function HomeClient() {
         </div>
       </section>
 
-      {/* 1. OUR SOFTWARE (ON IT SPOTLIGHT) */}
+      {/* 1. BUILT IN-HOUSE (ON IT SPOTLIGHT) */}
       <OnItSpotlight />
 
-      {/* 2. CLIENT WEBSITES */}
+      {/* 2. SELECTED WORK */}
       <PastWork />
 
       {/* 3. HOW WE WORK (4-STEP PROCESS) */}
       <Process />
 
-      {/* 4. DIGITAL SOLUTIONS TEASER */}
+      {/* 4. WHAT WE BUILD (CAPABILITIES) */}
       <section className="section teaser-section">
         <div className="wrap">
           <div className="eyebrow">
@@ -117,78 +115,25 @@ export function HomeClient() {
           </div>
           <div className="section-head-split">
             <h2 className="section-title">
-              Custom <em>software</em>, plus the tools around it.
+              Software for the way your <em>company</em> runs.
             </h2>
             <p className="section-subtitle">
-              Start with the app your business needs, or pick individual services like websites, local SEO, and branding. Combine them to unlock package perks.
+              We build custom software end to end, from the first workflow map to launch and support. Websites and supporting services are available alongside.
             </p>
           </div>
 
           <div className="bento-grid teaser-bento">
-            {featuredSolutions.map((item) => (
-              <Link key={item.id} href="/solutions" className="bento-tile interactive-tile">
-                <div className="bento-tile-top">
-                  <h3 className="bento-tile-title">{item.name}</h3>
-                  <div className="bento-price-tag">
-                    {item.quoteOnly ? (
-                      <span className="price-num price-quote">Custom quote</span>
-                    ) : (
-                      <>
-                        <span className="price-num">{item.price}</span>
-                        <span className="price-cadence">/{item.cadence}</span>
-                      </>
-                    )}
-                  </div>
-                </div>
-                {item.note && <p className="bento-price-note">{item.note}</p>}
+            {siteData.capabilities.map((item) => (
+              <div key={item.id} className="bento-tile">
+                <h3 className="bento-tile-title">{item.name}</h3>
                 <p className="bento-tile-desc">{item.description}</p>
-              </Link>
-            ))}
-          </div>
-
-          <div className="teaser-action-row">
-            <Link href="/solutions" className="btn btn-ghost">
-              View all digital solutions
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. PACKAGE PROGRESSION (TIER LADDER TEASER) */}
-      <section className="section teaser-section tier-ladder-section">
-        <div className="wrap">
-          <div className="eyebrow">
-            <span>Package Progression</span>
-          </div>
-          <div className="section-head-split">
-            <h2 className="section-title">
-              The more you add, the <em>more</em> you unlock.
-            </h2>
-            <p className="section-subtitle">
-              You pay per solution. Every added tool advances your business up our package ladder, unlocking perks like priority support and website maintenance.
-            </p>
-          </div>
-
-          <div className="tier-ladder">
-            {siteData.packages.map((pkg, index) => (
-              <div key={pkg.id} className={`ladder-step step-${index + 1} ${pkg.featured ? "featured-step" : ""}`}>
-                <div className="ladder-step-num">0{index + 1}</div>
-                <div className="ladder-step-info">
-                  <h3 className="ladder-step-name">{pkg.name}</h3>
-                  <span className="ladder-step-qualifier">{pkg.qualifier}</span>
-                </div>
-                <p className="ladder-step-pitch">{pkg.pitch}</p>
               </div>
             ))}
           </div>
 
           <div className="teaser-action-row">
-            <Link href="/packages" className="btn btn-primary">
-              See how tiers &amp; perks work
+            <Link href="/solutions" className="btn btn-ghost">
+              View all solutions
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
@@ -198,29 +143,29 @@ export function HomeClient() {
         </div>
       </section>
 
-      {/* 6. CLOSING CTA BAND */}
+      {/* 5. CLOSING CTA BAND */}
       <section className="section cta-band-section">
         <div className="wrap">
           <div className="cta-band-card">
             <div className="eyebrow light-eyebrow">
-              <span>Ready to start?</span>
+              <span>Start a Project</span>
             </div>
             <h2 className="cta-band-title">
-              Let&apos;s build something <em>lasting</em> for your business.
+              Let&apos;s build something <em>lasting</em> for your company.
             </h2>
             <p className="cta-band-text">
-              Tell us how your business runs and where it gets stuck. We respond within 24 business hours.
+              Tell us how your company operates and where it gets stuck. We reply within one business day with next steps.
             </p>
             <div className="cta-band-actions">
               <Link href="/contact" className="btn btn-gold-bright">
-                Get a quote
+                Start a project
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
               </Link>
-              <Link href="/solutions" className="btn btn-ghost-light">
-                Browse solutions
+              <Link href="/#work" className="btn btn-ghost-light">
+                See our work
               </Link>
             </div>
           </div>
