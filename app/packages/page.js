@@ -2,9 +2,9 @@ import Link from "next/link";
 import { siteData } from "../../data/site";
 
 export const metadata = {
-  title: "Service Packages & Tier Progression | Dynasty Web",
+  title: "Website Packages",
   description:
-    "How our package tiers work. Pay per Digital Solution on top of your custom website base and unlock Pro Gold, Platinum, and Diamond perks.",
+    "How Dynasty Web website packages work: add services to a website project and unlock included perks.",
 };
 
 export default function PackagesPage() {
@@ -13,32 +13,32 @@ export default function PackagesPage() {
       <section className="section page-hero-section">
         <div className="wrap">
           <div className="eyebrow">
-            <span>Package Structure</span>
+            <span>Website Packages</span>
           </div>
           <h1 className="page-title">
-            How our <em>packages</em> &amp; tiers work.
+            How <em>packages</em> work.
           </h1>
           <p className="page-subtitle">
-            Packages start with a custom website base. Adding Digital Solutions automatically advances your business into higher tiers with exclusive free perks. Every solution can also be bought on its own.
+            Packages apply to website projects. Adding supporting services moves a project into higher tiers with included perks. Every service can also be purchased on its own, and custom software is always scoped separately.
           </p>
 
           <div className="tier-explanation-box">
             <div className="expl-step">
               <span className="expl-num">1</span>
-              <h4>Custom Website Base</h4>
-              <p>Every client gets a responsive, high-converting digital storefront.</p>
+              <h4>Website Base</h4>
+              <p>Every package starts with a custom, mobile-friendly website.</p>
             </div>
             <div className="expl-divider">→</div>
             <div className="expl-step">
               <span className="expl-num">2</span>
-              <h4>Select Solutions</h4>
-              <p>Choose à la carte tools like SEO, Photography, or On It invoicing.</p>
+              <h4>Add Services</h4>
+              <p>Add services like local SEO, photography, or On It invoicing.</p>
             </div>
             <div className="expl-divider">→</div>
             <div className="expl-step">
               <span className="expl-num">3</span>
               <h4>Unlock Perks</h4>
-              <p>Higher solution counts unlock CRM setup, website maintenance &amp; priority support.</p>
+              <p>Higher service counts unlock CRM setup, website maintenance, and priority support.</p>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function PackagesPage() {
 
                 <div className="pkg-footer">
                   <Link
-                    href={`/contact?s=`}
+                    href={`/contact?s=website`}
                     className={`btn ${pkg.featured ? "btn-gold-bright" : "btn-primary"} full-width`}
                   >
                     Build your quote
@@ -91,14 +91,14 @@ export default function PackagesPage() {
 
           <div className="packages-actions-row">
             <Link href="/solutions" className="btn btn-ghost">
-              Browse Digital Solutions
+              Browse services
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
               </svg>
             </Link>
             <Link href="/contact" className="btn btn-primary">
-              Inquire now
+              Start a project
             </Link>
           </div>
         </div>
@@ -109,20 +109,20 @@ export default function PackagesPage() {
         <div className="wrap">
           <div className="cta-band-card">
             <div className="eyebrow light-eyebrow">
-              <span>Ready to pick solutions?</span>
+              <span>Ready to choose?</span>
             </div>
             <h2 className="cta-band-title">
-              See which <em>tier</em> matches your vision.
+              Find the <em>package</em> that fits.
             </h2>
             <p className="cta-band-text">
-              Check out our full à la carte menu of Digital Solutions and add them to your interactive quote.
+              Browse supporting services and add them to your quote.
             </p>
             <div className="cta-band-actions">
               <Link href="/solutions" className="btn btn-gold-bright">
-                Explore solutions
+                Explore services
               </Link>
               <Link href="/contact" className="btn btn-ghost-light">
-                Get a custom quote
+                Start a project
               </Link>
             </div>
           </div>
