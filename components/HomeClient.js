@@ -90,14 +90,14 @@ export function HomeClient() {
       <section className="section teaser-section">
         <div className="wrap">
           <div className="eyebrow">
-            <span>Digital Solutions</span>
+            <span>What We Build</span>
           </div>
           <div className="section-head-split">
             <h2 className="section-title">
-              À la carte <em>tools</em> for growth.
+              Custom <em>software</em>, plus the tools around it.
             </h2>
             <p className="section-subtitle">
-              Select individual services or combine them on top of your website base to automatically unlock package perks.
+              Start with the app your business needs, or pick individual services like websites, local SEO, and branding. Combine them to unlock package perks.
             </p>
           </div>
 
@@ -107,8 +107,14 @@ export function HomeClient() {
                 <div className="bento-tile-top">
                   <h3 className="bento-tile-title">{item.name}</h3>
                   <div className="bento-price-tag">
-                    <span className="price-num">{item.price}</span>
-                    <span className="price-cadence">/{item.cadence}</span>
+                    {item.quoteOnly ? (
+                      <span className="price-num price-quote">Custom quote</span>
+                    ) : (
+                      <>
+                        <span className="price-num">{item.price}</span>
+                        <span className="price-cadence">/{item.cadence}</span>
+                      </>
+                    )}
                   </div>
                 </div>
                 {item.note && <p className="bento-price-note">{item.note}</p>}

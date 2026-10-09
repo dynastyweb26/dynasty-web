@@ -26,13 +26,13 @@ export default function SolutionsPage() {
       <section className="section page-hero-section">
         <div className="wrap">
           <div className="eyebrow">
-            <span>Digital Solutions Menu</span>
+            <span>What We Build</span>
           </div>
           <h1 className="page-title">
-            À la carte <em>services</em> for local growth.
+            Custom <em>software</em> first. Growth tools alongside.
           </h1>
           <p className="page-subtitle">
-            Pick and choose the exact digital tools your business needs. Each added solution builds your quote and advances your tier.
+            Start with a custom web app built around your business, or pick individual services. Each added solution builds your quote and advances your tier.
           </p>
 
           <div className="tier-unlock-banner">

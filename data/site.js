@@ -62,6 +62,13 @@ export const siteData = {
   // `quoteOnly: true` means no fixed price; the client requests a quote.
   solutions: [
     {
+      id: "custom-software",
+      name: "Custom Software",
+      quoteOnly: true,
+      tierEligible: false,
+      description: "Web apps built around how your business runs: job trackers, customer portals, quote builders, scheduling, and internal dashboards. Scoped and quoted per project.",
+    },
+    {
       id: "website",
       name: "Website Design",
       price: "From $400",
@@ -121,13 +128,6 @@ export const siteData = {
       cadence: "one-time",
       note: "plus directory listing fees at cost",
       description: "Google Business Profile optimization, local listings, and on-site tuning so you show up in your town.",
-    },
-    {
-      id: "custom-software",
-      name: "Custom Software",
-      quoteOnly: true,
-      tierEligible: false,
-      description: "Job trackers, customer portals, quote builders: tools built around how your business actually runs.",
     },
   ],
 
