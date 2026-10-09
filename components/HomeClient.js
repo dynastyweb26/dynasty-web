@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteData } from "../data/site";
 import { PastWork } from "./PastWork";
 import { OnItSpotlight } from "./OnItSpotlight";
@@ -36,44 +37,66 @@ export function HomeClient() {
     <>
       {/* FULL VIEWPORT HERO */}
       <section className="hero-full-viewport">
-        <div className="faded-word-background" aria-hidden="true">
-          Dynasty
-        </div>
         <div className="hero-radial-glow" aria-hidden="true" />
 
         <div className="wrap hero-wrap">
-          <div className="eyebrow hero-eyebrow">
-            <span>Software Studio · Forney, TX</span>
-          </div>
+          <div className="hero-copy">
+            <div className="eyebrow hero-eyebrow">
+              <span>Software Studio · Dallas–Fort Worth</span>
+            </div>
 
-          <h1 className="hero-headline">
-            Custom software tailored to <em>your</em> business.
-          </h1>
+            <h1 className="hero-headline">
+              Custom software tailored to <em>your</em> company.
+            </h1>
 
-          <p className="hero-subhead">
-            We build web apps and business tools around how you actually work: job trackers, customer portals, quote builders, invoicing. Need a website too? We build those as well.
-          </p>
+            <p className="hero-subhead">
+              We design and build the software your company runs on: customer-facing apps, quoting and ordering tools, and internal systems, shaped around how your team actually works. Built for you, owned by you.
+            </p>
 
-          <div className="hero-cta-group">
-            <Link href="/contact" className="btn btn-primary hero-btn">
-              Get a quote
+            <div className="hero-cta-group">
+              <Link href="/contact" className="btn btn-primary hero-btn">
+                Start a project
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </Link>
+              <Link href="/#work" className="btn btn-ghost hero-btn">
+                See our work
+              </Link>
+            </div>
+
+            <a href="#built-by-dynasty" className="hero-scroll-cue" aria-label="Scroll to our software">
+              <span className="scroll-text">See what we&apos;ve shipped</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <polyline points="19 12 12 19 5 12" />
               </svg>
-            </Link>
-            <Link href="/solutions" className="btn btn-ghost hero-btn">
-              See what we build
-            </Link>
+            </a>
           </div>
 
-          <a href="#built-by-dynasty" className="hero-scroll-cue" aria-label="Scroll to our software">
-            <span className="scroll-text">See our software</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <line x1="12" y1="5" x2="12" y2="19" />
-              <polyline points="19 12 12 19 5 12" />
-            </svg>
-          </a>
+          <div className="hero-visual">
+            <Image
+              src="/onit/04-expenses.png"
+              alt=""
+              width={797}
+              height={1600}
+              sizes="(min-width: 1000px) 260px, 180px"
+              className="hero-phone hero-phone-back"
+            />
+            <Image
+              src="/onit/01-chat.png"
+              alt="On It, custom software Dynasty Web built for a field-service company, turning a spoken job into an invoice"
+              width={883}
+              height={1600}
+              sizes="(min-width: 1000px) 300px, 210px"
+              priority
+              className="hero-phone hero-phone-front"
+            />
+            <Link href="/on-it" className="hero-visual-caption">
+              On It · built for one client, now a live product →
+            </Link>
+          </div>
         </div>
       </section>
 
