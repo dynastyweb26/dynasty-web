@@ -85,13 +85,13 @@ function ContactFormInner() {
     <div className="contact-container">
       <div className="contact-header-block">
         <div className="eyebrow">
-          <span>Start a Conversation</span>
+          <span>Start a Project</span>
         </div>
         <h1 className="page-title">
-          Get a <em>custom</em> quote.
+          Tell us about your <em>project</em>.
         </h1>
         <p className="page-subtitle">
-          Tell us what you need built. Pick any solutions below and your package tier calculates automatically.
+          Share what you need built. We reply within one business day with next steps or a time to talk it through.
         </p>
         <div className="faq-jump-row">
           <Link href="/contact#faq" className="btn btn-ghost btn-sm">
@@ -113,6 +113,7 @@ function ContactFormInner() {
               autoComplete="off"
             />
 
+            {selectedSolutions.includes("website") && (
             <div className="computed-tier-banner">
               <div className="tier-banner-top">
                 <span className="tier-label">Calculated Tier:</span>
@@ -121,10 +122,11 @@ function ContactFormInner() {
               <p className="tier-qualifier">{computedTier.qualifier}</p>
               {computedTier.nextTier && (
                 <div className="next-tier-nudge">
-                  Add {computedTier.neededForNext} more solution{computedTier.neededForNext > 1 ? "s" : ""} to unlock <strong>{computedTier.nextTier}</strong> perks!
+                  Add {computedTier.neededForNext} more service{computedTier.neededForNext > 1 ? "s" : ""} to unlock <strong>{computedTier.nextTier}</strong> perks.
                 </div>
               )}
             </div>
+            )}
 
             <div className="form-group-grid">
               <div className="form-field">
@@ -136,26 +138,26 @@ function ContactFormInner() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="John Doe"
+                  placeholder="Full name"
                 />
               </div>
 
               <div className="form-field">
-                <label htmlFor="businessName">Business Name</label>
+                <label htmlFor="businessName">Company</label>
                 <input
                   type="text"
                   id="businessName"
                   name="businessName"
                   value={formData.businessName}
                   onChange={handleChange}
-                  placeholder="Forney Plumbing Co."
+                  placeholder="Company name"
                 />
               </div>
             </div>
 
             <div className="form-group-grid">
               <div className="form-field">
-                <label htmlFor="email">Email Address *</label>
+                <label htmlFor="email">Work email *</label>
                 <input
                   type="email"
                   id="email"
@@ -163,12 +165,12 @@ function ContactFormInner() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="john@example.com"
+                  placeholder="you@company.com"
                 />
               </div>
 
               <div className="form-field">
-                <label htmlFor="phone">Phone Number</label>
+                <label htmlFor="phone">Phone</label>
                 <input
                   type="tel"
                   id="phone"
@@ -181,7 +183,7 @@ function ContactFormInner() {
             </div>
 
             <div className="form-field">
-              <label>Digital Solutions of Interest</label>
+              <label>What you&apos;re interested in (optional)</label>
               <div className="checkbox-solutions-grid">
                 {siteData.solutions.map((sol) => {
                   const isChecked = selectedSolutions.includes(sol.id);
@@ -213,7 +215,7 @@ function ContactFormInner() {
             </div>
 
             <div className="form-field">
-              <label htmlFor="message">Message *</label>
+              <label htmlFor="message">Project details *</label>
               <textarea
                 id="message"
                 name="message"
@@ -221,7 +223,7 @@ function ContactFormInner() {
                 rows={4}
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Tell us how your business runs and what you need built..."
+                placeholder="Describe how your company operates today and what you need built…"
               />
             </div>
 
@@ -236,7 +238,7 @@ function ContactFormInner() {
 
             {status === "success" && (
               <div className="form-status-alert success">
-                <p>Inquiry received! We will be in touch within 24 business hours.</p>
+                <p>Thanks, your inquiry is in. We&apos;ll reply within one business day.</p>
               </div>
             )}
 
@@ -245,7 +247,7 @@ function ContactFormInner() {
               disabled={status === "sending"}
               className="btn btn-primary btn-submit full-width"
             >
-              {status === "sending" ? "Sending Inquiry..." : "Submit Inquiry"}
+              {status === "sending" ? "Sending…" : "Send inquiry"}
             </button>
           </form>
         </div>
@@ -253,13 +255,13 @@ function ContactFormInner() {
         <div className="contact-info-sidebar">
           <div className="sidebar-card">
             <h3>Direct Contact</h3>
-            <p>Prefer to send a direct message or email?</p>
+            <p>Prefer email? Write to Brandon directly.</p>
             <a href="mailto:brandon@dynastyweb.co" className="sidebar-email">
               brandon@dynastyweb.co
             </a>
             <div className="sidebar-location">
               <span>Forney, Texas</span>
-              <p>Based in Forney, working with businesses anywhere.</p>
+              <p>Based in the Dallas–Fort Worth area, working with companies anywhere.</p>
             </div>
           </div>
         </div>
