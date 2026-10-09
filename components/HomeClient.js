@@ -43,15 +43,15 @@ export function HomeClient() {
 
         <div className="wrap hero-wrap">
           <div className="eyebrow hero-eyebrow">
-            <span>Digital Solutions Studio · Forney, TX</span>
+            <span>Software Studio · Forney, TX</span>
           </div>
 
           <h1 className="hero-headline">
-            Digital solutions built for <em>local</em> service businesses.
+            Custom software tailored to <em>your</em> business.
           </h1>
 
           <p className="hero-subhead">
-            We build custom websites, local SEO, and software that bring in calls, keep your business organized, and help hard-working trades grow.
+            We build web apps and business tools around how you actually work: job trackers, customer portals, quote builders, invoicing. Need a website too? We build those as well.
           </p>
 
           <div className="hero-cta-group">
@@ -63,12 +63,12 @@ export function HomeClient() {
               </svg>
             </Link>
             <Link href="/solutions" className="btn btn-ghost hero-btn">
-              Explore solutions
+              See what we build
             </Link>
           </div>
 
-          <a href="#work" className="hero-scroll-cue" aria-label="Scroll to Recent Work">
-            <span className="scroll-text">Explore work</span>
+          <a href="#built-by-dynasty" className="hero-scroll-cue" aria-label="Scroll to our software">
+            <span className="scroll-text">See our software</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <line x1="12" y1="5" x2="12" y2="19" />
               <polyline points="19 12 12 19 5 12" />

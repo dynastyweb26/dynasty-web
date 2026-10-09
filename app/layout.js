@@ -24,13 +24,16 @@ const siteUrl = "https://dynastyweb.co";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Dynasty Web — Digital Solutions Studio for Local Businesses",
+    default: "Dynasty Web — Custom Software & Web Apps for Your Business",
     template: "%s · Dynasty Web",
   },
   description:
-    "Digital solutions studio in Forney, Texas building websites, branding, and lead capture systems for local businesses. Makers of On It.",
+    "Software studio in Forney, Texas building custom web apps and business tools tailored to how you work, plus websites. Makers of On It.",
   keywords: [
     "Dynasty Web",
+    "custom software development",
+    "custom web app development",
+    "small business software",
     "digital solutions studio",
     "web design Forney TX",
     "small business websites",
@@ -47,16 +50,16 @@ export const metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Dynasty Web",
-    title: "Dynasty Web — Digital Solutions Studio",
+    title: "Dynasty Web — Custom Software Tailored to Your Business",
     description:
-      "Digital solutions studio in Forney, Texas building custom websites, branding, and lead systems for local businesses.",
+      "Custom web apps and business tools built around how you work, plus websites. A software studio in Forney, Texas.",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dynasty Web — Digital Solutions Studio",
+    title: "Dynasty Web — Custom Software Tailored to Your Business",
     description:
-      "Digital solutions studio in Forney, Texas building custom websites, branding, and lead systems for local businesses.",
+      "Custom web apps and business tools built around how you work, plus websites. A software studio in Forney, Texas.",
   },
   icons: {
     icon: "/icon",
