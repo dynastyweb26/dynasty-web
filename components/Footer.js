@@ -15,7 +15,7 @@ export function Footer() {
               <span className="footer-brand-name">Dynasty Web</span>
             </Link>
             <p className="footer-tagline">
-              Digital solutions studio building custom websites, marketing, and software for local service businesses, from Forney, Texas to anywhere.
+              Software studio building custom web apps, business tools, and websites for service businesses, from Forney, Texas to anywhere.
             </p>
           </div>
 

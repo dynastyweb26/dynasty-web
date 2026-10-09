@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Dynasty Web — Digital solutions studio for local businesses";
+export const alt = "Dynasty Web — Custom software tailored to your business";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -83,7 +83,7 @@ export default function OpengraphImage() {
               display: "flex",
             }}
           >
-            Digital solutions studio in Forney, Texas for local businesses.
+            Custom software and web apps, built around your business.
           </div>
         </div>
 
@@ -98,7 +98,7 @@ export default function OpengraphImage() {
             fontWeight: 600,
           }}
         >
-          <div style={{ display: "flex" }}>Digital Solutions</div>
+          <div style={{ display: "flex" }}>Custom Software</div>
           <div style={{ display: "flex", color: "#a89a83" }}>·</div>
           <div style={{ display: "flex" }}>Makers of On It</div>
           <div style={{ display: "flex", color: "#a89a83" }}>·</div>

@@ -43,15 +43,15 @@ export function HomeClient() {
 
         <div className="wrap hero-wrap">
           <div className="eyebrow hero-eyebrow">
-            <span>Digital Solutions Studio · Forney, TX</span>
+            <span>Software Studio · Forney, TX</span>
           </div>
 
           <h1 className="hero-headline">
-            Digital solutions built for <em>local</em> service businesses.
+            Custom software tailored to <em>your</em> business.
           </h1>
 
           <p className="hero-subhead">
-            We build custom websites, local SEO, and software that bring in calls, keep your business organized, and help hard-working trades grow.
+            We build web apps and business tools around how you actually work: job trackers, customer portals, quote builders, invoicing. Need a website too? We build those as well.
           </p>
 
           <div className="hero-cta-group">
@@ -63,12 +63,12 @@ export function HomeClient() {
               </svg>
             </Link>
             <Link href="/solutions" className="btn btn-ghost hero-btn">
-              Explore solutions
+              See what we build
             </Link>
           </div>
 
-          <a href="#work" className="hero-scroll-cue" aria-label="Scroll to Recent Work">
-            <span className="scroll-text">Explore work</span>
+          <a href="#built-by-dynasty" className="hero-scroll-cue" aria-label="Scroll to our software">
+            <span className="scroll-text">See our software</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <line x1="12" y1="5" x2="12" y2="19" />
               <polyline points="19 12 12 19 5 12" />
@@ -77,11 +77,11 @@ export function HomeClient() {
         </div>
       </section>
 
-      {/* 1. RECENT WORK SECTION */}
-      <PastWork />
-
-      {/* 2. BUILT BY DYNASTY WEB SECTION */}
+      {/* 1. OUR SOFTWARE (ON IT SPOTLIGHT) */}
       <OnItSpotlight />
+
+      {/* 2. CLIENT WEBSITES */}
+      <PastWork />
 
       {/* 3. HOW WE WORK (4-STEP PROCESS) */}
       <Process />
@@ -90,14 +90,14 @@ export function HomeClient() {
       <section className="section teaser-section">
         <div className="wrap">
           <div className="eyebrow">
-            <span>Digital Solutions</span>
+            <span>What We Build</span>
           </div>
           <div className="section-head-split">
             <h2 className="section-title">
-              À la carte <em>tools</em> for growth.
+              Custom <em>software</em>, plus the tools around it.
             </h2>
             <p className="section-subtitle">
-              Select individual services or combine them on top of your website base to automatically unlock package perks.
+              Start with the app your business needs, or pick individual services like websites, local SEO, and branding. Combine them to unlock package perks.
             </p>
           </div>
 
@@ -107,8 +107,14 @@ export function HomeClient() {
                 <div className="bento-tile-top">
                   <h3 className="bento-tile-title">{item.name}</h3>
                   <div className="bento-price-tag">
-                    <span className="price-num">{item.price}</span>
-                    <span className="price-cadence">/{item.cadence}</span>
+                    {item.quoteOnly ? (
+                      <span className="price-num price-quote">Custom quote</span>
+                    ) : (
+                      <>
+                        <span className="price-num">{item.price}</span>
+                        <span className="price-cadence">/{item.cadence}</span>
+                      </>
+                    )}
                   </div>
                 </div>
                 {item.note && <p className="bento-price-note">{item.note}</p>}
@@ -180,7 +186,7 @@ export function HomeClient() {
               Let&apos;s build something <em>lasting</em> for your business.
             </h2>
             <p className="cta-band-text">
-              Pick your solutions, estimate your package tier, and send us an inquiry. We respond within 24 business hours.
+              Tell us how your business runs and where it gets stuck. We respond within 24 business hours.
             </p>
             <div className="cta-band-actions">
               <Link href="/contact" className="btn btn-gold-bright">

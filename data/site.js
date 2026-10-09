@@ -62,6 +62,13 @@ export const siteData = {
   // `quoteOnly: true` means no fixed price; the client requests a quote.
   solutions: [
     {
+      id: "custom-software",
+      name: "Custom Software",
+      quoteOnly: true,
+      tierEligible: false,
+      description: "Web apps built around how your business runs: job trackers, customer portals, quote builders, scheduling, and internal dashboards. Scoped and quoted per project.",
+    },
+    {
       id: "website",
       name: "Website Design",
       price: "From $400",
@@ -122,13 +129,6 @@ export const siteData = {
       note: "plus directory listing fees at cost",
       description: "Google Business Profile optimization, local listings, and on-site tuning so you show up in your town.",
     },
-    {
-      id: "custom-software",
-      name: "Custom Software",
-      quoteOnly: true,
-      tierEligible: false,
-      description: "Job trackers, customer portals, quote builders: tools built around how your business actually runs.",
-    },
   ],
 
   work: [
@@ -173,11 +173,11 @@ export const siteData = {
       url: "https://onit.dynastyweb.co",
       screenshots: [],
       builtInHouse: true,
-      shortDescription: "Fast invoices, fast money. An invoicing app for home service pros, and proof that Dynasty Web ships real software, not just websites.",
+      shortDescription: "Built as a custom invoicing app for Cyril Handyman & Door, now being scaled for home service pros everywhere. Say the job, send the invoice, get paid.",
       caseStudy: {
-        problem: "Tradespeople lose hours typing out invoices after long days on job sites.",
-        whatWeBuilt: "Created voice-to-invoice web software so field workers can speak the job and send a professional invoice.",
-        result: "Enables field workers to invoice before leaving the client driveway.",
+        problem: "Cyril was losing evenings typing up invoices after long days on job sites, and generic invoicing apps didn't fit how his crew works.",
+        whatWeBuilt: "A custom voice-to-invoice web app built around his business: speak the job, and On It writes and sends a professional invoice with a pay link.",
+        result: "Cyril invoices before leaving the driveway. The app worked so well that we're now developing it for home service pros everywhere.",
       },
     },
   ],
@@ -185,27 +185,35 @@ export const siteData = {
   process: [
     {
       step: "01",
-      title: "Pick Solutions",
-      description: "Select the specific Digital Solutions your business needs, from local SEO to business photography.",
+      title: "Tell Us the Problem",
+      description: "Walk us through how your business runs today and where it slows you down: paperwork, spreadsheets, missed follow-ups.",
     },
     {
       step: "02",
       title: "Quick Call & Quote",
-      description: "We talk through your goals on a short call and send a fixed quote. Your tier is set by how many solutions you pick.",
+      description: "We map out the tool on a short call and send a clear quote with scope and timeline before any work starts.",
     },
     {
       step: "03",
       title: "Build & Refine",
-      description: "We build your website and solutions fast, keep you updated directly, and skip anything you don't need.",
+      description: "We build in short rounds and show you working versions along the way, so you shape it as it comes together.",
     },
     {
       step: "04",
-      title: "Launch",
-      description: "Your custom platform goes live on your domain, ready to turn local visitors into paying customers.",
+      title: "Launch & Support",
+      description: "Your software goes live, your team gets set up, and we stay on to maintain and improve it.",
     },
   ],
 
   faq: [
+    {
+      question: "What kind of software do you build?",
+      answer: "Web apps that run on any phone or computer, built around one business: job trackers, customer portals, quote and estimate builders, invoicing, scheduling, and internal dashboards. If part of your business runs on spreadsheets, paper, or a pile of apps that don't talk to each other, that's usually where we start.",
+    },
+    {
+      question: "How much does custom software cost?",
+      answer: "Every project is quoted after a short call, because scope drives price. You get a clear quote with scope and timeline before any work begins, and we can start small and grow it in stages.",
+    },
     {
       question: "How much does a website cost?",
       answer: "Websites start at $400 for up to 3 pages: home, services or gallery, and contact. That includes mobile-friendly design, a contact form, basic on-page SEO, Google Search Console setup, and 1 revision round. You supply the text, logo, and photos. Hosting and maintenance is $90/mo. Extra pages, copywriting, Local SEO, branding, and other solutions are add-ons.",
@@ -216,7 +224,7 @@ export const siteData = {
     },
     {
       question: "How long does a build take?",
-      answer: "A standard build takes 1 to 2 weeks from kickoff. Diamond tier projects with full brand refreshes take 2 to 3 weeks.",
+      answer: "Custom software depends on scope, and your quote includes a timeline. Websites take 1 to 2 weeks from kickoff; Diamond tier projects with full brand refreshes take 2 to 3 weeks.",
     },
     {
       question: "Do I own my site?",

@@ -12,13 +12,13 @@ export function OnItSpotlight() {
           {/* INTRO BLOCK */}
           <div className="onit-intro-block">
             <div className="eyebrow">
-              <span>Built by Dynasty Web</span>
+              <span>Our Software</span>
             </div>
             <h2 className="section-title" style={{ marginTop: "12px", marginBottom: "16px" }}>
-              We build <em>custom</em> software.
+              Software built around <em>how</em> you work.
             </h2>
             <p className="onit-intro-p" style={{ fontSize: "16px", color: "var(--ink-2)", lineHeight: "1.6", marginBottom: "28px" }}>
-              We design and ship real apps for the trades. On It is our in-house invoicing app: say the job, send the invoice, get paid before you leave the driveway. Proof that Dynasty Web builds real software, not just websites.
+              On It started as a custom web app for one client: Cyril, a handyman who needed to invoice from the job site, not his kitchen table at night. We built it around exactly how his crew works. It worked so well we&apos;re now scaling it for every home service pro. That&apos;s what custom software looks like: built for your business first.
             </p>
             <Link href="/on-it" className="btn btn-primary">
               See On It
