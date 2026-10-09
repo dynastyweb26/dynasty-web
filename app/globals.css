@@ -2168,3 +2168,23 @@ em::after {
 .teaser-bento .bento-tile-title {
   margin-bottom: 10px;
 }
+
+/* ---------- Solutions: featured tile + services group ---------- */
+.feature-tile {
+  grid-column: 1 / -1;
+}
+
+.services-eyebrow {
+  margin-top: clamp(40px, 6vw, 64px);
+}
+
+.services-note {
+  font-size: 15px;
+  color: var(--ink-2);
+  margin: 8px 0 24px;
+}
+
+.services-note a {
+  color: var(--gold);
+  text-decoration: underline;
+}
