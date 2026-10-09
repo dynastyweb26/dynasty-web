@@ -91,7 +91,7 @@ function ContactFormInner() {
           Get a <em>custom</em> quote.
         </h1>
         <p className="page-subtitle">
-          Select your solutions below. Your package tier calculates automatically based on your requirements.
+          Tell us what you need built. Pick any solutions below and your package tier calculates automatically.
         </p>
         <div className="faq-jump-row">
           <Link href="/contact#faq" className="btn btn-ghost btn-sm">
@@ -221,7 +221,7 @@ function ContactFormInner() {
                 rows={4}
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Tell us about your project or current site..."
+                placeholder="Tell us how your business runs and what you need built..."
               />
             </div>
 
