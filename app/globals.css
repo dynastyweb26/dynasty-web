@@ -1900,13 +1900,6 @@ em::after {
   text-align: center;
 }
 
-.onit-qr-badge {
-  position: absolute;
-  top: 24px;
-  right: 32px;
-  z-index: 10;
-}
-
 .qr-link {
   display: flex;
   flex-direction: column;
@@ -2185,6 +2178,61 @@ em::after {
 }
 
 .services-note a {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+/* ---------- On It page: inline QR, static hero shot, video section ---------- */
+.onit-qr-inline {
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.onit-qr-inline .qr-code-img {
+  width: 72px;
+  height: 72px;
+}
+
+.onit-hero-shot {
+  height: min(64vh, 560px);
+  margin: 0 auto;
+}
+
+.onit-hero-shot-img {
+  height: 100%;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 24px 40px rgba(36, 29, 21, 0.18));
+}
+
+@media (max-width: 600px) {
+  .onit-hero-shot {
+    height: 440px;
+  }
+}
+
+.onit-video-section {
+  padding: clamp(60px, 9vw, 100px) 0;
+  border-top: 1px solid var(--line);
+}
+
+.onit-video-frame {
+  margin-top: 20px;
+  background: var(--ink);
+  border-radius: 26px;
+  padding: clamp(16px, 3vw, 32px);
+  display: flex;
+  justify-content: center;
+}
+
+.onit-studio-note {
+  margin-top: 20px;
+  font-size: 14.5px;
+  color: var(--ink-soft);
+}
+
+.onit-studio-note a {
   color: var(--gold);
   text-decoration: underline;
 }
