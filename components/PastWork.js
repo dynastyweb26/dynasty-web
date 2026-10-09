@@ -9,14 +9,14 @@ export function PastWork() {
     <section className="section" id="work">
       <div className="wrap">
         <div className="eyebrow">
-          <span>Recent Work</span>
+          <span>Client Websites</span>
         </div>
         <div className="section-head-split">
           <h2 className="section-title">
-            Sites that <em>work</em> for a living.
+            Websites that <em>work</em> for a living.
           </h2>
           <p className="section-subtitle">
-            Every client site is custom-built from scratch to load fast, rank in local search, and turn visitors into calls.
+            We build websites too. Every client site is custom-built from scratch to load fast, rank in local search, and turn visitors into calls.
           </p>
         </div>
 

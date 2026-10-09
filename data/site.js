@@ -173,7 +173,7 @@ export const siteData = {
       url: "https://onit.dynastyweb.co",
       screenshots: [],
       builtInHouse: true,
-      shortDescription: "Fast invoices, fast money. An invoicing app for home service pros, and proof that Dynasty Web ships real software, not just websites.",
+      shortDescription: "Fast invoices, fast money. Our in-house invoicing app for home service pros, built from scratch and used in the field.",
       caseStudy: {
         problem: "Tradespeople lose hours typing out invoices after long days on job sites.",
         whatWeBuilt: "Created voice-to-invoice web software so field workers can speak the job and send a professional invoice.",

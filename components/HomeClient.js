@@ -77,11 +77,11 @@ export function HomeClient() {
         </div>
       </section>
 
-      {/* 1. RECENT WORK SECTION */}
-      <PastWork />
-
-      {/* 2. BUILT BY DYNASTY WEB SECTION */}
+      {/* 1. OUR SOFTWARE (ON IT SPOTLIGHT) */}
       <OnItSpotlight />
+
+      {/* 2. CLIENT WEBSITES */}
+      <PastWork />
 
       {/* 3. HOW WE WORK (4-STEP PROCESS) */}
       <Process />
@@ -180,7 +180,7 @@ export function HomeClient() {
               Let&apos;s build something <em>lasting</em> for your business.
             </h2>
             <p className="cta-band-text">
-              Pick your solutions, estimate your package tier, and send us an inquiry. We respond within 24 business hours.
+              Tell us how your business runs and where it gets stuck. We respond within 24 business hours.
             </p>
             <div className="cta-band-actions">
               <Link href="/contact" className="btn btn-gold-bright">
