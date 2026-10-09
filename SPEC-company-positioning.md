@@ -209,6 +209,10 @@ capabilities: [
 ],
 ```
 
+**File:** `components/Process.js` (header copy, same commit)
+- `<h2>`: `A clear path from first call to <em>launch</em>.`
+- Paragraph: `Every engagement follows the same disciplined process: defined scope, phased delivery, and direct access to the engineer leading your build.`
+
 **`faq` — replace the whole array** (order matters):
 ```js
 faq: [
@@ -491,6 +495,7 @@ Only existing tokens and the existing shadow color are used. No new colors.
   </div>
 </section>
 ```
+   Add `@media (min-width: 700px) { .teaser-bento { grid-template-columns: repeat(2, minmax(0, 1fr)); } }` so the four tiles sit 2×2 instead of leaving an orphan.
    Tiles are **not** links and have no price tag. If `.bento-tile-title` needs spacing from the description without `.bento-tile-top`, add `.teaser-bento .bento-tile-title { margin-bottom: 10px; }` — nothing else.
 4. Closing CTA band (`{/* 6. CLOSING CTA BAND */}`):
    - Eyebrow: `Start a Project`
@@ -625,6 +630,7 @@ const services = siteData.solutions.filter((s) => s.id !== "custom-software");
 - Success message: `Thanks, your inquiry is in. We&apos;ll reply within one business day.`
 - Sidebar: `<p>` under "Direct Contact" → `Prefer email? Write to Brandon directly.`; location paragraph → `Based in the Dallas–Fort Worth area, working with companies anywhere.` (the `<span>Forney, Texas</span>` stays).
 - Error/network messages: unchanged.
+- Add `margin-bottom: 32px` to `.faq-jump-row` so the FAQ button doesn't touch the form card.
 
 **File:** `components/FAQ.js`
 - Subtitle: `Timelines, ownership, support, and billing: what to know before a project begins.`

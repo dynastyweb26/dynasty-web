@@ -1676,6 +1676,7 @@ em::after {
 
 .faq-jump-row {
   margin-top: 16px;
+  margin-bottom: 32px;
 }
 
 .faq-list {
@@ -2235,4 +2236,10 @@ em::after {
 .onit-studio-note a {
   color: var(--gold);
   text-decoration: underline;
+}
+
+@media (min-width: 700px) {
+  .teaser-bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
