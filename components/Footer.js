@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { BrandLogo } from "./BrandLogo";
+import { brandConfig } from "../data/brand";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,8 +17,17 @@ export function Footer() {
               <span className="footer-brand-name">Dynasty Web</span>
             </Link>
             <p className="footer-tagline">
-              Software studio building custom web apps, business tools, and websites for service businesses, from Forney, Texas to anywhere.
+              Custom software studio designing and building web applications, operations tools, and websites for companies in Texas and beyond.
             </p>
+            <div className="footer-credential">
+              <Image
+                src={brandConfig.awsCloudPractitioner.src}
+                alt={brandConfig.awsCloudPractitioner.alt}
+                width={40}
+                height={40}
+              />
+              <span>AWS Certified Cloud Practitioner</span>
+            </div>
           </div>
 
           {/* NAVIGATION COL */}
@@ -27,10 +38,10 @@ export function Footer() {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/solutions">Solutions</Link>
+                <Link href="/#work">Work</Link>
               </li>
               <li>
-                <Link href="/packages">Packages</Link>
+                <Link href="/solutions">Solutions</Link>
               </li>
               <li>
                 <Link href="/contact">Contact</Link>
@@ -58,6 +69,9 @@ export function Footer() {
                     <polyline points="7 7 17 7 17 17" />
                   </svg>
                 </a>
+              </li>
+              <li>
+                <Link href="/packages">Website Packages</Link>
               </li>
               <li>
                 <Link href="/privacy">Privacy Policy</Link>

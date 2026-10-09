@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import OnItPromoVideo from "../../components/OnItPromoVideo";
 
 export const metadata = {
-  title: "On It: Fast invoicing for home service pros | Dynasty Web",
+  title: "On It: Voice-Powered Invoicing",
   description:
-    "Say the job. Send the invoice. Get paid before you leave the driveway. Voice-powered invoicing software built by Dynasty Web.",
+    "Say the job, send the invoice, get paid on the spot. On It is a voice-powered invoicing app built by Dynasty Web.",
 };
 
 export default function OnItPage() {
@@ -22,12 +23,13 @@ export default function OnItPage() {
       {/* 1. HERO SECTION */}
       <section className="onit-hero-section">
         {/* DESKTOP QR BADGE TOP-RIGHT */}
-        <div className="onit-qr-badge desktop-only" aria-hidden="true">
+        <div className="onit-qr-badge desktop-only">
           <a
             href="https://onit.dynastyweb.co/install"
             target="_blank"
             rel="noopener noreferrer"
             className="qr-link"
+            aria-label="Scan to install On It on your phone"
           >
             <Image
               src="/onit/install-qr.png"
@@ -78,9 +80,17 @@ export default function OnItPage() {
             </a>
           </div>
 
-          {/* HERO VIDEO */}
-          <div className="onit-hero-video">
-            <OnItPromoVideo />
+          {/* HERO SCREENSHOT */}
+          <div className="onit-hero-shot">
+            <Image
+              src="/onit/01-chat.png"
+              alt="On It chat screen turning a spoken job into an invoice"
+              width={883}
+              height={1600}
+              sizes="320px"
+              priority
+              className="onit-hero-shot-img"
+            />
           </div>
         </div>
       </section>
@@ -124,7 +134,21 @@ export default function OnItPage() {
         </div>
       </section>
 
-      {/* 4. CLOSING CTA */}
+      {/* 4. PROMO VIDEO */}
+      <section className="onit-video-section">
+        <div className="wrap">
+          <div className="eyebrow">
+            <span>See It Work</span>
+          </div>
+          <div className="onit-video-frame">
+            <div className="onit-hero-video">
+              <OnItPromoVideo />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. CLOSING CTA */}
       <section className="onit-closing-section">
         <div className="wrap onit-closing-wrap">
           <h2 className="onit-closing-title">Your next invoice takes a minute.</h2>
@@ -134,6 +158,10 @@ export default function OnItPage() {
           >
             Open On It
           </a>
+          <p className="onit-studio-note">
+            Built by Dynasty Web. Need software built around your company?{" "}
+            <Link href="/contact">Start a project →</Link>
+          </p>
         </div>
       </section>
     </main>

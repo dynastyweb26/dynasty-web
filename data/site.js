@@ -7,7 +7,7 @@ export const siteData = {
       id: "starter",
       name: "Starter",
       qualifier: "Website base (0–1 solutions)",
-      pitch: "A custom website for local service providers, starting at $400.",
+      pitch: "A custom website, starting at $400.",
       perks: [
         "Custom website, up to 3 pages",
         "Mobile-friendly design & contact form",
@@ -66,7 +66,7 @@ export const siteData = {
       name: "Custom Software",
       quoteOnly: true,
       tierEligible: false,
-      description: "Web apps built around how your business runs: job trackers, customer portals, quote builders, scheduling, and internal dashboards. Scoped and quoted per project.",
+      description: "Software designed and built around how your company operates: customer-facing apps, quoting and ordering systems, portals, scheduling, and internal dashboards. Scoped and quoted per project.",
     },
     {
       id: "website",
@@ -79,17 +79,17 @@ export const siteData = {
     },
     {
       id: "photography",
-      name: "Business Photography",
+      name: "Brand Photography",
       price: "$300",
       cadence: "session",
-      description: "On-location photo sessions capturing your shop, crew, trucks, and completed work.",
+      description: "On-location photography of your team, facilities, fleet, and completed work.",
     },
     {
       id: "social-media",
       name: "Social Media Management",
       price: "$399",
       cadence: "mo",
-      description: "We plan, create, and post content that shows off your real jobs, every month.",
+      description: "We plan, create, and publish content that shows your real work, every month.",
     },
     {
       id: "invoicing",
@@ -105,14 +105,14 @@ export const siteData = {
       price: "$100",
       cadence: "mo",
       note: "3-month minimum",
-      description: "One page that shows how many people found you, where they came from, and how many called or asked for a quote.",
+      description: "One dashboard showing how many people found you, where they came from, and how many reached out.",
     },
     {
       id: "branding",
       name: "Logo & Brand Package",
       price: "$299",
       cadence: "one-time",
-      description: "Vector logo files, brand color palette, typography guidelines, and truck decal assets.",
+      description: "Vector logo files, color palette, typography guidelines, and vehicle and signage assets.",
     },
     {
       id: "email-marketing",
@@ -127,7 +127,31 @@ export const siteData = {
       price: "$250",
       cadence: "one-time",
       note: "plus directory listing fees at cost",
-      description: "Google Business Profile optimization, local listings, and on-site tuning so you show up in your town.",
+      description: "Google Business Profile optimization, directory listings, and on-site tuning so you show up in local search.",
+    },
+  ],
+
+  // Home page "What We Build" tiles. No prices; these describe custom-software work.
+  capabilities: [
+    {
+      id: "customer-apps",
+      name: "Customer-Facing Apps",
+      description: "Tools your customers use directly: product configurators, portals, quote requests, and order tracking, under your brand.",
+    },
+    {
+      id: "operations-tools",
+      name: "Quoting & Operations Tools",
+      description: "Replace spreadsheets and manual lookups with systems that price, quote, schedule, and track work accurately.",
+    },
+    {
+      id: "internal-systems",
+      name: "Internal Systems & Dashboards",
+      description: "One place for your team to see orders, jobs, and numbers, built around how your company already operates.",
+    },
+    {
+      id: "web-presence",
+      name: "Websites & Supporting Services",
+      description: "Fast, custom websites plus local search, branding, photography, and marketing, for clients who need them alongside a build.",
     },
   ],
 
@@ -135,18 +159,18 @@ export const siteData = {
     {
       id: "cyril",
       name: "Cyril Handyman & Door LLC",
-      industry: "Handyman & Door Services",
+      industry: "Field Services · Website & Local Search",
       url: "https://crazydoorhandyman.com",
       screenshots: [
         { src: "/work/cyril/1.webp", alt: "Cyril Handyman & Door homepage with hero headline and quote request form" },
         { src: "/work/cyril/2.webp", alt: "Cyril Handyman & Door services section listing garage doors, media walls, kitchen renovation, and more" },
         { src: "/work/cyril/3.webp", alt: "Cyril Handyman & Door gallery of completed garage door, media wall, and kitchen projects" },
       ],
-      shortDescription: "A new handyman business with a strong local reputation and no online presence, now with a website and Google profile that show off the work.",
+      shortDescription: "A growing handyman and door company with a strong reputation and no online presence. Now customers see the work before they call.",
       caseStudy: {
-        problem: "Cyril's handyman and door business was building a strong reputation in the local community for excellent work. But it had no website and no social media presence, so people who heard about him had nowhere to see his work or check him out before calling.",
+        problem: "Cyril Handyman & Door was earning a strong reputation for quality work, but had no website and no social presence. People who heard about the company had nowhere to see the work or check it out before calling.",
         whatWeBuilt: "A clean, simple website that puts his garage doors, media walls, and remodels front and center, with tap-to-call and a quote request form. We also optimized his Google Business Profile and set up local SEO so nearby customers can find him. Cyril signed off on the design at the first demo.",
-        result: "His work now makes the first impression before he picks up the phone. Customers see real projects, trust what they're getting, and can reach him in one tap. Word of mouth now leads to a business people can find and check out online.",
+        result: "The work now makes the first impression before the phone rings. Customers see real projects, trust what they're getting, and can reach the company in one tap. Word of mouth now leads somewhere.",
       },
     },
     {
@@ -169,15 +193,15 @@ export const siteData = {
     {
       id: "onit",
       name: "On It",
-      industry: "Invoicing app for home service pros",
+      industry: "Field-service invoicing app",
       url: "https://onit.dynastyweb.co",
       screenshots: [],
       builtInHouse: true,
-      shortDescription: "Built as a custom invoicing app for Cyril Handyman & Door, now being scaled for home service pros everywhere. Say the job, send the invoice, get paid.",
+      shortDescription: "Built as custom software for one field-service company, now a standalone product. Say the job, send the invoice, get paid.",
       caseStudy: {
-        problem: "Cyril was losing evenings typing up invoices after long days on job sites, and generic invoicing apps didn't fit how his crew works.",
-        whatWeBuilt: "A custom voice-to-invoice web app built around his business: speak the job, and On It writes and sends a professional invoice with a pay link.",
-        result: "Cyril invoices before leaving the driveway. The app worked so well that we're now developing it for home service pros everywhere.",
+        problem: "Cyril's crew was writing up invoices at night after long days on job sites, and off-the-shelf invoicing apps didn't fit how they work.",
+        whatWeBuilt: "A custom voice-to-invoice web app built around the crew's workflow: describe the job out loud, and On It writes and sends a branded invoice with a pay link.",
+        result: "Invoices go out before the truck leaves the driveway. It worked well enough that we turned it into a product for field-service teams everywhere.",
       },
     },
   ],
@@ -185,62 +209,66 @@ export const siteData = {
   process: [
     {
       step: "01",
-      title: "Tell Us the Problem",
-      description: "Walk us through how your business runs today and where it slows you down: paperwork, spreadsheets, missed follow-ups.",
+      title: "Discovery",
+      description: "We learn how your company operates today: the workflow, the people involved, the systems already in place, and where time and money leak out.",
     },
     {
       step: "02",
-      title: "Quick Call & Quote",
-      description: "We map out the tool on a short call and send a clear quote with scope and timeline before any work starts.",
+      title: "Proposal & Scope",
+      description: "You receive a written proposal with scope, milestones, timeline, and pricing for each phase before any work begins.",
     },
     {
       step: "03",
-      title: "Build & Refine",
-      description: "We build in short rounds and show you working versions along the way, so you shape it as it comes together.",
+      title: "Build in Phases",
+      description: "We ship working versions at each milestone so your team can test with real data and shape the product as it comes together.",
     },
     {
       step: "04",
       title: "Launch & Support",
-      description: "Your software goes live, your team gets set up, and we stay on to maintain and improve it.",
+      description: "We deploy, onboard your team, and stay on under a support plan for maintenance, fixes, and improvements.",
     },
   ],
 
   faq: [
     {
       question: "What kind of software do you build?",
-      answer: "Web apps that run on any phone or computer, built around one business: job trackers, customer portals, quote and estimate builders, invoicing, scheduling, and internal dashboards. If part of your business runs on spreadsheets, paper, or a pile of apps that don't talk to each other, that's usually where we start.",
+      answer: "Custom web applications built around one company's operations: customer-facing apps and product configurators, quoting and ordering systems, portals, scheduling, and internal dashboards. They run in any browser, on phone or desktop. If part of your company runs on spreadsheets, manual lookups, or tools that don't talk to each other, that's usually where we start.",
     },
     {
-      question: "How much does custom software cost?",
-      answer: "Every project is quoted after a short call, because scope drives price. You get a clear quote with scope and timeline before any work begins, and we can start small and grow it in stages.",
+      question: "How is custom software priced?",
+      answer: "Every project is scoped before it's priced. After discovery you receive a written proposal with scope, milestones, timeline, and pricing for each phase, so you can approve a first phase before committing to the full build.",
     },
     {
-      question: "How much does a website cost?",
-      answer: "Websites start at $400 for up to 3 pages: home, services or gallery, and contact. That includes mobile-friendly design, a contact form, basic on-page SEO, Google Search Console setup, and 1 revision round. You supply the text, logo, and photos. Hosting and maintenance is $90/mo. Extra pages, copywriting, Local SEO, branding, and other solutions are add-ons.",
+      question: "Who owns the software?",
+      answer: "You do. You own the source code, designs, and content created for your project.",
     },
     {
-      question: "Can I buy a solution without a website?",
-      answer: "Yes. Any solution can be bought on its own, no website required. Package tiers and their perks apply when a website is part of the project.",
+      question: "Will you sign an NDA?",
+      answer: "Yes. We're glad to sign your NDA before discovery begins.",
+    },
+    {
+      question: "What happens after launch?",
+      answer: "We stay on under a support plan covering hosting, maintenance, security updates, fixes, and improvements. Support terms, including response times, are set out in your proposal.",
     },
     {
       question: "How long does a build take?",
-      answer: "Custom software depends on scope, and your quote includes a timeline. Websites take 1 to 2 weeks from kickoff; Diamond tier projects with full brand refreshes take 2 to 3 weeks.",
+      answer: "Custom software depends on scope, and your proposal includes a timeline for each phase. Websites take 1 to 2 weeks from kickoff; Diamond-tier website projects take 2 to 3 weeks.",
     },
     {
-      question: "Do I own my site?",
-      answer: "Yes, 100%. You own all source code, domain names, content, and design assets created during the project.",
+      question: "How much does a website cost?",
+      answer: "Websites start at $400 for up to 3 pages: home, services or gallery, and contact. That includes mobile-friendly design, a contact form, basic on-page SEO, Google Search Console setup, and 1 revision round. You supply the text, logo, and photos. Hosting and maintenance is $90/mo. Extra pages, copywriting, local SEO, branding, and other services are add-ons.",
     },
     {
-      question: "How do package tiers work?",
-      answer: "You pay per Digital Solution added on top of your website base. Adding more solutions automatically unlocks higher tiers (Pro Gold, Pro Platinum, Pro Allstar Diamond) and their exclusive perks at no added tier fee.",
+      question: "Can I buy a service on its own?",
+      answer: "Yes. Any service can be purchased on its own, no website required. Package tiers and perks apply to website projects.",
+    },
+    {
+      question: "How do website packages work?",
+      answer: "You pay per service added to a website project. Adding more services automatically moves the project into higher tiers (Pro Gold, Pro Platinum, Pro Allstar Diamond) with included perks, at no added tier fee.",
     },
     {
       question: "How do I pay?",
-      answer: "We invoice electronically after our initial consultation and contract approval. Nothing is charged directly on this website.",
-    },
-    {
-      question: "What does ongoing maintenance cover?",
-      answer: "Maintenance covers fast cloud hosting, domain upkeep, regular security updates, content revisions, and priority technical support.",
+      answer: "We invoice electronically once your proposal and contract are approved. Nothing is charged on this website.",
     },
   ],
 };

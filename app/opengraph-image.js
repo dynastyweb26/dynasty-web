@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Dynasty Web — Custom software tailored to your business";
+export const alt = "Dynasty Web — Custom software built around your company";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -73,7 +73,7 @@ export default function OpengraphImage() {
               display: "flex",
             }}
           >
-            Software the trades actually keep open.
+            Custom software built around your company.
           </div>
           <div
             style={{
@@ -83,7 +83,7 @@ export default function OpengraphImage() {
               display: "flex",
             }}
           >
-            Custom software and web apps, built around your business.
+            Web applications, quoting systems, and customer-facing apps.
           </div>
         </div>
 

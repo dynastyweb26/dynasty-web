@@ -56,8 +56,8 @@ export function Nav() {
 
   const navLinks = [
     { href: "/", label: "Home" },
+    { href: "/#work", label: "Work" },
     { href: "/solutions", label: "Solutions" },
-    { href: "/packages", label: "Packages" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -90,7 +90,7 @@ export function Nav() {
 
         <div className="nav-actions">
           <Link href="/contact" className="btn btn-primary nav-cta">
-            Get a quote
+            Start a project
           </Link>
 
           {/* MOBILE HAMBURGER / CLOSE BUTTON */}
@@ -144,7 +144,7 @@ export function Nav() {
                 className="btn btn-primary full-width mobile-cta-btn"
                 onClick={() => setIsOpen(false)}
               >
-                Get a quote
+                Start a project
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />

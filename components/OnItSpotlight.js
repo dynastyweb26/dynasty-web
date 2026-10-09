@@ -12,13 +12,13 @@ export function OnItSpotlight() {
           {/* INTRO BLOCK */}
           <div className="onit-intro-block">
             <div className="eyebrow">
-              <span>Our Software</span>
+              <span>Built In-House</span>
             </div>
-            <h2 className="section-title" style={{ marginTop: "12px", marginBottom: "16px" }}>
-              Software built around <em>how</em> you work.
+            <h2 className="section-title">
+              Built for one <em>client</em>. Now a product.
             </h2>
-            <p className="onit-intro-p" style={{ fontSize: "16px", color: "var(--ink-2)", lineHeight: "1.6", marginBottom: "28px" }}>
-              On It started as a custom web app for one client: Cyril, a handyman who needed to invoice from the job site, not his kitchen table at night. We built it around exactly how his crew works. It worked so well we&apos;re now scaling it for every home service pro. That&apos;s what custom software looks like: built for your business first.
+            <p className="onit-intro-p">
+              On It began as custom software for a single field-service company whose crew was writing up invoices at night after every job. We mapped how the crew actually works and built around it: describe the job out loud, and a branded invoice with a pay link goes out on the spot. It worked well enough that we turned it into a standalone product. That&apos;s how we approach every build: solve one company&apos;s real problem first, and build it to last.
             </p>
             <Link href="/on-it" className="btn btn-primary">
               See On It

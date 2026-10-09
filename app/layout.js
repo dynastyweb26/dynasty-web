@@ -24,22 +24,22 @@ const siteUrl = "https://dynastyweb.co";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Dynasty Web — Custom Software & Web Apps for Your Business",
+    default: "Dynasty Web — Custom Software Built Around Your Company",
     template: "%s · Dynasty Web",
   },
   description:
-    "Software studio in Forney, Texas building custom web apps and business tools tailored to how you work, plus websites. Makers of On It.",
+    "Software studio in the Dallas–Fort Worth area designing and building custom web applications, quoting and operations tools, and customer-facing apps for companies. Makers of On It.",
   keywords: [
     "Dynasty Web",
     "custom software development",
-    "custom web app development",
-    "small business software",
-    "digital solutions studio",
-    "web design Forney TX",
-    "small business websites",
+    "custom web application development",
+    "software development company Texas",
+    "custom software Dallas Fort Worth",
+    "quoting software development",
+    "customer portal development",
     "On It",
     "Forney Texas",
-    "local business web development",
+    "web design Forney TX",
   ],
   authors: [{ name: "Brandon Fotsing Talla" }],
   creator: "Brandon Fotsing Talla",
@@ -50,16 +50,16 @@ export const metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Dynasty Web",
-    title: "Dynasty Web — Custom Software Tailored to Your Business",
+    title: "Dynasty Web — Custom Software Built Around Your Company",
     description:
-      "Custom web apps and business tools built around how you work, plus websites. A software studio in Forney, Texas.",
+      "Custom software, web applications, and operations tools designed around how your company works. A software studio in Texas.",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dynasty Web — Custom Software Tailored to Your Business",
+    title: "Dynasty Web — Custom Software Built Around Your Company",
     description:
-      "Custom web apps and business tools built around how you work, plus websites. A software studio in Forney, Texas.",
+      "Custom software, web applications, and operations tools designed around how your company works. A software studio in Texas.",
   },
   icons: {
     icon: "/icon",

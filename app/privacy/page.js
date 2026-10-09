@@ -18,7 +18,7 @@ export default function PrivacyPage() {
       </h1>
 
       <p className="page-subtitle" style={{ marginBottom: "32px" }}>
-        We respect the privacy of every business owner who reaches out to us. Here is exactly how we handle your data.
+        We respect the privacy of everyone who contacts us. Here is exactly how we handle your information.
       </p>
 
       <div
@@ -41,14 +41,14 @@ export default function PrivacyPage() {
         <section>
           <h3 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>1. What Information We Collect</h3>
           <p style={{ color: "var(--ink-2)", lineHeight: "1.6", fontSize: "15px" }}>
-            When you submit our contact form, we collect your name, business name, email address, phone number, and any project details you provide.
+            When you submit our contact form, we collect your name, company name, email address, phone number, and any project details you provide.
           </p>
         </section>
 
         <section>
           <h3 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>2. How We Use Your Data</h3>
           <p style={{ color: "var(--ink-2)", lineHeight: "1.6", fontSize: "15px" }}>
-            Your information is strictly used to evaluate your project request, prepare custom quote proposals, and communicate with you directly regarding our digital solutions services.
+            Your information is strictly used to evaluate your project request, prepare custom quote proposals, and communicate with you directly regarding our services.
           </p>
         </section>
 

@@ -13,7 +13,7 @@ export function FAQ() {
             Clear answers before <em>you start</em>.
           </h2>
           <p className="section-subtitle">
-            Have a question about our build timelines, software ownership, or billing process? Here is what you need to know.
+            Timelines, ownership, support, and billing: what to know before a project begins.
           </p>
         </div>
 

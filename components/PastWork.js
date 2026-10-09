@@ -9,14 +9,14 @@ export function PastWork() {
     <section className="section" id="work">
       <div className="wrap">
         <div className="eyebrow">
-          <span>Client Websites</span>
+          <span>Selected Work</span>
         </div>
         <div className="section-head-split">
           <h2 className="section-title">
-            Websites that <em>work</em> for a living.
+            Work that <em>earns</em> its keep.
           </h2>
           <p className="section-subtitle">
-            We build websites too. Every client site is custom-built from scratch to load fast, rank in local search, and turn visitors into calls.
+            Custom software and the web presence around it, built for clients who needed something off-the-shelf tools couldn&apos;t give them.
           </p>
         </div>
 
@@ -27,8 +27,8 @@ export function PastWork() {
         </div>
 
         <div className="teaser-action-row" style={{ marginTop: "32px" }}>
-          <Link href="/solutions" className="btn btn-ghost">
-            Explore solutions for your business
+          <Link href="/contact" className="btn btn-ghost">
+            Discuss your project
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />

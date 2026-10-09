@@ -1,6 +1,6 @@
 # Dynasty Web
 
-Digital solutions studio in Forney, Texas building custom websites, local SEO, branding, and lead capture systems for small trade and service businesses. Makers of On It.
+Custom software studio based in Forney, Texas, designing and building web applications, quoting and operations tools, and customer-facing apps for companies, plus websites and supporting services. Makers of On It.
 
 Founder: Brandon Fotsing Talla · [brandon@dynastyweb.co](mailto:brandon@dynastyweb.co)
 

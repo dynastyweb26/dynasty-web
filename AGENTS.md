@@ -20,7 +20,7 @@ Read this fully before making any change.
 
 ## Brand in one line
 
-Warm, editorial, craftsman-premium digital solutions studio for local businesses. It should feel like a well-made printed piece or a heritage brand, **not** a SaaS template. Restraint is the point.
+Warm, editorial, craftsman-premium custom software studio. Primary reader: a decision-maker at a company commissioning custom software (owner, operations lead, manager). Secondary reader: smaller clients buying a website or supporting services. It should feel like a well-made printed piece or a heritage brand, **not** a SaaS template. Restraint is the point.
 
 ## Color tokens (defined in `:root`)
 
@@ -68,6 +68,7 @@ Rules:
 
 ## Voice & copy
 
-- Plain-spoken, confident, respectful of local business owners and tradespeople. Short sentences.
+- Plain-spoken, confident, and precise. Address the reader's company ("your company"), never "your business" or "small business". Short sentences.
 - Avoid buzzwords ("leverage," "seamless," "revolutionize," "AI-powered platform").
 - Don't mention our tech stack in client-facing copy.
+- Primary CTA label is "Start a project". Exceptions to the "company" rule: "business hours", "business day", "Google Business Profile", and the /on-it product page.
