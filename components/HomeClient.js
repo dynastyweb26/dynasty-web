@@ -124,10 +124,11 @@ export function HomeClient() {
 
           <div className="bento-grid teaser-bento">
             {siteData.capabilities.map((item) => (
-              <div key={item.id} className="bento-tile">
+              <Link key={item.id} href="/solutions" className="bento-tile interactive-tile capability-tile">
                 <h3 className="bento-tile-title">{item.name}</h3>
                 <p className="bento-tile-desc">{item.description}</p>
-              </div>
+                <span className="capability-cta">Explore solutions →</span>
+              </Link>
             ))}
           </div>
 
