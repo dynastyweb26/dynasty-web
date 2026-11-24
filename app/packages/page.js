@@ -27,19 +27,19 @@ export default function PackagesPage() {
           <div className="tier-explanation-box">
             <div className="expl-step">
               <span className="expl-num">1</span>
-              <h4>Website Base</h4>
+              <h2>Website Base</h2>
               <p>Every package starts with a custom, mobile-friendly website.</p>
             </div>
             <div className="expl-divider">→</div>
             <div className="expl-step">
               <span className="expl-num">2</span>
-              <h4>Add Services</h4>
+              <h2>Add Services</h2>
               <p>Add services like local SEO, photography, or On It invoicing.</p>
             </div>
             <div className="expl-divider">→</div>
             <div className="expl-step">
               <span className="expl-num">3</span>
-              <h4>Unlock Perks</h4>
+              <h2>Unlock Perks</h2>
               <p>Higher service counts unlock CRM setup, website maintenance, and priority support.</p>
             </div>
           </div>
@@ -66,7 +66,7 @@ export default function PackagesPage() {
                 </div>
 
                 <div className="pkg-perks-list">
-                  <h4>Included Perks</h4>
+                  <h3>Included Perks</h3>
                   <ul>
                     {pkg.perks.map((perk, idx) => (
                       <li key={idx}>

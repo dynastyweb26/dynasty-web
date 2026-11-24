@@ -1255,7 +1255,7 @@ em::after {
   margin-bottom: 8px;
 }
 
-.expl-step h4 {
+.expl-step h2 {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 4px;
@@ -1349,7 +1349,7 @@ em::after {
   margin-bottom: 28px;
 }
 
-.pkg-perks-list h4 {
+.pkg-perks-list h3 {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1358,7 +1358,7 @@ em::after {
   margin-bottom: 12px;
 }
 
-.featured-card .pkg-perks-list h4 {
+.featured-card .pkg-perks-list h3 {
   color: var(--gold-bright);
 }
 
