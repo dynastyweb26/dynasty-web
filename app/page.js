@@ -3,10 +3,10 @@ import HomeClient from "../components/HomeClient";
 import { pageMetadata } from "../data/seo";
 
 export const metadata = pageMetadata({
-  title: "Custom Software Development Company in DFW | Dynasty Web",
+  title: "Custom Software Development Company | Dynasty Web",
   absoluteTitle: true,
   description:
-    "Custom software development company in Dallas–Fort Worth. We build custom web applications, quoting and operations tools, and websites for companies.",
+    "Custom software development company based in Texas, serving the US. We build custom web applications, quoting and operations tools, and websites for companies.",
   path: "/",
 });
 
