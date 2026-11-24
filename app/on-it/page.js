@@ -48,7 +48,13 @@ export default function OnItPage() {
           </a>
         </div>
 
-        <div className="wrap onit-hero-wrap">
+        <div className="wrap onit-hero-wrap onit-hero-split">
+          {/* PROMO VIDEO: first thing people see */}
+          <div className="onit-hero-video onit-hero-video-lead">
+            <OnItPromoVideo eager />
+          </div>
+
+          <div className="onit-hero-copy">
           {/* LOGO / WORDMARK */}
           <div className="onit-brand-header">
             <Image
@@ -85,19 +91,8 @@ export default function OnItPage() {
               How to install
             </a>
           </div>
-
-          {/* HERO SCREENSHOT */}
-          <div className="onit-hero-shot">
-            <Image
-              src="/onit/01-chat.png"
-              alt="On It chat screen with quick actions for receipts, invoices and payments"
-              width={767}
-              height={1600}
-              sizes="320px"
-              priority
-              className="onit-hero-shot-img"
-            />
           </div>
+
         </div>
       </section>
 
@@ -140,21 +135,7 @@ export default function OnItPage() {
         </div>
       </section>
 
-      {/* 4. PROMO VIDEO */}
-      <section className="onit-video-section">
-        <div className="wrap">
-          <div className="eyebrow">
-            <span>See It Work</span>
-          </div>
-          <div className="onit-video-frame">
-            <div className="onit-hero-video">
-              <OnItPromoVideo />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. CLOSING CTA */}
+      {/* 4. CLOSING CTA */}
       <section className="onit-closing-section">
         <div className="wrap onit-closing-wrap">
           <h2 className="onit-closing-title">Your next invoice takes a minute.</h2>
