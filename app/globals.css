@@ -2040,7 +2040,7 @@ em::after {
 
 .onit-hero-video {
   height: min(72vh, 640px);
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 720 / 1136;
   margin: 0 auto;
 }
 
