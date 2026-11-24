@@ -2,10 +2,8 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { siteData } from "../data/site";
-import { PastWork } from "./PastWork";
-import { OnItSpotlight } from "./OnItSpotlight";
+import { ResultCard } from "./ResultCard";
 import { Process } from "./Process";
 
 export function HomeClient() {
@@ -33,81 +31,65 @@ export function HomeClient() {
 
   return (
     <>
-      {/* FULL VIEWPORT HERO */}
-      <section className="hero-full-viewport">
-        <div className="hero-radial-glow" aria-hidden="true" />
-
-        <div className="wrap hero-wrap">
-          <div className="hero-copy">
-            <div className="eyebrow hero-eyebrow">
-              <span>Software Studio · Dallas–Fort Worth</span>
-            </div>
-
-            <h1 className="hero-headline">
-              Custom software tailored to <em>your</em> company.
-            </h1>
-
-            <p className="hero-subhead">
-              We design and build the software your company runs on: customer-facing apps, quoting and ordering tools, and internal systems, shaped around how your team actually works. Built for you, owned by you.
-            </p>
-
-            <div className="hero-cta-group">
-              <Link href="/contact" className="btn btn-primary hero-btn">
-                Start a project
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </Link>
-              <Link href="/#work" className="btn btn-ghost hero-btn">
-                See our work
-              </Link>
-            </div>
-
-            <a href="#built-by-dynasty" className="hero-scroll-cue" aria-label="Scroll to our software">
-              <span className="scroll-text">See what we&apos;ve shipped</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <line x1="12" y1="5" x2="12" y2="19" />
-                <polyline points="19 12 12 19 5 12" />
-              </svg>
-            </a>
+      {/* HERO: short banner, then straight into results */}
+      <section className="home-banner">
+        <div className="home-banner-glow" aria-hidden="true" />
+        <div className="wrap home-banner-inner">
+          <div className="eyebrow light-eyebrow home-banner-eyebrow">
+            <span>Software Studio · Dallas–Fort Worth</span>
           </div>
+          <h1 className="home-banner-title">
+            Custom software built around <em>your</em> company.
+          </h1>
+          <p className="home-banner-sub">
+            We design and build the software your company runs on. Here&apos;s what that looks like.
+          </p>
+          <ul className="home-banner-pills">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+              Custom software, apps, and internal tools
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" />
+              </svg>
+              Websites, local SEO, and Google profiles
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              Built for you, owned by you
+            </li>
+          </ul>
+        </div>
+      </section>
 
-          <div className="hero-visual">
-            <Image
-              src="/onit/04-expenses.png"
-              alt=""
-              width={797}
-              height={1600}
-              sizes="(min-width: 1000px) 260px, 180px"
-              className="hero-phone hero-phone-back"
-            />
-            <Image
-              src="/onit/01-chat.png"
-              alt="On It, custom software Dynasty Web built for a field-service company, turning a spoken job into an invoice"
-              width={883}
-              height={1600}
-              sizes="(min-width: 1000px) 300px, 210px"
-              priority
-              className="hero-phone hero-phone-front"
-            />
-            <Link href="/on-it" className="hero-visual-caption">
-              On It · built for one client, now a live product →
+      {/* RESULTS: the work, right under the banner */}
+      <section className="section home-results" id="work">
+        <div className="wrap">
+          <div className="home-results-head">
+            <h2 className="section-title">
+              Work that <em>earns</em> its keep.
+            </h2>
+            <Link href="/contact" className="btn btn-primary btn-sm">
+              Start a project
             </Link>
+          </div>
+          <div className="result-grid">
+            {siteData.work.map((item) => (
+              <ResultCard key={item.id} item={item} />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 1. BUILT IN-HOUSE (ON IT SPOTLIGHT) */}
-      <OnItSpotlight />
-
-      {/* 2. SELECTED WORK */}
-      <PastWork />
-
-      {/* 3. HOW WE WORK (4-STEP PROCESS) */}
-      <Process />
-
-      {/* 4. WHAT WE BUILD (CAPABILITIES) */}
+      {/* WHAT WE BUILD */}
       <section className="section teaser-section">
         <div className="wrap">
           <div className="eyebrow">
@@ -144,7 +126,10 @@ export function HomeClient() {
         </div>
       </section>
 
-      {/* 5. CLOSING CTA BAND */}
+      {/* HOW WE WORK */}
+      <Process />
+
+      {/* CLOSING CTA BAND */}
       <section className="section cta-band-section">
         <div className="wrap">
           <div className="cta-band-card">
