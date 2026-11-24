@@ -5,6 +5,7 @@ import { siteData } from "../../../data/site";
 import { pageMetadata, SITE_URL, ORG_ID } from "../../../data/seo";
 import { JsonLd } from "../../../components/JsonLd";
 import { BeforeAfter } from "../../../components/BeforeAfter";
+import { Zoomable } from "../../../components/Zoomable";
 
 const caseStudies = siteData.work.filter((w) => !w.builtInHouse && w.slug && w.caseStudy);
 const getStudy = (slug) => caseStudies.find((w) => w.slug === slug);
@@ -86,20 +87,22 @@ export default async function CaseStudyPage({ params }) {
             </a>
           </div>
 
-          <div className="csx-devices">
+          <div className={`csx-devices${cs.mobileShot ? " has-phone" : ""}`}>
             <div className="csx-browser">
               <div className="csx-browser-bar" aria-hidden="true">
                 <span /><span /><span />
               </div>
-              <Image
-                src={hero.src}
-                alt={hero.alt}
-                width={hero.w ?? 1600}
-                height={hero.h ?? 920}
-                sizes="(min-width: 1000px) 620px, 100vw"
-                priority
-                className="csx-browser-img"
-              />
+              <Zoomable src={hero.src} alt={hero.alt} className="zoomable-block">
+                <Image
+                  src={hero.src}
+                  alt={hero.alt}
+                  width={hero.w ?? 1600}
+                  height={hero.h ?? 920}
+                  sizes="(min-width: 1000px) 620px, 100vw"
+                  priority
+                  className="csx-browser-img"
+                />
+              </Zoomable>
             </div>
             {cs.mobileShot && (
               <div className="csx-phone">
@@ -140,14 +143,16 @@ export default async function CaseStudyPage({ params }) {
       {/* THE PROBLEM */}
       <section className="csx-section">
         <div className="wrap csx-problem">
-          <Image
-            src={problemImg.src}
-            alt={problemImg.alt}
-            width={problemImg.w ?? 1600}
-            height={problemImg.h ?? 920}
-            sizes="(min-width: 900px) 560px, 100vw"
-            className="csx-problem-img"
-          />
+          <Zoomable src={problemImg.src} alt={problemImg.alt} className="zoomable-block">
+            <Image
+              src={problemImg.src}
+              alt={problemImg.alt}
+              width={problemImg.w ?? 1600}
+              height={problemImg.h ?? 920}
+              sizes="(min-width: 900px) 560px, 100vw"
+              className="csx-problem-img"
+            />
+          </Zoomable>
           <div className="csx-problem-copy">
             <div className="eyebrow"><span>The Problem</span></div>
             <p>{cs.problem}</p>
@@ -168,7 +173,7 @@ export default async function CaseStudyPage({ params }) {
                 const shot = sv.shot ?? item.screenshots[idx % item.screenshots.length].src;
                 return (
                   <li key={sv.name} className="csx-tile" title={sv.detail}>
-                    <div className="csx-tile-media">
+                    <Zoomable src={shot} alt={sv.name} className="csx-tile-media">
                       <Image
                         src={shot}
                         alt=""
@@ -177,7 +182,7 @@ export default async function CaseStudyPage({ params }) {
                         style={{ objectFit: "cover", objectPosition: sv.shotPosition ?? "50% 0%" }}
                       />
                       <span className="csx-tile-num">{String(idx + 1).padStart(2, "0")}</span>
-                    </div>
+                    </Zoomable>
                     <span className="csx-tile-name">{sv.name}</span>
                   </li>
                 );
@@ -199,14 +204,16 @@ export default async function CaseStudyPage({ params }) {
                     {cs.beforeAfter.caption && <p className="csx-dark-caption">{cs.beforeAfter.caption}</p>}
                   </>
                 ) : (
-                  <Image
-                    src={showcase.src}
-                    alt={showcase.alt}
-                    width={showcase.w ?? 1600}
-                    height={showcase.h ?? 920}
-                    sizes="(min-width: 900px) 560px, 100vw"
-                    className="csx-dark-img"
-                  />
+                  <Zoomable src={showcase.src} alt={showcase.alt} className="zoomable-block">
+                    <Image
+                      src={showcase.src}
+                      alt={showcase.alt}
+                      width={showcase.w ?? 1600}
+                      height={showcase.h ?? 920}
+                      sizes="(min-width: 900px) 560px, 100vw"
+                      className="csx-dark-img"
+                    />
+                  </Zoomable>
                 )}
               </div>
               <div className="csx-result">
