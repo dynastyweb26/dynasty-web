@@ -207,8 +207,8 @@ export default function CustomSoftwarePage() {
             <div className="sw-proof-media">
               <Image
                 src="/onit/01-chat.png"
-                alt="On It turning a spoken job description into an invoice"
-                width={883}
+                alt="On It chat screen with quick actions for receipts, invoices and payments"
+                width={767}
                 height={1600}
                 sizes="(min-width: 860px) 260px, 60vw"
                 className="sw-proof-phone"

@@ -13,7 +13,7 @@ export function WorkCard({ item }) {
           <Image
             src="/onit/02-invoices.png"
             alt=""
-            width={883}
+            width={767}
             height={1600}
             sizes="140px"
             className="onit-card-phone onit-card-phone-left"
@@ -21,15 +21,15 @@ export function WorkCard({ item }) {
           <Image
             src="/onit/03-books.png"
             alt=""
-            width={911}
+            width={767}
             height={1600}
             sizes="140px"
             className="onit-card-phone onit-card-phone-right"
           />
           <Image
             src="/onit/01-chat.png"
-            alt="On It chat screen turning a spoken job into an invoice"
-            width={883}
+            alt="On It chat screen with quick actions for receipts, invoices and payments"
+            width={767}
             height={1600}
             sizes="180px"
             className="onit-card-phone onit-card-phone-center"

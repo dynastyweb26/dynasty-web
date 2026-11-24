@@ -42,7 +42,7 @@ const workCards = [
   {
     href: "/on-it",
     img: "/onit/01-chat.png",
-    alt: "On It chat screen turning a spoken job into an invoice",
+    alt: "On It chat screen with quick actions for receipts, invoices and payments",
     tag: "Built in-house · Invoicing app",
     name: "On It",
     cta: "See the app",
