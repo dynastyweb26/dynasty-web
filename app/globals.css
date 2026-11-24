@@ -2881,6 +2881,10 @@ em::after {
   max-width: 44ch;
 }
 
+.home-banner-cta {
+  margin-top: 28px;
+}
+
 .home-banner-pills {
   list-style: none;
   display: grid;

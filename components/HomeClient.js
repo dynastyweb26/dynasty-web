@@ -68,6 +68,11 @@ export function HomeClient() {
               Built for you, owned by you
             </li>
           </ul>
+          <div className="home-banner-cta">
+            <Link href="/contact" className="btn btn-gold-bright">
+              Start a project
+            </Link>
+          </div>
         </div>
       </section>
 
