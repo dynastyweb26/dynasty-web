@@ -158,6 +158,7 @@ export const siteData = {
   work: [
     {
       id: "cyril",
+      slug: "cyril-handyman",
       name: "Cyril Handyman & Door LLC",
       industry: "Field Services · Website & Local Search",
       url: "https://crazydoorhandyman.com",
@@ -166,15 +167,25 @@ export const siteData = {
         { src: "/work/cyril/2.webp", alt: "Cyril Handyman & Door services section listing garage doors, media walls, kitchen renovation, and more" },
         { src: "/work/cyril/3.webp", alt: "Cyril Handyman & Door gallery of completed garage door, media wall, and kitchen projects" },
       ],
-      shortDescription: "A growing handyman and door company with a strong reputation and no online presence. Now customers see the work before they call.",
+      shortDescription: "A handyman everyone in town already knew, now found well beyond it. Website, photos, Google, SEO, social, and in-house software.",
       caseStudy: {
-        problem: "Cyril Handyman & Door was earning a strong reputation for quality work, but had no website and no social presence. People who heard about the company had nowhere to see the work or check it out before calling.",
-        whatWeBuilt: "A clean, simple website that puts his garage doors, media walls, and remodels front and center, with tap-to-call and a quote request form. We also optimized his Google Business Profile and set up local SEO so nearby customers can find him. Cyril signed off on the design at the first demo.",
-        result: "The work now makes the first impression before the phone rings. Customers see real projects, trust what they're getting, and can reach the company in one tap. Word of mouth now leads somewhere.",
+        title: "From word of mouth to found on Google",
+        problem: "Cyril was great at his work, and around Forney people knew it. But that is where his reach stopped. He had no website, no photos of his work online, and no way for anyone outside his circle to find him or see what he could do.",
+        whatWeBuilt: "We started with a website, because he had none. We went on site with him to photograph real jobs for the site and his social media, set up and verified his Google Business Profile, and built out his local SEO. We keep growing his social presence, and he works on On It, the software we build in-house, before its public release.",
+        result: "Cyril now reaches customers beyond the city he is based in. People find him on Google, see real photos of his work before they call, and reach him in one tap. And with On It, invoices and tax paperwork take far less of his time.",
+        services: [
+          { name: "Website", detail: "Built from scratch: service pages, city pages, a project gallery, tap-to-call, and a quote request form." },
+          { name: "On-site photography", detail: "We went to his job sites and photographed real work for the website and social media." },
+          { name: "Google Business Profile", detail: "Set up and verified on Google so local searches lead to him." },
+          { name: "Local SEO", detail: "Pages for each service and city he covers, structured data, and a clean sitemap, so he shows up beyond Forney." },
+          { name: "Social media", detail: "An ongoing push to grow his social presence with his own work." },
+          { name: "Early access to On It", detail: "Private, unreleased software from our studio that handles his invoices and tax paperwork." },
+        ],
       },
     },
     {
       id: "vydale",
+      slug: "vydale",
       name: "Vydale T.C. Projects",
       industry: "Speaker, Author & Youth Empowerment",
       url: "https://vydaletcprojects.com",
@@ -188,6 +199,13 @@ export const siteData = {
         problem: "Vydale is an international speaker, published author, and MC focused on faith, growth, and personal transformation. Her books, speaking, awards, and community work were spread across social media, with no single place to show event organizers and readers the full picture.",
         whatWeBuilt: "A polished personal site that brings it all together: her story, her books (I Am Worthy of My Dreams and the children's book Martha's Little Secret), awards, a gallery of past events, and a Book Vydale button for speaking inquiries. We also added a Donate page for her drive to get books to children in orphanages.",
         result: "Organizers, readers, and supporters now land on one place that shows who she is and what she's done. It gives her a professional first impression for bookings and a direct way for people to support her book drive.",
+        title: "One home for a speaker, author, and advocate",
+        services: [
+          { name: "Personal website", detail: "Her story, speaking, and awards brought together in one polished site." },
+          { name: "Book showcase", detail: "I Am Worthy of My Dreams and the children's book Martha's Little Secret, front and center." },
+          { name: "Event gallery", detail: "Photos from past speaking engagements and community events." },
+          { name: "Booking and donations", detail: "A Book Vydale button for speaking inquiries and a Donate page for her book drive." },
+        ],
       },
     },
     {
