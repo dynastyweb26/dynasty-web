@@ -159,6 +159,9 @@ export const siteData = {
     {
       id: "cyril",
       slug: "cyril-handyman",
+      logo: "/work/cyril/logo.webp",
+      meta: "Forney, TX · Field services",
+      chips: ["29 Google reviews", "40 project pages", "Verified on Google"],
       name: "Cyril Handyman & Door LLC",
       industry: "Field Services · Website & Local Search",
       url: "https://crazydoorhandyman.com",
@@ -204,6 +207,9 @@ export const siteData = {
     {
       id: "vydale",
       slug: "vydale",
+      logo: "/work/vydale/logo.webp",
+      meta: "Speaker & author",
+      chips: ["Books & speaking", "Book drive donations"],
       name: "Vydale T.C. Projects",
       industry: "Speaker, Author & Youth Empowerment",
       url: "https://vydaletcprojects.com",
@@ -230,6 +236,15 @@ export const siteData = {
     {
       id: "onit",
       name: "On It",
+      logo: "/brand/on-it-logo.png",
+      meta: "Built in-house · Invoicing app",
+      chips: ["Live product", "Voice to invoice"],
+      href: "/on-it",
+      thumbs: [
+        { src: "/onit/01-chat.png", alt: "On It chat screen turning a spoken job into an invoice" },
+        { src: "/onit/02-invoices.png", alt: "On It invoices list" },
+        { src: "/onit/03-books.png", alt: "On It books overview" },
+      ],
       industry: "Field-service invoicing app",
       url: "https://onit.dynastyweb.co",
       screenshots: [],
