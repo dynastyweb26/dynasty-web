@@ -42,7 +42,7 @@ const ownership = [
 const faqs = [
   {
     q: "How much does custom software cost?",
-    a: "It depends on what the software needs to do, so every project is scoped individually. After a discovery call you get a written proposal with scope, milestones, timeline and pricing for each phase, before any work begins.",
+    a: "Websites start at $400. Custom software is priced by what it needs to do, so every project is scoped individually. After a discovery call you get a written proposal with scope, milestones, timeline and pricing for each phase, before any work begins.",
   },
   {
     q: "How long does a custom software project take?",
