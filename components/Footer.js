@@ -32,7 +32,7 @@ export function Footer() {
 
           {/* NAVIGATION COL */}
           <div className="footer-col">
-            <h4 className="footer-col-title">Navigation</h4>
+            <h2 className="footer-col-title">Navigation</h2>
             <ul className="footer-links">
               <li>
                 <Link href="/">Home</Link>
@@ -51,7 +51,7 @@ export function Footer() {
 
           {/* PRODUCTS & LEGAL COL */}
           <div className="footer-col">
-            <h4 className="footer-col-title">Studio</h4>
+            <h2 className="footer-col-title">Studio</h2>
             <ul className="footer-links">
               <li>
                 <Link href="/on-it">On It Software</Link>
@@ -81,7 +81,7 @@ export function Footer() {
 
           {/* DIRECT CONTACT COL */}
           <div className="footer-col">
-            <h4 className="footer-col-title">Direct Inquiries</h4>
+            <h2 className="footer-col-title">Direct Inquiries</h2>
             <a href="mailto:brandon@dynastyweb.co" className="footer-email-link">
               brandon@dynastyweb.co
             </a>

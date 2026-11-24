@@ -42,28 +42,28 @@ export default function PrivacyPage() {
         </div>
 
         <section>
-          <h3 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>1. What Information We Collect</h3>
+          <h2 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>1. What Information We Collect</h2>
           <p style={{ color: "var(--ink-2)", lineHeight: "1.6", fontSize: "15px" }}>
             When you submit our contact form, we collect your name, company name, email address, phone number, and any project details you provide.
           </p>
         </section>
 
         <section>
-          <h3 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>2. How We Use Your Data</h3>
+          <h2 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>2. How We Use Your Data</h2>
           <p style={{ color: "var(--ink-2)", lineHeight: "1.6", fontSize: "15px" }}>
             Your information is strictly used to evaluate your project request, prepare custom quote proposals, and communicate with you directly regarding our services.
           </p>
         </section>
 
         <section>
-          <h3 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>3. No Third-Party Sales</h3>
+          <h2 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>3. No Third-Party Sales</h2>
           <p style={{ color: "var(--ink-2)", lineHeight: "1.6", fontSize: "15px" }}>
             We never sell, rent, or trade your contact details to third-party advertisers or data brokers.
           </p>
         </section>
 
         <section>
-          <h3 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>4. Contact Us</h3>
+          <h2 style={{ fontSize: "18px", marginBottom: "8px", fontFamily: "var(--font-display)" }}>4. Contact Us</h2>
           <p style={{ color: "var(--ink-2)", lineHeight: "1.6", fontSize: "15px" }}>
             If you have any questions regarding your data, please contact Brandon directly at{" "}
             <a href="mailto:brandon@dynastyweb.co" style={{ color: "var(--gold)", textDecoration: "underline" }}>
