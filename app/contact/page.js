@@ -83,23 +83,6 @@ function ContactFormInner() {
 
   return (
     <div className="contact-container">
-      <div className="contact-header-block">
-        <div className="eyebrow">
-          <span>Start a Project</span>
-        </div>
-        <h1 className="page-title">
-          Tell us about your <em>project</em>.
-        </h1>
-        <p className="page-subtitle">
-          Share what you need built. We reply within one business day with next steps or a time to talk it through.
-        </p>
-        <div className="faq-jump-row">
-          <Link href="/contact#faq" className="btn btn-ghost btn-sm">
-            View FAQs ↓
-          </Link>
-        </div>
-      </div>
-
       <div className="contact-grid">
         <div className="contact-form-wrapper">
           <form onSubmit={handleSubmit} className="contact-form">
@@ -267,10 +250,6 @@ function ContactFormInner() {
         </div>
       </div>
 
-      {/* FAQ SECTION BELOW FORM */}
-      <div id="faq" className="contact-faq-wrap">
-        <FAQ />
-      </div>
     </div>
   );
 }
@@ -279,9 +258,35 @@ export default function ContactPage() {
   return (
     <section className="section contact-page-section">
       <div className="wrap">
+        {/* Header and FAQ render on the server so crawlers see them;
+            only the form needs the URL params (Suspense). */}
+        <div className="contact-container">
+          <div className="contact-header-block">
+            <div className="eyebrow">
+              <span>Start a Project</span>
+            </div>
+            <h1 className="page-title">
+              Tell us about your <em>project</em>.
+            </h1>
+            <p className="page-subtitle">
+              Share what you need built. We reply within one business day with next steps or a time to talk it through.
+            </p>
+            <div className="faq-jump-row">
+              <Link href="/contact#faq" className="btn btn-ghost btn-sm">
+                View FAQs ↓
+              </Link>
+            </div>
+          </div>
+        </div>
         <Suspense fallback={<div className="loading-spinner">Loading contact form...</div>}>
           <ContactFormInner />
         </Suspense>
+        <div className="contact-container">
+          {/* FAQ SECTION BELOW FORM */}
+          <div id="faq" className="contact-faq-wrap">
+            <FAQ />
+          </div>
+        </div>
       </div>
     </section>
   );
