@@ -13,12 +13,14 @@ export const metadata = pageMetadata({
 
 export default function OnItPage() {
   const stripScreenshots = [
-    { src: "/onit/01-chat.png", w: 883, alt: "On It chat screen turning a spoken job into an invoice" },
-    { src: "/onit/02-invoices.png", w: 883, alt: "On It invoices list screen" },
-    { src: "/onit/03-books.png", w: 911, alt: "On It books overview with money kept this year" },
-    { src: "/onit/04-expenses.png", w: 797, alt: "On It expenses logged from receipt photos" },
-    { src: "/onit/05-invoice-style.png", w: 900, alt: "On It invoice style and color picker" },
-    { src: "/onit/06-settings.png", w: 879, alt: "On It business settings and payment connections" },
+    { src: "/onit/01-chat.png", w: 767, alt: "On It chat screen with quick actions for receipts, invoices and payments" },
+    { src: "/onit/02-invoices.png", w: 767, alt: "On It invoices list with open and paid invoices" },
+    { src: "/onit/03-books.png", w: 767, alt: "On It books overview with money owed, collected and spent" },
+    { src: "/onit/04-books-summary.png", w: 767, alt: "On It books summary chart of income and expenses over time" },
+    { src: "/onit/05-invoice-style.png", w: 767, alt: "On It invoice style and color picker with a live preview" },
+    { src: "/onit/06-settings.png", w: 767, alt: "On It settings for clients, products, payment options and plan" },
+    { src: "/onit/07-clients.png", w: 767, alt: "On It clients list with open balances and estimates" },
+    { src: "/onit/08-payment-options.png", w: 767, alt: "On It payment options for card, bank transfer, Zelle, Cash App, PayPal and Venmo" },
   ];
 
   return (
@@ -88,8 +90,8 @@ export default function OnItPage() {
           <div className="onit-hero-shot">
             <Image
               src="/onit/01-chat.png"
-              alt="On It chat screen turning a spoken job into an invoice"
-              width={883}
+              alt="On It chat screen with quick actions for receipts, invoices and payments"
+              width={767}
               height={1600}
               sizes="320px"
               priority
