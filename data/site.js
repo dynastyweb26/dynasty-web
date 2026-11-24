@@ -194,12 +194,12 @@ export const siteData = {
         { src: "/work/vydale/2.webp", alt: "Vydale T.C. Projects founder section introducing Vydale Mache Fotsing and her award nominations" },
         { src: "/work/vydale/3.webp", alt: "Vydale T.C. Projects photo gallery of community events and speaking engagements" },
       ],
-      shortDescription: "An international speaker and author with no single place to show her books, awards, and community work, now with a home for all of it.",
+      shortDescription: "A rising speaker and author whose message reached only as far as she could. Now her books, speaking, and book drive reach people anywhere.",
       caseStudy: {
-        problem: "Vydale is an international speaker, published author, and MC focused on faith, growth, and personal transformation. Her books, speaking, awards, and community work were spread across social media, with no single place to show event organizers and readers the full picture.",
+        problem: "Vydale is an upcoming speaker, author, and MC whose message is faith, growth, and personal transformation. Her positivity reached people only as far as she could physically go. Her books, speaking, awards, and community work were scattered across social media, with no single place to show event organizers and readers the full picture."
         whatWeBuilt: "A polished personal site that brings it all together: her story, her books (I Am Worthy of My Dreams and the children's book Martha's Little Secret), awards, a gallery of past events, and a Book Vydale button for speaking inquiries. We also added a Donate page for her drive to get books to children in orphanages.",
         result: "Organizers, readers, and supporters now land on one place that shows who she is and what she's done. It gives her a professional first impression for bookings and a direct way for people to support her book drive.",
-        title: "One home for a speaker, author, and advocate",
+        title: "Taking her message beyond her physical reach",
         services: [
           { name: "Personal website", detail: "Her story, speaking, and awards brought together in one polished site." },
           { name: "Book showcase", detail: "I Am Worthy of My Dreams and the children's book Martha's Little Secret, front and center." },
