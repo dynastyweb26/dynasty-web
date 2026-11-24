@@ -2,6 +2,8 @@ import { Fraunces, Inter } from "next/font/google";
 import Script from "next/script";
 import { Nav } from "../components/Nav";
 import { Footer } from "../components/Footer";
+import { JsonLd } from "../components/JsonLd";
+import { organizationSchema } from "../data/seo";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -81,6 +83,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <JsonLd data={organizationSchema} />
         <Nav />
         {children}
         <Footer />

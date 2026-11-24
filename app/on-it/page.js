@@ -1,4 +1,5 @@
-import { pageMetadata } from "../../data/seo";
+import { pageMetadata, onItSchema } from "../../data/seo";
+import { JsonLd } from "../../components/JsonLd";
 import Image from "next/image";
 import Link from "next/link";
 import OnItPromoVideo from "../../components/OnItPromoVideo";
@@ -22,6 +23,7 @@ export default function OnItPage() {
 
   return (
     <main className="onit-page">
+      <JsonLd data={onItSchema} />
       {/* 1. HERO SECTION */}
       <section className="onit-hero-section">
         {/* DESKTOP QR BADGE TOP-RIGHT */}

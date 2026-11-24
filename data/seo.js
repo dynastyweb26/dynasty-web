@@ -33,3 +33,59 @@ export function pageMetadata({ title, description, path, absoluteTitle = false }
     },
   };
 }
+
+export const ORG_ID = `${SITE_URL}/#organization`;
+
+// Site-wide entity graph: who we are and what the site is.
+export const organizationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": ORG_ID,
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: `${SITE_URL}/brand/dynasty-web-logo-256.png`,
+      image: `${SITE_URL}/opengraph-image`,
+      email: "brandon@dynastyweb.co",
+      description:
+        "Software studio designing and building custom web applications, quoting and operations tools, and customer-facing apps for companies.",
+      founder: { "@type": "Person", name: "Brandon Fotsing Talla" },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Forney",
+        addressRegion: "TX",
+        addressCountry: "US",
+      },
+      areaServed: { "@type": "Country", name: "United States" },
+      knowsAbout: [
+        "Custom software development",
+        "Web application development",
+        "Website design",
+        "Local SEO",
+        "Social media management",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: SITE_NAME,
+      publisher: { "@id": ORG_ID },
+      inLanguage: "en-US",
+    },
+  ],
+};
+
+// On It product entity for /on-it.
+export const onItSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "On It",
+  url: "https://onit.dynastyweb.co",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web, iOS, Android",
+  description:
+    "Voice-powered invoicing app for tradespeople and home service pros. Say the job, send the invoice, get paid on the spot.",
+  publisher: { "@id": ORG_ID },
+};
