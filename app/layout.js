@@ -43,12 +43,8 @@ export const metadata = {
   ],
   authors: [{ name: "Brandon Fotsing Talla" }],
   creator: "Brandon Fotsing Talla",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
-    url: siteUrl,
     siteName: "Dynasty Web",
     title: "Dynasty Web — Custom Software Built Around Your Company",
     description:

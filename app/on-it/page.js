@@ -1,12 +1,14 @@
+import { pageMetadata } from "../../data/seo";
 import Image from "next/image";
 import Link from "next/link";
 import OnItPromoVideo from "../../components/OnItPromoVideo";
 
-export const metadata = {
-  title: "On It: Voice-Powered Invoicing",
+export const metadata = pageMetadata({
+  title: "On It: Voice-Powered Invoicing App",
   description:
-    "Say the job, send the invoice, get paid on the spot. On It is a voice-powered invoicing app built by Dynasty Web.",
-};
+    "Say the job, send the invoice, get paid on the spot. On It is a voice-powered invoicing app for tradespeople and home service pros, built by Dynasty Web.",
+  path: "/on-it",
+});
 
 export default function OnItPage() {
   const stripScreenshots = [

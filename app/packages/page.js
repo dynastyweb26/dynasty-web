@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { siteData } from "../../data/site";
+import { pageMetadata } from "../../data/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Website Packages",
   description:
-    "How Dynasty Web website packages work: add services to a website project and unlock included perks.",
-};
+    "How Dynasty Web website packages work: start with a custom website, add services like branding, SEO, or invoicing, and unlock perks at each tier.",
+  path: "/packages",
+});
 
 export default function PackagesPage() {
   return (

@@ -1,10 +1,13 @@
+import { pageMetadata } from "../../data/seo";
 import Link from "next/link";
 import BrandLogo from "../../components/BrandLogo";
 
-export const metadata = {
-  title: "Privacy Policy | Dynasty Web",
-  description: "Privacy policy and data handling commitment for Dynasty Web client inquiries.",
-};
+export const metadata = pageMetadata({
+  title: "Privacy Policy",
+  description:
+    "How Dynasty Web collects, uses, and protects the information you share through our contact form and client inquiries.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (
