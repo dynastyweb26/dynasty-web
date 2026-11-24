@@ -163,9 +163,12 @@ export const siteData = {
       industry: "Field Services · Website & Local Search",
       url: "https://crazydoorhandyman.com",
       screenshots: [
-        { src: "/work/cyril/1.webp", alt: "Cyril Handyman & Door homepage with hero headline and quote request form" },
-        { src: "/work/cyril/2.webp", alt: "Cyril Handyman & Door services section listing garage doors, media walls, kitchen renovation, and more" },
-        { src: "/work/cyril/3.webp", alt: "Cyril Handyman & Door gallery of completed garage door, media wall, and kitchen projects" },
+        { src: "/work/cyril/1.webp", w: 1600, h: 928, alt: "Cyril Handyman & Door homepage hero: Garage doors to media walls. One call, done right." },
+        { src: "/work/cyril/2.webp", w: 1600, h: 928, alt: "Cyril Handyman & Door gallery carousel of real projects, each with its own page" },
+        { src: "/work/cyril/3.webp", w: 1600, h: 910, alt: "Before and after slider showing a plain TV wall turned into a slat media wall" },
+        { src: "/work/cyril/4.webp", w: 1600, h: 926, alt: "Five-star Google reviews from Cyril's customers on the homepage" },
+        { src: "/work/cyril/5.webp", w: 1600, h: 813, alt: "Service area map with Forney as home base and pages for eight nearby towns" },
+        { src: "/work/cyril/6.webp", w: 1600, h: 934, alt: "Filterable gallery showing 40 projects across garage doors, blinds, patio screens, and media walls" },
       ],
       shortDescription: "A handyman everyone in town already knew, now found well beyond it. Website, photos, Google, SEO, social, and in-house software.",
       caseStudy: {

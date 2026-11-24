@@ -82,8 +82,8 @@ export default async function CaseStudyPage({ params }) {
               key={shot.src}
               src={shot.src}
               alt={shot.alt}
-              width={1600}
-              height={920}
+              width={shot.w ?? 1600}
+              height={shot.h ?? 920}
               sizes="(min-width: 900px) 33vw, 100vw"
               priority={i === 0}
               className="cs-page-shot"
