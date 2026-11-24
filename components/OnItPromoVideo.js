@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 // Plays the promo only while it is on screen. With reduced motion it never
 // autoplays; the poster shows with native controls instead.
-export default function OnItPromoVideo() {
+export default function OnItPromoVideo({ eager = false }) {
   const ref = useRef(null);
   const [reduced, setReduced] = useState(false);
 
@@ -39,7 +39,7 @@ export default function OnItPromoVideo() {
       muted
       loop
       playsInline
-      preload="none"
+      preload={eager ? "auto" : "none"}
       controls={reduced}
       aria-label="On It promo: creating an invoice by voice and getting paid"
     />

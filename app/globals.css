@@ -2823,3 +2823,44 @@ em::after {
   line-height: 1;
   cursor: pointer;
 }
+/* On It hero: video leads, copy beside it (desktop) or below it (mobile) */
+.onit-hero-split {
+  max-width: var(--maxw);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 80px);
+  text-align: left;
+}
+
+.onit-hero-split .onit-hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.onit-hero-split .onit-hero-cta-block {
+  align-items: flex-start;
+}
+
+.onit-hero-video-lead {
+  height: min(78vh, 680px);
+}
+
+@media (max-width: 860px) {
+  .onit-hero-split {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .onit-hero-split .onit-hero-copy,
+  .onit-hero-split .onit-hero-cta-block {
+    align-items: center;
+  }
+
+  .onit-hero-video-lead {
+    height: auto;
+    width: min(84%, 360px);
+  }
+}
