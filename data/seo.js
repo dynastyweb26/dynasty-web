@@ -55,7 +55,8 @@ export const organizationSchema = {
       email: "brandon@dynastyweb.co",
       description:
         "Software studio designing and building custom web applications, quoting and operations tools, and customer-facing apps for companies.",
-      founder: { "@type": "Person", name: "Brandon Fotsing Talla" },
+      founder: { "@id": `${SITE_URL}/about#founder` },
+      sameAs: ["https://github.com/dynastyweb26"],
       address: {
         "@type": "PostalAddress",
         addressLocality: "Forney",
