@@ -3,7 +3,8 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { siteData } from "../data/site";
-import { ResultCard } from "./ResultCard";
+import { PastWork } from "./PastWork";
+import { OnItSpotlight } from "./OnItSpotlight";
 import { Process } from "./Process";
 
 export function HomeClient() {
@@ -70,24 +71,11 @@ export function HomeClient() {
         </div>
       </section>
 
-      {/* RESULTS: the work, right under the banner */}
-      <section className="section home-results" id="work">
-        <div className="wrap">
-          <div className="home-results-head">
-            <h2 className="section-title">
-              Work that <em>earns</em> its keep.
-            </h2>
-            <Link href="/contact" className="btn btn-primary btn-sm">
-              Start a project
-            </Link>
-          </div>
-          <div className="result-grid">
-            {siteData.work.map((item) => (
-              <ResultCard key={item.id} item={item} />
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* SELECTED WORK: browser-framed client sites */}
+      <PastWork />
+
+      {/* BUILT IN-HOUSE: On It */}
+      <OnItSpotlight />
 
       {/* WHAT WE BUILD */}
       <section className="section teaser-section">
@@ -137,7 +125,7 @@ export function HomeClient() {
               <span>Start a Project</span>
             </div>
             <h2 className="cta-band-title">
-              Let&apos;s build something <em>lasting</em> for your company.
+              Ready to build something <em>great</em>?
             </h2>
             <p className="cta-band-text">
               Tell us how your company operates and where it gets stuck. We reply within one business day with next steps.
@@ -150,9 +138,9 @@ export function HomeClient() {
                 <polyline points="12 5 19 12 12 19" />
               </svg>
               </Link>
-              <Link href="/#work" className="btn btn-ghost-light">
-                See our work
-              </Link>
+              <a href="mailto:brandon@dynastyweb.co" className="btn btn-ghost-light">
+                Contact us
+              </a>
             </div>
           </div>
         </div>
