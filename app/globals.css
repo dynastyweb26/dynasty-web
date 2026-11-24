@@ -288,6 +288,12 @@ em::after {
   list-style: none;
 }
 
+@media (max-width: 1024px) {
+  .desktop-nav .nav-links {
+    gap: 20px;
+  }
+}
+
 .nav-link {
   position: relative;
   font-size: 15px;

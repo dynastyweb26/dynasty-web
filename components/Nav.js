@@ -57,7 +57,9 @@ export function Nav() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/#work", label: "Work" },
+    { href: "/custom-software", label: "Custom Software" },
     { href: "/solutions", label: "Solutions" },
+    { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
   ];
 
