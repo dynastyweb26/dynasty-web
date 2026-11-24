@@ -185,8 +185,7 @@ export const siteData = {
           { text: "Built from Scratch" },
         ],
         heroShot: { src: "/work/cyril/1.webp", w: 1600, h: 928, alt: "Cyril Handyman & Door homepage on desktop" },
-        mobileShot: { src: "/work/cyril/mobile.webp", w: 390, h: 845, alt: "Cyril Handyman & Door homepage on mobile" },
-        problemImage: { src: "/work/cyril/problem.webp", w: 706, h: 470, alt: "A black modern garage door Cyril installed, with frosted side windows" },
+        problemImage: { src: "/work/cyril/6.webp", w: 1600, h: 934, alt: "Cyril's project gallery: 40 real jobs across garage doors, blinds, patio screens, and media walls" },
         beforeAfter: {
           before: { src: "/work/cyril/before.webp", w: 1600, h: 1200, alt: "A TV and soundbar on a bare beige wall, before" },
           after: { src: "/work/cyril/after.webp", w: 1600, h: 1200, alt: "The same wall finished as a slat media wall with built-in shelves, after" },
@@ -194,7 +193,7 @@ export const siteData = {
         },
         services: [
           { name: "Website", detail: "Built from scratch: service pages, city pages, a project gallery, tap-to-call, and a quote request form.", shot: "/work/cyril/1.webp" },
-          { name: "On-site photography", detail: "We went to his job sites and photographed real work for the website and social media.", shot: "/work/cyril/6.webp" },
+          { name: "On-site photography", detail: "We went to his job sites and photographed real work for the website and social media.", shot: "/work/cyril/photo-led-wall.webp", shotPosition: "50% 50%" },
           { name: "Local SEO", detail: "Pages for each service and city he covers, structured data, and a clean sitemap, so he shows up beyond Forney.", shot: "/work/cyril/5.webp" },
           { name: "Google Business Profile", detail: "Set up and verified on Google so local searches lead to him.", shot: "/work/cyril/4.webp" },
           { name: "Social media", detail: "An ongoing push to grow his social presence with his own work.", shot: "/work/cyril/2.webp" },
