@@ -1,14 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { WorkSlideshow } from "./WorkSlideshow";
 import { BrandLogo } from "./BrandLogo";
 import Image from "next/image";
 
 export function WorkCard({ item }) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   if (item.builtInHouse) {
     return (
       <div className="work-card on-it-card">
@@ -106,45 +103,13 @@ export function WorkCard({ item }) {
             </svg>
           </a>
 
-          <button
-            type="button"
-            className="btn-case-study"
-            onClick={() => setIsExpanded(!isExpanded)}
-            aria-expanded={isExpanded}
-          >
-            {isExpanded ? "Close case study" : "Read case study"}
-            <svg
-              className={`chevron ${isExpanded ? "open" : ""}`}
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-          </button>
+          {item.slug && item.caseStudy && (
+            <Link href={`/work/${item.slug}`} className="btn-case-study-link">
+              Read case study →
+            </Link>
+          )}
         </div>
 
-        {isExpanded && item.caseStudy && (
-          <div className="case-study-drawer">
-            <div className="case-study-grid">
-              <div className="cs-item">
-                <h4>The Problem</h4>
-                <p>{item.caseStudy.problem}</p>
-              </div>
-              <div className="cs-item">
-                <h4>What We Built</h4>
-                <p>{item.caseStudy.whatWeBuilt}</p>
-              </div>
-              <div className="cs-item">
-                <h4>The Result</h4>
-                <p>{item.caseStudy.result}</p>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
