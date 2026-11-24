@@ -1,4 +1,5 @@
 import { SITE_URL } from "../data/seo";
+import { siteData } from "../data/site";
 
 // /products (storefront proxy) is intentionally left out: direct link only.
 const routes = [
@@ -8,6 +9,9 @@ const routes = [
   { path: "/packages", priority: 0.7, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.7, changeFrequency: "yearly" },
   { path: "/privacy", priority: 0.2, changeFrequency: "yearly" },
+  ...siteData.work
+    .filter((w) => !w.builtInHouse && w.slug && w.caseStudy)
+    .map((w) => ({ path: `/work/${w.slug}`, priority: 0.8, changeFrequency: "monthly" })),
 ];
 
 export default function sitemap() {
