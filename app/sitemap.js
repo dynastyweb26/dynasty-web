@@ -4,6 +4,7 @@ import { siteData } from "../data/site";
 // /products (storefront proxy) is intentionally left out: direct link only.
 const routes = [
   { path: "/", priority: 1.0, changeFrequency: "monthly" },
+  { path: "/custom-software", priority: 0.9, changeFrequency: "monthly" },
   { path: "/solutions", priority: 0.9, changeFrequency: "monthly" },
   { path: "/on-it", priority: 0.8, changeFrequency: "monthly" },
   { path: "/packages", priority: 0.7, changeFrequency: "monthly" },
